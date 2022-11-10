@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet" type="text/css">
+    <link href="https://ossonestopsolutionsltd.posinabox.eu/assets/base/css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet">
+    <link href="https://ossonestopsolutionsltd.posinabox.eu/assets/partner/css/progress-wizard.min.css"
+        rel="stylesheet">
+    <link href="https://ossonestopsolutionsltd.posinabox.eu/assets/partner/css/style-signup.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/customer details.css">
+    <link rel="stylesheet"
+        href="https://ossonestopsolutionsltd.posinabox.eu/assets/jquery-multi-select/css/multi-select.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css"
+        media="all">
+
+
+    <!-- jquery -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
+
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button>
+        <!-- Navbar Search-->
+        <!-- <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form> -->
+        <!-- Navbar -->
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#!">Settings</a></li>
+                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <body class="no_bg sing-up-body">
+        <!-- header -->
+
+        <!-- header without menu -->
+        <header>
+            <!-- <div class="main-container container">
+                            <nav class="navbar navbar-default yamm">
+                                <div class="navbar-header">
+                                                                        <a class="navbar-brand main-logo" href="https://ossonestopsolutionsltd.posinabox.eu/">
+                                        <!-- <img src="https://ossonestopsolutionsltd.posinabox.eu/data/f2ae5e9b2519b1a8918cd50979e6f5e5/acd5017f7ac6fed0269ec7b97a368277.png"> -->
+            </a>
+            </div>
+            </nav>
+            </div> -->
+        </header>
+        <div class="clear" style="margin-top: 15px;"></div>
+
+
+        <!-- sub-header -->
+        <div class="header-selected container">
+        </div>
+        <!-- end header -->
+
+
+
+
+
+        <div class="signup-main-body">
+            <div class="container">
+
+                <form class="form-horizontal" role="form" method="post"
+                    action="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/102" name="form-main">
+
+                    <div class="top-info-route">
+                        <!-- Routing start -->
+
+
+
+                        <ul class="progress-indicator">
+                            <li class="completed"> <span class="bubble"></span>Select Products</li>
+                            <li class="completed"> <span class="bubble"></span>Customer Details</li>
+                            <li class=""> <span class="bubble"></span>Finance Overview</li>
+
+                            <li class=""> <span class="bubble"></span>Terms and Conditions<br>Privacy Policy</li>
+                            <li class=""> <span class="bubble"></span>Overview</li>
+                            <li class=""> <span class="bubble"></span>Complete</li>
+                        </ul>
+
+                        <!-- Routing end -->
+                    </div>
+
+                    <h1>
+                        Customer Details </h1>
+
+
+                    <div class="top-info-box">
+                        <span class="ico">i</span>
+                        Ask the customer to set their log In Details.
+                    </div>
+
+                    <div class="span11">
+
+                        <div class="form-group">
+                            <label for="signup_first_name" class="col-sm-4 control-label">First name *</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="signup_first_name" id="signup_first_name" class="form-control"
+                                    value="">
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signup_last_name" class="col-sm-4 control-label">Last name *</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="signup_last_name" id="signup_last_name" class="form-control"
+                                    value="">
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signup_email" class="col-sm-4 control-label">Email Address *</label>
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon">@</span>
+                                    <input type="email" name="signup_email" id="signup_email" class="form-control"
+                                        value="">
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signup_password" class="col-sm-4 control-label">Password *</label>
+                            <div class="col-sm-8">
+                                <input type="password" name="signup_password" id="signup_password" class="form-control"
+                                    value="">
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signup_password_confirm" class="col-sm-4 control-label">Confirm password
+                                *</label>
+                            <div class="col-sm-8">
+                                <input type="password" name="signup_password_confirm" id="signup_password_confirm"
+                                    class="form-control" value="">
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="delivery-address-box" id="delivery_group">
+                            <div class="form-group">
+                                <h2>
+                                    Terminal Delivery Address <small>(only complete if different to Trading
+                                        Address)</small>
+                                    <br><small>* We can only deliver to addresses that are connected to the business or
+                                        Customer's home addresses</small>
+                                </h2>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label class="margin-top-5">
+                                        <input type="hidden" name="signup_retailer_is_same_delivery_address" value="0">
+                                        <input type="checkbox" name="signup_retailer_is_same_delivery_address"
+                                            id="signup_retailer_is_same_delivery_address" checked="" value="1">
+                                        Same as Trading Address </label>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="address-lookup-wrapper">
+
+                                <div class="form-group">
+                                    <label for="signup_retailer_delivery_address_lookup"
+                                        class="col-sm-4 control-label">Search for address</label>
+                                    <div class="col-sm-8">
+                                        <div class="form-row">
+                                            <div class="col-sm-9 no-padding">
+                                                <input type="text" id="signup_retailer_delivery_address_lookup"
+                                                    name="signup_retailer_delivery_address_lookup"
+                                                    class="form-control address-lookup-address"
+                                                    placeholder="e.g. Manor Farm Barns, Framingham Pigot or NR14 7PZ"
+                                                    aria-owns="address_result" autocomplete="off" autocorrect="off"
+                                                    readonly="">
+                                            </div>
+                                            <div class="col-sm-3 no-padding">
+                                                <button type="button"
+                                                    class="address-lookup-submit btn btn-primary right"
+                                                    disabled="disabled">Search</button>
+                                            </div>
+                                        </div>
+                                        <div aria-live="assertive" aria-atomic="true" role="status"
+                                            class="sr-only address-lookup-status"></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="address-lookup-results"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ba_recipients_name" class="col-sm-4 control-label">Recipients name
+                                        *</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="signup_retailer_delivery_recipients_name"
+                                            id="ba_recipients_name" class="form-control" value="" readonly="">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ba_recipients_outlet" class="col-sm-4 control-label">Recipients
+                                        Outlet</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="signup_retailer_delivery_recipients_outlet"
+                                            id="ba_recipients_outlet" class="form-control al-organisation" value=""
+                                            readonly="">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ba_address_1" class="col-sm-3 control-label">Address line 1 *</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="signup_retailer_delivery_address_1" id="ba_address_1"
+                                            class="form-control al-address-line-1" value="" readonly="">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ba_address_2" class="col-sm-3 control-label">Address line 2</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="signup_retailer_delivery_address_2" id="ba_address_2"
+                                            class="form-control al-address-line-2" value="" readonly="">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ba_city" class="col-sm-3 control-label">City *</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="signup_retailer_delivery_city" id="ba_city"
+                                            class="form-control al-city" value="" readonly="">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ba_postcode" class="col-sm-3 control-label">Postcode *</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" name="signup_retailer_delivery_postcode" id="ba_postcode"
+                                            class="form-control al-postcode" value="" readonly="">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ba_country" class="col-sm-3 control-label">Country *</label>
+                                    <div class="col-sm-9">
+                                        <select name="signup_retailer_delivery_country" class="form-control al-country"
+                                            id="ba_country">
+                                            <optgroup label="- Please Select -">
+                                                <option value="ie" disabled="disabled">Ireland</option>
+                                                <option value="gb" selected="selected" disabled="disabled">United
+                                                    Kingdom</option>
+                                            </optgroup>
+                                            <optgroup label="---------------">
+                                                <option value="af" disabled="disabled">Afghanistan</option>
+                                                <option value="ax" disabled="disabled">Aland Islands</option>
+                                                <option value="al" disabled="disabled">Albania</option>
+                                                <option value="dz" disabled="disabled">Algeria</option>
+                                                <option value="as" disabled="disabled">American Samoa</option>
+                                                <option value="ad" disabled="disabled">Andorra</option>
+                                                <option value="ao" disabled="disabled">Angola</option>
+                                                <option value="ai" disabled="disabled">Anguilla</option>
+                                                <option value="aq" disabled="disabled">Antarctica</option>
+                                                <option value="ag" disabled="disabled">Antigua and Barbuda</option>
+                                                <option value="ar" disabled="disabled">Argentina</option>
+                                                <option value="am" disabled="disabled">Armenia</option>
+                                                <option value="aw" disabled="disabled">Aruba</option>
+                                                <option value="au" disabled="disabled">Australia</option>
+                                                <option value="at" disabled="disabled">Austria</option>
+                                                <option value="az" disabled="disabled">Azerbaijan</option>
+                                                <option value="bs" disabled="disabled">Bahamas</option>
+                                                <option value="bh" disabled="disabled">Bahrain</option>
+                                                <option value="bd" disabled="disabled">Bangladesh</option>
+                                                <option value="bb" disabled="disabled">Barbados</option>
+                                                <option value="by" disabled="disabled">Belarus</option>
+                                                <option value="be" disabled="disabled">Belgium</option>
+                                                <option value="bz" disabled="disabled">Belize</option>
+                                                <option value="bj" disabled="disabled">Benin</option>
+                                                <option value="bm" disabled="disabled">Bermuda</option>
+                                                <option value="bt" disabled="disabled">Bhutan</option>
+                                                <option value="bo" disabled="disabled">Bolivia, Plurinational State of
+                                                </option>
+                                                <option value="bq" disabled="disabled">Bonaire, Sint Eustatius and Saba
+                                                </option>
+                                                <option value="ba" disabled="disabled">Bosnia and Herzegovina</option>
+                                                <option value="bw" disabled="disabled">Botswana</option>
+                                                <option value="bv" disabled="disabled">Bouvet Island</option>
+                                                <option value="br" disabled="disabled">Brazil</option>
+                                                <option value="io" disabled="disabled">British Indian Ocean Territory
+                                                </option>
+                                                <option value="bn" disabled="disabled">Brunei Darussalam</option>
+                                                <option value="bg" disabled="disabled">Bulgaria</option>
+                                                <option value="bf" disabled="disabled">Burkina Faso</option>
+                                                <option value="bi" disabled="disabled">Burundi</option>
+                                                <option value="kh" disabled="disabled">Cambodia</option>
+                                                <option value="cm" disabled="disabled">Cameroon</option>
+                                                <option value="ca" disabled="disabled">Canada</option>
+                                                <option value="cv" disabled="disabled">Cape Verde</option>
+                                                <option value="ky" disabled="disabled">Cayman Islands</option>
+                                                <option value="cf" disabled="disabled">Central African Republic</option>
+                                                <option value="td" disabled="disabled">Chad</option>
+                                                <option value="cl" disabled="disabled">Chile</option>
+                                                <option value="cn" disabled="disabled">China</option>
+                                                <option value="cx" disabled="disabled">Christmas Island</option>
+                                                <option value="cc" disabled="disabled">Cocos (Keeling) Islands</option>
+                                                <option value="co" disabled="disabled">Colombia</option>
+                                                <option value="km" disabled="disabled">Comoros</option>
+                                                <option value="cg" disabled="disabled">Congo</option>
+                                                <option value="cd" disabled="disabled">Congo, The Democratic Republic of
+                                                    the</option>
+                                                <option value="ck" disabled="disabled">Cook Islands</option>
+                                                <option value="cr" disabled="disabled">Costa Rica</option>
+                                                <option value="ci" disabled="disabled">Cote d'Ivoire</option>
+                                                <option value="hr" disabled="disabled">Croatia</option>
+                                                <option value="cu" disabled="disabled">Cuba</option>
+                                                <option value="cw" disabled="disabled">Curacao</option>
+                                                <option value="cy" disabled="disabled">Cyprus</option>
+                                                <option value="cz" disabled="disabled">Czech Republic</option>
+                                                <option value="dk" disabled="disabled">Denmark</option>
+                                                <option value="dj" disabled="disabled">Djibouti</option>
+                                                <option value="dm" disabled="disabled">Dominica</option>
+                                                <option value="do" disabled="disabled">Dominican Republic</option>
+                                                <option value="ec" disabled="disabled">Ecuador</option>
+                                                <option value="eg" disabled="disabled">Egypt</option>
+                                                <option value="sv" disabled="disabled">El Salvador</option>
+                                                <option value="gq" disabled="disabled">Equatorial Guinea</option>
+                                                <option value="er" disabled="disabled">Eritrea</option>
+                                                <option value="ee" disabled="disabled">Estonia</option>
+                                                <option value="et" disabled="disabled">Ethiopia</option>
+                                                <option value="fk" disabled="disabled">Falkland Islands (Malvinas)
+                                                </option>
+                                                <option value="fo" disabled="disabled">Faroe Islands</option>
+                                                <option value="fj" disabled="disabled">Fiji</option>
+                                                <option value="fi" disabled="disabled">Finland</option>
+                                                <option value="fr" disabled="disabled">France</option>
+                                                <option value="gf" disabled="disabled">French Guiana</option>
+                                                <option value="pf" disabled="disabled">French Polynesia</option>
+                                                <option value="tf" disabled="disabled">French Southern Territories
+                                                </option>
+                                                <option value="ga" disabled="disabled">Gabon</option>
+                                                <option value="gm" disabled="disabled">Gambia</option>
+                                                <option value="ge" disabled="disabled">Georgia</option>
+                                                <option value="de" disabled="disabled">Germany</option>
+                                                <option value="gh" disabled="disabled">Ghana</option>
+                                                <option value="gi" disabled="disabled">Gibraltar</option>
+                                                <option value="gr" disabled="disabled">Greece</option>
+                                                <option value="gl" disabled="disabled">Greenland</option>
+                                                <option value="gd" disabled="disabled">Grenada</option>
+                                                <option value="gp" disabled="disabled">Guadeloupe</option>
+                                                <option value="gu" disabled="disabled">Guam</option>
+                                                <option value="gt" disabled="disabled">Guatemala</option>
+                                                <option value="gg" disabled="disabled">Guernsey</option>
+                                                <option value="gn" disabled="disabled">Guinea</option>
+                                                <option value="gw" disabled="disabled">Guinea-Bissau</option>
+                                                <option value="gy" disabled="disabled">Guyana</option>
+                                                <option value="ht" disabled="disabled">Haiti</option>
+                                                <option value="hm" disabled="disabled">Heard Island and McDonald Islands
+                                                </option>
+                                                <option value="va" disabled="disabled">Holy See (Vatican City State)
+                                                </option>
+                                                <option value="hn" disabled="disabled">Honduras</option>
+                                                <option value="hk" disabled="disabled">Hong Kong</option>
+                                                <option value="hu" disabled="disabled">Hungary</option>
+                                                <option value="is" disabled="disabled">Iceland</option>
+                                                <option value="in" disabled="disabled">India</option>
+                                                <option value="id" disabled="disabled">Indonesia</option>
+                                                <option value="ir" disabled="disabled">Iran, Islamic Republic of
+                                                </option>
+                                                <option value="iq" disabled="disabled">Iraq</option>
+                                                <option value="im" disabled="disabled">Isle of Man</option>
+                                                <option value="il" disabled="disabled">Israel</option>
+                                                <option value="it" disabled="disabled">Italy</option>
+                                                <option value="jm" disabled="disabled">Jamaica</option>
+                                                <option value="jp" disabled="disabled">Japan</option>
+                                                <option value="je" disabled="disabled">Jersey</option>
+                                                <option value="jo" disabled="disabled">Jordan</option>
+                                                <option value="kz" disabled="disabled">Kazakhstan</option>
+                                                <option value="ke" disabled="disabled">Kenya</option>
+                                                <option value="ki" disabled="disabled">Kiribati</option>
+                                                <option value="kp" disabled="disabled">Korea, Democratic People's
+                                                    Republic of</option>
+                                                <option value="kr" disabled="disabled">Korea, Republic of</option>
+                                                <option value="kw" disabled="disabled">Kuwait</option>
+                                                <option value="kg" disabled="disabled">Kyrgyzstan</option>
+                                                <option value="la" disabled="disabled">Lao People's Democratic Republic
+                                                </option>
+                                                <option value="lv" disabled="disabled">Latvia</option>
+                                                <option value="lb" disabled="disabled">Lebanon</option>
+                                                <option value="ls" disabled="disabled">Lesotho</option>
+                                                <option value="lr" disabled="disabled">Liberia</option>
+                                                <option value="ly" disabled="disabled">Libyan Arab Jamahiriya</option>
+                                                <option value="li" disabled="disabled">Liechtenstein</option>
+                                                <option value="lt" disabled="disabled">Lithuania</option>
+                                                <option value="lu" disabled="disabled">Luxembourg</option>
+                                                <option value="mo" disabled="disabled">Macao</option>
+                                                <option value="mk" disabled="disabled">Macedonia, The former Yugoslav
+                                                    Republic of</option>
+                                                <option value="mg" disabled="disabled">Madagascar</option>
+                                                <option value="mw" disabled="disabled">Malawi</option>
+                                                <option value="my" disabled="disabled">Malaysia</option>
+                                                <option value="mv" disabled="disabled">Maldives</option>
+                                                <option value="ml" disabled="disabled">Mali</option>
+                                                <option value="mt" disabled="disabled">Malta</option>
+                                                <option value="mh" disabled="disabled">Marshall Islands</option>
+                                                <option value="mq" disabled="disabled">Martinique</option>
+                                                <option value="mr" disabled="disabled">Mauritania</option>
+                                                <option value="mu" disabled="disabled">Mauritius</option>
+                                                <option value="yt" disabled="disabled">Mayotte</option>
+                                                <option value="mx" disabled="disabled">Mexico</option>
+                                                <option value="fm" disabled="disabled">Micronesia, Federated States of
+                                                </option>
+                                                <option value="md" disabled="disabled">Moldova, Republic of</option>
+                                                <option value="mc" disabled="disabled">Monaco</option>
+                                                <option value="mn" disabled="disabled">Mongolia</option>
+                                                <option value="me" disabled="disabled">Montenegro</option>
+                                                <option value="ms" disabled="disabled">Montserrat</option>
+                                                <option value="ma" disabled="disabled">Morocco</option>
+                                                <option value="mz" disabled="disabled">Mozambique</option>
+                                                <option value="mm" disabled="disabled">Myanmar</option>
+                                                <option value="na" disabled="disabled">Namibia</option>
+                                                <option value="nr" disabled="disabled">Nauru</option>
+                                                <option value="np" disabled="disabled">Nepal</option>
+                                                <option value="nl" disabled="disabled">Netherlands</option>
+                                                <option value="nc" disabled="disabled">New Caledonia</option>
+                                                <option value="nz" disabled="disabled">New Zealand</option>
+                                                <option value="ni" disabled="disabled">Nicaragua</option>
+                                                <option value="ne" disabled="disabled">Niger</option>
+                                                <option value="ng" disabled="disabled">Nigeria</option>
+                                                <option value="nu" disabled="disabled">Niue</option>
+                                                <option value="nf" disabled="disabled">Norfolk Island</option>
+                                                <option value="mp" disabled="disabled">Northern Mariana Islands</option>
+                                                <option value="no" disabled="disabled">Norway</option>
+                                                <option value="om" disabled="disabled">Oman</option>
+                                                <option value="pk" disabled="disabled">Pakistan</option>
+                                                <option value="pw" disabled="disabled">Palau</option>
+                                                <option value="ps" disabled="disabled">Palestinian Territory, Occupied
+                                                </option>
+                                                <option value="pa" disabled="disabled">Panama</option>
+                                                <option value="pg" disabled="disabled">Papua New Guinea</option>
+                                                <option value="py" disabled="disabled">Paraguay</option>
+                                                <option value="pe" disabled="disabled">Peru</option>
+                                                <option value="ph" disabled="disabled">Philippines</option>
+                                                <option value="pn" disabled="disabled">Pitcairn</option>
+                                                <option value="pl" disabled="disabled">Poland</option>
+                                                <option value="pt" disabled="disabled">Portugal</option>
+                                                <option value="pr" disabled="disabled">Puerto Rico</option>
+                                                <option value="qa" disabled="disabled">Qatar</option>
+                                                <option value="re" disabled="disabled">Reunion</option>
+                                                <option value="ro" disabled="disabled">Romania</option>
+                                                <option value="ru" disabled="disabled">Russian Federation</option>
+                                                <option value="rw" disabled="disabled">Rwanda</option>
+                                                <option value="bl" disabled="disabled">Saint Barthelemy</option>
+                                                <option value="sh" disabled="disabled">Saint Helena, Ascension and
+                                                    Tristan Da Cunha</option>
+                                                <option value="kn" disabled="disabled">Saint Kitts and Nevis</option>
+                                                <option value="lc" disabled="disabled">Saint Lucia</option>
+                                                <option value="mf" disabled="disabled">Saint Martin (French Part)
+                                                </option>
+                                                <option value="pm" disabled="disabled">Saint Pierre and Miquelon
+                                                </option>
+                                                <option value="vc" disabled="disabled">Saint Vincent and The Grenadines
+                                                </option>
+                                                <option value="ws" disabled="disabled">Samoa</option>
+                                                <option value="sm" disabled="disabled">San Marino</option>
+                                                <option value="st" disabled="disabled">Sao Tome and Principe</option>
+                                                <option value="sa" disabled="disabled">Saudi Arabia</option>
+                                                <option value="sn" disabled="disabled">Senegal</option>
+                                                <option value="rs" disabled="disabled">Serbia</option>
+                                                <option value="sc" disabled="disabled">Seychelles</option>
+                                                <option value="sl" disabled="disabled">Sierra Leone</option>
+                                                <option value="sg" disabled="disabled">Singapore</option>
+                                                <option value="sx" disabled="disabled">Sint Maarten (Dutch Part)
+                                                </option>
+                                                <option value="sk" disabled="disabled">Slovakia</option>
+                                                <option value="si" disabled="disabled">Slovenia</option>
+                                                <option value="sb" disabled="disabled">Solomon Islands</option>
+                                                <option value="so" disabled="disabled">Somalia</option>
+                                                <option value="za" disabled="disabled">South Africa</option>
+                                                <option value="gs" disabled="disabled">South Georgia and The South
+                                                    Sandwich Islands</option>
+                                                <option value="ss" disabled="disabled">South Sudan</option>
+                                                <option value="es" disabled="disabled">Spain</option>
+                                                <option value="lk" disabled="disabled">Sri Lanka</option>
+                                                <option value="sd" disabled="disabled">Sudan</option>
+                                                <option value="sr" disabled="disabled">Suriname</option>
+                                                <option value="sj" disabled="disabled">Svalbard and Jan Mayen</option>
+                                                <option value="sz" disabled="disabled">Swaziland</option>
+                                                <option value="se" disabled="disabled">Sweden</option>
+                                                <option value="ch" disabled="disabled">Switzerland</option>
+                                                <option value="sy" disabled="disabled">Syrian Arab Republic</option>
+                                                <option value="tw" disabled="disabled">Taiwan, Province of China
+                                                </option>
+                                                <option value="tj" disabled="disabled">Tajikistan</option>
+                                                <option value="tz" disabled="disabled">Tanzania, United Republic of
+                                                </option>
+                                                <option value="th" disabled="disabled">Thailand</option>
+                                                <option value="tl" disabled="disabled">Timor-Leste</option>
+                                                <option value="tg" disabled="disabled">Togo</option>
+                                                <option value="tk" disabled="disabled">Tokelau</option>
+                                                <option value="to" disabled="disabled">Tonga</option>
+                                                <option value="tt" disabled="disabled">Trinidad and Tobago</option>
+                                                <option value="tn" disabled="disabled">Tunisia</option>
+                                                <option value="tr" disabled="disabled">Turkey</option>
+                                                <option value="tm" disabled="disabled">Turkmenistan</option>
+                                                <option value="tc" disabled="disabled">Turks and Caicos Islands</option>
+                                                <option value="tv" disabled="disabled">Tuvalu</option>
+                                                <option value="ug" disabled="disabled">Uganda</option>
+                                                <option value="ua" disabled="disabled">Ukraine</option>
+                                                <option value="ae" disabled="disabled">United Arab Emirates</option>
+                                                <option value="us" disabled="disabled">United States</option>
+                                                <option value="um" disabled="disabled">United States Minor Outlying
+                                                    Islands</option>
+                                                <option value="uy" disabled="disabled">Uruguay</option>
+                                                <option value="uz" disabled="disabled">Uzbekistan</option>
+                                                <option value="vu" disabled="disabled">Vanuatu</option>
+                                                <option value="ve" disabled="disabled">Venezuela, Bolivarian Republic of
+                                                </option>
+                                                <option value="vn" disabled="disabled">Viet Nam</option>
+                                                <option value="vg" disabled="disabled">Virgin Islands, British</option>
+                                                <option value="vi" disabled="disabled">Virgin Islands, U.S.</option>
+                                                <option value="wf" disabled="disabled">Wallis and Futuna</option>
+                                                <option value="eh" disabled="disabled">Western Sahara</option>
+                                                <option value="ye" disabled="disabled">Yemen</option>
+                                                <option value="zm" disabled="disabled">Zambia</option>
+                                                <option value="zw" disabled="disabled">Zimbabwe</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="clearfix"></div>
+
+                    </div>
+
+                    <div class="span1">&nbsp;</div>
+
+                    <div class="span12">
+
+                        <div class="form-group">
+                            <label for="signup_retailer_name" class="col-sm-4 control-label">Trading Name *</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="signup_retailer_name" id="signup_retailer_name"
+                                    class="form-control" value="">
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="signup_retailer_url" class="col-sm-4 control-label">Login Address *</label>
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                    <input type="text" disabled="disabled" name="signup_retailer_url"
+                                        id="signup_retailer_url" class="form-control" value="">
+                                    <span class="input-group-addon">-ossonestopsolutionsltd.posinabox.eu</span>
+                                    <input type="hidden" name="signup_retailer_url" id="signup_retailer_url_hidden"
+                                        value="">
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <br><br>
+
+                        <div class="form-group">
+                            <label for="signup_retailer_sale_done_how" class="col-sm-7 control-label">Was this sale done
+                                Virtually or Face to Face? *</label>
+                            <div class="col-sm-4">
+                                <select name="signup_retailer_sale_done_how" class="form-control"
+                                    id="signup_retailer_sale_done_how">
+                                    <option value="" selected="selected">- please select -</option>
+                                    <option value="v">Virtually</option>
+                                    <option value="f">Face to Face</option>
+                                </select>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-group" id="signup_retailer_sale_done_virtually_confirm_kyc_form_group"
+                            style="display: none;">
+                            <label for="signup_retailer_sale_done_virtually_confirm_kyc"
+                                class="col-sm-7 control-label">I have certified the KYC via video call *</label>
+                            <div class="col-sm-4">
+                                <select name="signup_retailer_sale_done_virtually_confirm_kyc" class="form-control"
+                                    id="signup_retailer_sale_done_virtually_confirm_kyc">
+                                    <option value="" selected="selected">- please select -</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-group" id="signup_retailer_sale_done_virtually_confirm_id_form_group"
+                            style="display: none;">
+                            <label for="signup_retailer_sale_done_virtually_confirm_id" class="col-sm-7 control-label"
+                                style="padding-right:4px;">I confirm the ID the customer has provided matches the person
+                                I saw on the video call *</label>
+                            <div class="col-sm-4">
+                                <select name="signup_retailer_sale_done_virtually_confirm_id" class="form-control"
+                                    id="signup_retailer_sale_done_virtually_confirm_id" style="height:52px">
+                                    <option value="" selected="selected">- please select -</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+
+
+
+                        <div class="form-group hidden">
+                            <label for="signup_retailer_country" class="col-sm-4 control-label">Country *</label>
+                            <div class="col-sm-8">
+                                <select name="signup_retailer_country" class="form-control"
+                                    id="signup_retailer_country">
+                                    <optgroup label="- please select -">
+                                        <option value="gb" selected="selected">United Kingdom</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="form-group hidden">
+                            <label for="signup_retailer_language" class="col-sm-4 control-label">Language *</label>
+                            <div class="col-sm-8">
+                                <select name="signup_retailer_language" class="form-control"
+                                    id="signup_retailer_language">
+                                    <option value="en" selected="selected">English</option>
+                                </select>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="form-group hidden">
+                            <label for="signup_retailer_currency" class="col-sm-4 control-label">Currency *</label>
+                            <div class="col-sm-8">
+                                <select name="signup_retailer_currency" class="form-control"
+                                    id="signup_retailer_currency">
+                                    <optgroup label="- please select -">
+                                        <option value="GBP" selected="selected">British Pound Sterling (£)</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="form-group hidden">
+                            <label for="signup_retailer_time_zone" class="col-sm-4 control-label">Time zone *</label>
+                            <div class="col-sm-8">
+                                <select name="signup_retailer_time_zone" class="form-control signup_retailer_time_zone"
+                                    id="signup_retailer_time_zone">
+                                    <option value="Africa/Abidjan">(UTC+00:00) Africa/Abidjan</option>
+                                    <option value="Africa/Accra">(UTC+00:00) Africa/Accra</option>
+                                    <option value="Africa/Addis_Ababa">(UTC+03:00) Africa/Addis_Ababa</option>
+                                    <option value="Africa/Algiers">(UTC+01:00) Africa/Algiers</option>
+                                    <option value="Africa/Asmara">(UTC+03:00) Africa/Asmara</option>
+                                    <option value="Africa/Bamako">(UTC+00:00) Africa/Bamako</option>
+                                    <option value="Africa/Bangui">(UTC+01:00) Africa/Bangui</option>
+                                    <option value="Africa/Banjul">(UTC+00:00) Africa/Banjul</option>
+                                    <option value="Africa/Bissau">(UTC+00:00) Africa/Bissau</option>
+                                    <option value="Africa/Blantyre">(UTC+02:00) Africa/Blantyre</option>
+                                    <option value="Africa/Brazzaville">(UTC+01:00) Africa/Brazzaville</option>
+                                    <option value="Africa/Bujumbura">(UTC+02:00) Africa/Bujumbura</option>
+                                    <option value="Africa/Cairo">(UTC+02:00) Africa/Cairo</option>
+                                    <option value="Africa/Casablanca">(UTC+01:00) Africa/Casablanca</option>
+                                    <option value="Africa/Ceuta">(UTC+02:00) Africa/Ceuta</option>
+                                    <option value="Africa/Conakry">(UTC+00:00) Africa/Conakry</option>
+                                    <option value="Africa/Dakar">(UTC+00:00) Africa/Dakar</option>
+                                    <option value="Africa/Dar_es_Salaam">(UTC+03:00) Africa/Dar_es_Salaam</option>
+                                    <option value="Africa/Djibouti">(UTC+03:00) Africa/Djibouti</option>
+                                    <option value="Africa/Douala">(UTC+01:00) Africa/Douala</option>
+                                    <option value="Africa/El_Aaiun">(UTC+01:00) Africa/El_Aaiun</option>
+                                    <option value="Africa/Freetown">(UTC+00:00) Africa/Freetown</option>
+                                    <option value="Africa/Gaborone">(UTC+02:00) Africa/Gaborone</option>
+                                    <option value="Africa/Harare">(UTC+02:00) Africa/Harare</option>
+                                    <option value="Africa/Johannesburg">(UTC+02:00) Africa/Johannesburg</option>
+                                    <option value="Africa/Juba">(UTC+03:00) Africa/Juba</option>
+                                    <option value="Africa/Kampala">(UTC+03:00) Africa/Kampala</option>
+                                    <option value="Africa/Khartoum">(UTC+02:00) Africa/Khartoum</option>
+                                    <option value="Africa/Kigali">(UTC+02:00) Africa/Kigali</option>
+                                    <option value="Africa/Kinshasa">(UTC+01:00) Africa/Kinshasa</option>
+                                    <option value="Africa/Lagos">(UTC+01:00) Africa/Lagos</option>
+                                    <option value="Africa/Libreville">(UTC+01:00) Africa/Libreville</option>
+                                    <option value="Africa/Lome">(UTC+00:00) Africa/Lome</option>
+                                    <option value="Africa/Luanda">(UTC+01:00) Africa/Luanda</option>
+                                    <option value="Africa/Lubumbashi">(UTC+02:00) Africa/Lubumbashi</option>
+                                    <option value="Africa/Lusaka">(UTC+02:00) Africa/Lusaka</option>
+                                    <option value="Africa/Malabo">(UTC+01:00) Africa/Malabo</option>
+                                    <option value="Africa/Maputo">(UTC+02:00) Africa/Maputo</option>
+                                    <option value="Africa/Maseru">(UTC+02:00) Africa/Maseru</option>
+                                    <option value="Africa/Mbabane">(UTC+02:00) Africa/Mbabane</option>
+                                    <option value="Africa/Mogadishu">(UTC+03:00) Africa/Mogadishu</option>
+                                    <option value="Africa/Monrovia">(UTC+00:00) Africa/Monrovia</option>
+                                    <option value="Africa/Nairobi">(UTC+03:00) Africa/Nairobi</option>
+                                    <option value="Africa/Ndjamena">(UTC+01:00) Africa/Ndjamena</option>
+                                    <option value="Africa/Niamey">(UTC+01:00) Africa/Niamey</option>
+                                    <option value="Africa/Nouakchott">(UTC+00:00) Africa/Nouakchott</option>
+                                    <option value="Africa/Ouagadougou">(UTC+00:00) Africa/Ouagadougou</option>
+                                    <option value="Africa/Porto-Novo">(UTC+01:00) Africa/Porto-Novo</option>
+                                    <option value="Africa/Sao_Tome">(UTC+00:00) Africa/Sao_Tome</option>
+                                    <option value="Africa/Tripoli">(UTC+02:00) Africa/Tripoli</option>
+                                    <option value="Africa/Tunis">(UTC+01:00) Africa/Tunis</option>
+                                    <option value="Africa/Windhoek">(UTC+02:00) Africa/Windhoek</option>
+                                    <option value="Asia/Aden">(UTC+03:00) Asia/Aden</option>
+                                    <option value="Asia/Almaty">(UTC+06:00) Asia/Almaty</option>
+                                    <option value="Asia/Amman">(UTC+03:00) Asia/Amman</option>
+                                    <option value="Asia/Anadyr">(UTC+12:00) Asia/Anadyr</option>
+                                    <option value="Asia/Aqtau">(UTC+05:00) Asia/Aqtau</option>
+                                    <option value="Asia/Aqtobe">(UTC+05:00) Asia/Aqtobe</option>
+                                    <option value="Asia/Ashgabat">(UTC+05:00) Asia/Ashgabat</option>
+                                    <option value="Asia/Atyrau">(UTC+05:00) Asia/Atyrau</option>
+                                    <option value="Asia/Baghdad">(UTC+03:00) Asia/Baghdad</option>
+                                    <option value="Asia/Bahrain">(UTC+03:00) Asia/Bahrain</option>
+                                    <option value="Asia/Baku">(UTC+04:00) Asia/Baku</option>
+                                    <option value="Asia/Bangkok">(UTC+07:00) Asia/Bangkok</option>
+                                    <option value="Asia/Barnaul">(UTC+07:00) Asia/Barnaul</option>
+                                    <option value="Asia/Beirut">(UTC+03:00) Asia/Beirut</option>
+                                    <option value="Asia/Bishkek">(UTC+06:00) Asia/Bishkek</option>
+                                    <option value="Asia/Brunei">(UTC+08:00) Asia/Brunei</option>
+                                    <option value="Asia/Chita">(UTC+09:00) Asia/Chita</option>
+                                    <option value="Asia/Choibalsan">(UTC+08:00) Asia/Choibalsan</option>
+                                    <option value="Asia/Colombo">(UTC+05:30) Asia/Colombo</option>
+                                    <option value="Asia/Damascus">(UTC+03:00) Asia/Damascus</option>
+                                    <option value="Asia/Dhaka">(UTC+06:00) Asia/Dhaka</option>
+                                    <option value="Asia/Dili">(UTC+09:00) Asia/Dili</option>
+                                    <option value="Asia/Dubai">(UTC+04:00) Asia/Dubai</option>
+                                    <option value="Asia/Dushanbe">(UTC+05:00) Asia/Dushanbe</option>
+                                    <option value="Asia/Famagusta">(UTC+03:00) Asia/Famagusta</option>
+                                    <option value="Asia/Gaza">(UTC+03:00) Asia/Gaza</option>
+                                    <option value="Asia/Hebron">(UTC+03:00) Asia/Hebron</option>
+                                    <option value="Asia/Ho_Chi_Minh">(UTC+07:00) Asia/Ho_Chi_Minh</option>
+                                    <option value="Asia/Hong_Kong">(UTC+08:00) Asia/Hong_Kong</option>
+                                    <option value="Asia/Hovd">(UTC+07:00) Asia/Hovd</option>
+                                    <option value="Asia/Irkutsk">(UTC+08:00) Asia/Irkutsk</option>
+                                    <option value="Asia/Jakarta">(UTC+07:00) Asia/Jakarta</option>
+                                    <option value="Asia/Jayapura">(UTC+09:00) Asia/Jayapura</option>
+                                    <option value="Asia/Jerusalem">(UTC+03:00) Asia/Jerusalem</option>
+                                    <option value="Asia/Kabul">(UTC+04:30) Asia/Kabul</option>
+                                    <option value="Asia/Kamchatka">(UTC+12:00) Asia/Kamchatka</option>
+                                    <option value="Asia/Karachi">(UTC+05:00) Asia/Karachi</option>
+                                    <option value="Asia/Kathmandu">(UTC+05:45) Asia/Kathmandu</option>
+                                    <option value="Asia/Khandyga">(UTC+09:00) Asia/Khandyga</option>
+                                    <option value="Asia/Kolkata">(UTC+05:30) Asia/Kolkata</option>
+                                    <option value="Asia/Krasnoyarsk">(UTC+07:00) Asia/Krasnoyarsk</option>
+                                    <option value="Asia/Kuala_Lumpur">(UTC+08:00) Asia/Kuala_Lumpur</option>
+                                    <option value="Asia/Kuching">(UTC+08:00) Asia/Kuching</option>
+                                    <option value="Asia/Kuwait">(UTC+03:00) Asia/Kuwait</option>
+                                    <option value="Asia/Macau">(UTC+08:00) Asia/Macau</option>
+                                    <option value="Asia/Magadan">(UTC+11:00) Asia/Magadan</option>
+                                    <option value="Asia/Makassar">(UTC+08:00) Asia/Makassar</option>
+                                    <option value="Asia/Manila">(UTC+08:00) Asia/Manila</option>
+                                    <option value="Asia/Muscat">(UTC+04:00) Asia/Muscat</option>
+                                    <option value="Asia/Nicosia">(UTC+03:00) Asia/Nicosia</option>
+                                    <option value="Asia/Novokuznetsk">(UTC+07:00) Asia/Novokuznetsk</option>
+                                    <option value="Asia/Novosibirsk">(UTC+07:00) Asia/Novosibirsk</option>
+                                    <option value="Asia/Omsk">(UTC+06:00) Asia/Omsk</option>
+                                    <option value="Asia/Oral">(UTC+05:00) Asia/Oral</option>
+                                    <option value="Asia/Phnom_Penh">(UTC+07:00) Asia/Phnom_Penh</option>
+                                    <option value="Asia/Pontianak">(UTC+07:00) Asia/Pontianak</option>
+                                    <option value="Asia/Pyongyang">(UTC+09:00) Asia/Pyongyang</option>
+                                    <option value="Asia/Qatar">(UTC+03:00) Asia/Qatar</option>
+                                    <option value="Asia/Qostanay">(UTC+06:00) Asia/Qostanay</option>
+                                    <option value="Asia/Qyzylorda">(UTC+05:00) Asia/Qyzylorda</option>
+                                    <option value="Asia/Riyadh">(UTC+03:00) Asia/Riyadh</option>
+                                    <option value="Asia/Sakhalin">(UTC+11:00) Asia/Sakhalin</option>
+                                    <option value="Asia/Samarkand">(UTC+05:00) Asia/Samarkand</option>
+                                    <option value="Asia/Seoul">(UTC+09:00) Asia/Seoul</option>
+                                    <option value="Asia/Shanghai">(UTC+08:00) Asia/Shanghai</option>
+                                    <option value="Asia/Singapore">(UTC+08:00) Asia/Singapore</option>
+                                    <option value="Asia/Srednekolymsk">(UTC+11:00) Asia/Srednekolymsk</option>
+                                    <option value="Asia/Taipei">(UTC+08:00) Asia/Taipei</option>
+                                    <option value="Asia/Tashkent">(UTC+05:00) Asia/Tashkent</option>
+                                    <option value="Asia/Tbilisi">(UTC+04:00) Asia/Tbilisi</option>
+                                    <option value="Asia/Tehran">(UTC+04:30) Asia/Tehran</option>
+                                    <option value="Asia/Thimphu">(UTC+06:00) Asia/Thimphu</option>
+                                    <option value="Asia/Tokyo">(UTC+09:00) Asia/Tokyo</option>
+                                    <option value="Asia/Tomsk">(UTC+07:00) Asia/Tomsk</option>
+                                    <option value="Asia/Ulaanbaatar">(UTC+08:00) Asia/Ulaanbaatar</option>
+                                    <option value="Asia/Urumqi">(UTC+06:00) Asia/Urumqi</option>
+                                    <option value="Asia/Ust-Nera">(UTC+10:00) Asia/Ust-Nera</option>
+                                    <option value="Asia/Vientiane">(UTC+07:00) Asia/Vientiane</option>
+                                    <option value="Asia/Vladivostok">(UTC+10:00) Asia/Vladivostok</option>
+                                    <option value="Asia/Yakutsk">(UTC+09:00) Asia/Yakutsk</option>
+                                    <option value="Asia/Yangon">(UTC+06:30) Asia/Yangon</option>
+                                    <option value="Asia/Yekaterinburg">(UTC+05:00) Asia/Yekaterinburg</option>
+                                    <option value="Asia/Yerevan">(UTC+04:00) Asia/Yerevan</option>
+                                    <option value="Europe/Amsterdam">(UTC+02:00) Europe/Amsterdam</option>
+                                    <option value="Europe/Andorra">(UTC+02:00) Europe/Andorra</option>
+                                    <option value="Europe/Astrakhan">(UTC+04:00) Europe/Astrakhan</option>
+                                    <option value="Europe/Athens">(UTC+03:00) Europe/Athens</option>
+                                    <option value="Europe/Belgrade">(UTC+02:00) Europe/Belgrade</option>
+                                    <option value="Europe/Berlin">(UTC+02:00) Europe/Berlin</option>
+                                    <option value="Europe/Bratislava">(UTC+02:00) Europe/Bratislava</option>
+                                    <option value="Europe/Brussels">(UTC+02:00) Europe/Brussels</option>
+                                    <option value="Europe/Bucharest">(UTC+03:00) Europe/Bucharest</option>
+                                    <option value="Europe/Budapest">(UTC+02:00) Europe/Budapest</option>
+                                    <option value="Europe/Busingen">(UTC+02:00) Europe/Busingen</option>
+                                    <option value="Europe/Chisinau">(UTC+03:00) Europe/Chisinau</option>
+                                    <option value="Europe/Copenhagen">(UTC+02:00) Europe/Copenhagen</option>
+                                    <option value="Europe/Dublin">(UTC+01:00) Europe/Dublin</option>
+                                    <option value="Europe/Gibraltar">(UTC+02:00) Europe/Gibraltar</option>
+                                    <option value="Europe/Guernsey">(UTC+01:00) Europe/Guernsey</option>
+                                    <option value="Europe/Helsinki">(UTC+03:00) Europe/Helsinki</option>
+                                    <option value="Europe/Isle_of_Man">(UTC+01:00) Europe/Isle_of_Man</option>
+                                    <option value="Europe/Istanbul">(UTC+03:00) Europe/Istanbul</option>
+                                    <option value="Europe/Jersey">(UTC+01:00) Europe/Jersey</option>
+                                    <option value="Europe/Kaliningrad">(UTC+02:00) Europe/Kaliningrad</option>
+                                    <option value="Europe/Kiev">(UTC+03:00) Europe/Kiev</option>
+                                    <option value="Europe/Kirov">(UTC+03:00) Europe/Kirov</option>
+                                    <option value="Europe/Lisbon">(UTC+01:00) Europe/Lisbon</option>
+                                    <option value="Europe/Ljubljana">(UTC+02:00) Europe/Ljubljana</option>
+                                    <option value="Europe/London" selected="selected">(UTC+01:00) Europe/London</option>
+                                    <option value="Europe/Luxembourg">(UTC+02:00) Europe/Luxembourg</option>
+                                    <option value="Europe/Madrid">(UTC+02:00) Europe/Madrid</option>
+                                    <option value="Europe/Malta">(UTC+02:00) Europe/Malta</option>
+                                    <option value="Europe/Mariehamn">(UTC+03:00) Europe/Mariehamn</option>
+                                    <option value="Europe/Minsk">(UTC+03:00) Europe/Minsk</option>
+                                    <option value="Europe/Monaco">(UTC+02:00) Europe/Monaco</option>
+                                    <option value="Europe/Moscow">(UTC+03:00) Europe/Moscow</option>
+                                    <option value="Europe/Oslo">(UTC+02:00) Europe/Oslo</option>
+                                    <option value="Europe/Paris">(UTC+02:00) Europe/Paris</option>
+                                    <option value="Europe/Podgorica">(UTC+02:00) Europe/Podgorica</option>
+                                    <option value="Europe/Prague">(UTC+02:00) Europe/Prague</option>
+                                    <option value="Europe/Riga">(UTC+03:00) Europe/Riga</option>
+                                    <option value="Europe/Rome">(UTC+02:00) Europe/Rome</option>
+                                    <option value="Europe/Samara">(UTC+04:00) Europe/Samara</option>
+                                    <option value="Europe/San_Marino">(UTC+02:00) Europe/San_Marino</option>
+                                    <option value="Europe/Sarajevo">(UTC+02:00) Europe/Sarajevo</option>
+                                    <option value="Europe/Saratov">(UTC+04:00) Europe/Saratov</option>
+                                    <option value="Europe/Simferopol">(UTC+03:00) Europe/Simferopol</option>
+                                    <option value="Europe/Skopje">(UTC+02:00) Europe/Skopje</option>
+                                    <option value="Europe/Sofia">(UTC+03:00) Europe/Sofia</option>
+                                    <option value="Europe/Stockholm">(UTC+02:00) Europe/Stockholm</option>
+                                    <option value="Europe/Tallinn">(UTC+03:00) Europe/Tallinn</option>
+                                    <option value="Europe/Tirane">(UTC+02:00) Europe/Tirane</option>
+                                    <option value="Europe/Ulyanovsk">(UTC+04:00) Europe/Ulyanovsk</option>
+                                    <option value="Europe/Uzhgorod">(UTC+03:00) Europe/Uzhgorod</option>
+                                    <option value="Europe/Vaduz">(UTC+02:00) Europe/Vaduz</option>
+                                    <option value="Europe/Vatican">(UTC+02:00) Europe/Vatican</option>
+                                    <option value="Europe/Vienna">(UTC+02:00) Europe/Vienna</option>
+                                    <option value="Europe/Vilnius">(UTC+03:00) Europe/Vilnius</option>
+                                    <option value="Europe/Volgograd">(UTC+04:00) Europe/Volgograd</option>
+                                    <option value="Europe/Warsaw">(UTC+02:00) Europe/Warsaw</option>
+                                    <option value="Europe/Zagreb">(UTC+02:00) Europe/Zagreb</option>
+                                    <option value="Europe/Zaporozhye">(UTC+03:00) Europe/Zaporozhye</option>
+                                    <option value="Europe/Zurich">(UTC+02:00) Europe/Zurich</option>
+                                </select>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+
+                    </div>
+                    <div class="clearfix"></div>
+
+
+                    <div class="bottom-box-2">
+                        <button type="submit" class="btn-continue right">Save and Continue &gt;</button>
+                        <button type="button" class="btn-previous left"
+                            onclick="location.href='https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/101'">&lt;
+                            Previous</button>
+                    </div>
+
+
+                    <div class="clearfix"></div>
+
+                </form>
+            </div>
+            <!--! end of #container -->
+
+        </div>
+
+
+
+        <div id="alerts_holder" class="alerts_holder alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <div id="alerts_holder_message">
+            </div>
+        </div>
+    </body>
+
+    <footer class="py-4 bg-light mt-auto">
+        <div class="container-fluid px-4">
+            <div class="d-flex align-items-center justify-content-between small">
+                <div class="text-muted">&copy; 2022 Oss One Stop Solutions Ltd</div>
+                <div>
+                    <a href="#">Privacy Policy</a>
+                    &middot;
+                    <a href="#">Terms &amp; Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            check_delivery_address();
+            validate_sale_done_how();
+        });
+
+        $("input[name=signup_retailer_is_same_delivery_address]").change(function () {
+            check_delivery_address();
+        });
+
+        function check_delivery_address(el) {
+            var element = $("input[name=signup_retailer_is_same_delivery_address]");
+            if (element.is(':checked')) {
+                $("#delivery_group input[type=text], #delivery_group select").val('').prop("readonly", true);
+                $('#delivery_group option:not(:selected)').attr('disabled', true);
+                $('#delivery_group button').attr('disabled', true);
+            } else {
+                $("#delivery_group input[type=text], #delivery_group select").prop("readonly", false);
+                $('#delivery_group option:not(:selected)').attr('disabled', false);
+                $('#delivery_group button').attr('disabled', false);
+
+                // Pre-select united kingdom
+                var selectedCountry = $('#ba_country').val();
+                if ((selectedCountry === undefined) || (selectedCountry === null)) {
+                    $('#ba_country').val('gb');
+                }
+            }
+        }
+
+        $("[name=signup_retailer_sale_done_how]").change(function () {
+            validate_sale_done_how();
+        });
+
+        function validate_sale_done_how() {
+            $("#signup_retailer_sale_done_virtually_confirm_kyc_form_group").hide();
+            $("#signup_retailer_sale_done_virtually_confirm_id_form_group").hide();
+
+            switch ($("[name=signup_retailer_sale_done_how]").val()) {
+                case "v":
+                    $("#signup_retailer_sale_done_virtually_confirm_kyc_form_group").show();
+                    $("#signup_retailer_sale_done_virtually_confirm_id_form_group").show();
+                    break;
+            }
+        }
+
+
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.input-datepicker').datepicker({
+                dateFormat: 'dd/mm/yy',
+                regional: get_bootstrap_datepicker_language(),
+            });
+
+        });
+
+        function get_bootstrap_datepicker_language() {
+            var lang = 'en';
+            return lang;
+        } 
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.table tbody tr.disabled button, .table tbody tr.disabled a, .table tbody tr.disabled td').addClass('disabled').unbind('click');
+        });
+    //-->
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript"
+        src="https://ossonestopsolutionsltd.posinabox.eu/assets/jquery-autoNumeric/autoNumeric-min.js"></script>
+    <script type="text/javascript">
+        function format_currency(selector, decimals) {
+            if (typeof decimals === 'undefined') { decimals = '2'; }
+
+            $(selector).autoNumeric("init", {
+                aSep: ',',
+                aDec: '.',
+                aSign: '£',
+                pSign: 'p',
+                mDec: decimals,
+                unSetOnSubmit: true
+            });
+        }
+
+        function format_tax(selector, decimals) {
+            if (typeof decimals === 'undefined') { decimals = '2'; }
+
+            if ($(selector).data('type') !== undefined) {
+                //console.log($(selector).data('type'));
+                if ($(selector).data('type') == 'e') {
+                    tax = $(selector).data('value');
+                    tax_calc = $(selector).data('amount') * (tax / 100);
+                    text = ' + VAT %y';
+                    text = text.replace('%x', tax);
+                    text = text.replace('%y', '<span>' + tax_calc + '</span>');
+                    $(selector).html(text);
+
+                    //format tax
+                    format_currency($(selector + ' span'));
+                }
+                else if ($(selector).data('type') == 'i') {
+                    $(selector).html(' VAT Included');
+                }
+            }
+        }
+
+        function format_number(selector, decimals) {
+            if (typeof decimals === 'undefined') { decimals = '2'; }
+
+            $(selector).autoNumeric("init", {
+                aSep: ',',
+                aDec: '.',
+                mDec: decimals,
+                unSetOnSubmit: true
+            });
+        }
+
+        function format_integer(selector) {
+            $(selector).autoNumeric("init", {
+                aSep: ',',
+                aDec: '.',
+                mDec: '0',
+                unSetOnSubmit: true
+            });
+        }
+
+        $(document).ready(function () {
+            format_currency('.format_currency');
+            format_number('.format_number');
+            format_number('.format_number_3_dec', 3);
+            format_integer('.format_integer');
+        });
+	//-->
+    </script>
+    <script type="text/javascript"
+        src="https://ossonestopsolutionsltd.posinabox.eu/assets/jquery-multi-select/js/jquery.multi-select.js"></script>
+    <script type="text/javascript"
+        src="https://ossonestopsolutionsltd.posinabox.eu/assets/jquery-quicksearch/jquery.quicksearch.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ossonestopsolutionsltd.posinabox.eu/assets/partner/js/general.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/boot_training.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" >Company Name</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                        <!-- <li><a class="dropdown-item" href="#!">Activity Log</a></li> -->
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="dashboard.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Customers</div>
+                            <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Operations
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="customers.html">Customers</a>
+                                    <!-- <a class="nav-link" href="layout-sidenav-light.html">Pending Request(s)</a> -->
+                                    <a class="nav-link" href="bespokepricing.html">Bespoke Pricing</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                CRM
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link" href="prospects.html">Prospects</a>
+                                    <!-- <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Register</a>
+                                            <a class="nav-link" href="password.html">Forgot Password</a>
+                                        </nav>
+                                    </div> -->
+                                    <a class="nav-link" href="mylist.html">My List
+                                        <!-- <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div> -->
+                                    </a>
+                                    <!-- <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="401.html">401 Page</a>
+                                            <a class="nav-link" href="404.html">404 Page</a>
+                                            <a class="nav-link" href="500.html">500 Page</a>
+                                        </nav>
+                                    </div> -->
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Support Materials</div>
+                            <a class="nav-link" href="support_materials.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Support Materials
+                            </a>
+                            <a class="nav-link" href="training.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Training
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Start Bootstrap
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Support Materials</h1>
+
+
+                        <div id="maincontent">
+
+                            <div id="modal-placeholder"></div>
+                
+                            <!-- search  -->
+                <!-- <script>
+                    $(document).ready(function () {
+                        $("Input_text").on("keyup", function () {
+                            var value = $(this).val().toLowerCase();
+                            $(".support_documents").filter(function () {
+                                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                            });
+                        });
+                    });
+                
+                </script> -->
+                
+                <!-- <div class="span24 itemcont" style="padding-top: 35px;">
+                    <div class="span24 pull-right">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr class="heading">
+                                <th nowrap="">Search <input class="form-control input-sm" style="width: 400px" id="Input_text" type="text" placeholder="Type in ...."></th>
+                                <th nowrap=""></th>
+                                
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div> -->
+                
+                <hr><br>
+                <div class="row">
+                    <div class="col-xs-6"><h2>Support Literature</h2></div>
+                    <div class="col-xs-6"><h2>Sales Literature</h2></div>
+                </div>
+                
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h4 style="margin-top: 15px;">Boarding Guides</h4>
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f2/d7b/e6b/5f2d7be6bc226321565261.pdf" target="_blank">Elavon Site Visit Form</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/8a6/bfc/5f58a6bfcd1f9746308687.pdf" target="_blank">Sole Trader Additional Information</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f6/080/78c/5f608078cce30882634626.pdf" target="_blank">Bespoke Pricing Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/d0e/b82/619d0eb823038641863077.pdf" target="_blank">KYC Acceptable Documentation</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/8bf/30a/5f58bf30a86a5318057865.pdf" target="_blank">Correct Formats of Contact Information</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/8e3/0ba/5f58e30ba8dca452518067.pdf" target="_blank">Terminal Delivery Address</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/750/48c/5f575048c3560008251757.pdf" target="_blank">KYC guidance</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5dc/45c/88b/5dc45c88bbbb5990929998.pdf" target="_blank">Elavon Application Checklist</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5dc/468/355/5dc468355d76d794694680.pdf" target="_blank">Restricted, risky, prohibited business</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/76a/f8b/5f576af8b58de261196076.pdf" target="_blank">Elavon Certified Payment Gateway List</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/75f/407/5f575f407384e545234474.pdf" target="_blank">Payment Industry Glossary</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/750/be5/5f5750be55a70760417263.pdf" target="_blank">PCI DSS Guidance (Payment Card Industry Data Security Standards)</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f6/321/541/5f6321541edf7825824922.pdf" target="_blank">Faster Payments Service Guidance (FPS)</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5e1/310/941/5e1310941bd2b865762457.pdf" target="_blank">Card Types</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5e1/da5/1d1/5e1da51d154f3408194852.pdf" target="_blank">MCC list Merchant Category Code Restricted Prohibited High Risk list</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/8f6/c5f/5f58f6c5f0115365280182.pdf" target="_blank">Cooling Off Period</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5e6/a63/698/5e6a636981a19162332507.xlsx" target="_blank">Elavon Risk Appetite Merchant Category Code  MCC Codes - Colour Coded - High Risk Prohibited</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/606/330/4fa/6063304fae19a821007442.pptx" target="_blank">TRADE SECTOR GUIDE MCC MERCHANT CATEGORY CODE RISKY RESTRICTED PROHIBITED</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5e7/0f4/6a1/5e70f46a1ca18246240529.pdf" target="_blank">Visa guide to MCC Merchat Catagory Codes</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f7/df4/9fb/5f7df49fb9599724700603.pdf" target="_blank">Add additional products locations or services to your existing customers</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f7/f41/840/5f7f418409d65172200433.pdf" target="_blank">Change of Bank Account</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f7/df4/df9/5f7df4df9a990282548014.pdf" target="_blank">Change of Director</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5fc/4ce/83d/5fc4ce83df8d6661001306.pdf" target="_blank">eDocs Guide step by step</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/601/8bf/65b/6018bf65bd3b4374582535.pdf" target="_blank">Elavon Ecommerce Website Requirements</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/602/167/e22/602167e223005930606890.pdf" target="_blank">Charity Applications – Additional Requirements</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/602/168/202/60216820266d9889862063.png" target="_blank">Charity Trust and Foundations Information</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/60c/206/98d/60c20698d567d481662844.pdf" target="_blank">Add location pdf (Elavon)</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/60c/206/cea/60c206ceafd83884435438.pdf" target="_blank">Multiple Location PDF (Elavon)</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/629/5f2/f7a/6295f2f7a380c930443874.pdf" target="_blank">Extra Documentation Required for a Club or Society</a>
+                                    </div>
+                                            </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h4 style="margin-top: 15px;">Merchant Guides</h4>
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/8b1/5a3/5f58b15a3e3b6962543339.pdf" target="_blank">Ingenico IWL Series Device Support Sheet</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/8b7/121/5f58b7121b5fd248313870.pdf" target="_blank">Ingenico Move3500 Device Support Sheet</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/8b8/29e/5f58b829e6783579149078.pdf" target="_blank">Ingenico Move 3500 User Guide</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5d8/a24/3ba/5d8a243ba2175810333681.pdf" target="_blank">Spire SPC5 Datasheet</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5d8/a24/8a2/5d8a248a2b25a869756610.pdf" target="_blank">Spire SPG7 Datasheet</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5d8/a24/e74/5d8a24e74d008717941795.pdf" target="_blank">Spire SPC5 Quick Reference Guide (QRG)</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5d8/a25/1e4/5d8a251e45357420385696.pdf" target="_blank">Spire SPG7 Quick Reference Guide (QRG)</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5d8/a26/925/5d8a269259ad3072016356.pdf" target="_blank">Spire SPG7 Wifi Quick Reference Guide (QRG)</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/600/06e/7e2/60006e7e22e23286664422.pdf" target="_blank">Spire SPC5 and SPG7 User Guide</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/8f8/53c/5f58f853c4c3f450187256.pdf" target="_blank">Go Mobile Leaflet</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5dc/ae4/220/5dcae422019c6382952651.pdf" target="_blank">Go Mobile User Guide</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/d0e/a5a/619d0ea5af14f583788560.pdf" target="_blank">Merchant Contacts</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/76b/b64/5f576bb64f910925471319.pdf" target="_blank">Adding a user to VT Virtual Terminal</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/74f/418/5f574f4185a52412815890.pdf" target="_blank">Refunding a Transaction Virtual Terminal VT</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/8fa/926/5f58fa9269297516242061.pdf" target="_blank">Processing a Virtual Terminal Transaction</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/b54/0c2/5f5b540c2f796665628602.pdf" target="_blank">Unbranded 12 page Brochure</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/60c/9dd/f94/60c9ddf9498c8715683244.pdf" target="_blank">Setting up your Miura M020 – GO MOBILE VIDEO</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/b80/e45/5f5b80e45c05b690514690.pdf" target="_blank">Elavon Connect Guide</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/608/7da/194/6087da194b495425359102.pdf" target="_blank">Pax A920 User Guide (POSitive)</a>
+                                    </div>
+                                        </div>
+                        <div class="col-xs-6">
+                            <h4 style="margin-top: 15px;">Merchant Guides</h4>
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/752/a14/5f5752a14fc85512452128.pdf" target="_blank">Pax S800 Device Support Sheet</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/753/3b9/5f57533b93d3d605605252.pdf" target="_blank">Pax S900 Device Support Sheet</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f8/eec/627/5f8eec627624a292605420.pdf" target="_blank">PAX S800 User Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5db/c63/857/5dbc6385785be982819699.pdf" target="_blank">Elavon Statement Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5e5/f9d/c90/5e5f9dc90ce56988498567.pdf" target="_blank">PAX S900 User Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f1/802/4dc/5f18024dc36ef770766624.pdf" target="_blank">Pay By Link Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f8/71d/c42/5f871dc425a97678000106.pdf" target="_blank">Ingenico Desk 3500 Desktop Quick Start Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f8/71d/fdb/5f871dfdb4f07802427710.pdf" target="_blank">Ingenico Move 3500 Portable Quick Start Guide - Bluetooth and Wifi</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f8/eed/73b/5f8eed73bf34f144118664.pdf" target="_blank">Pax S800 Quick Start Guide QSG</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5fa/29d/1bd/5fa29d1bdb8fc541512466.pdf" target="_blank">Optomany Pax A920 Quick Set up guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5fa/13b/68f/5fa13b68f196d599037770.pdf" target="_blank">Optomany Pax A920 Data Sheet</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/601/8c0/7a2/6018c07a243bb624266828.pdf" target="_blank">Elavon Connect Reporting Tool Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/607/829/4a6/6078294a6600a996356117.pdf" target="_blank">Introduction to EPOS Now</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/608/7e2/bbc/6087e2bbcaa52688616212.pdf" target="_blank">PAX A920 – SIM enabling steps</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/608/983/0c2/6089830c237de442617716.pdf" target="_blank">PAX A920 Inserting a SIM card APN</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/cc1/db7/619cc1db7a181381064932.pdf" target="_blank">EPOS Now Oprional Extras (Accessories)</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/e64/c30/619e64c30f3f0767601737.pdf" target="_blank">Castles Technology V3M2 Portable (Wi-Fi and GPRS) Installation guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/e64/f5b/619e64f5b4591168158525.pdf" target="_blank">Castles Technology Vega 3000 guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/e65/41e/619e6541e8595443190262.pdf" target="_blank">Castles Technology Vega 3000 Paper roll installation</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/e65/6b0/619e656b0b448485435235.pdf" target="_blank">Castles Technology Installation guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/e65/a8a/619e65a8aee6b357121860.pdf" target="_blank">Castles Technology V3C V3M2 User Manual</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/e65/e43/619e65e43e478738462643.pdf" target="_blank">Castles Technology Elavon 46D Menu navigation guide</a>
+                                    </div>
+                                            </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h4 style="margin-top: 15px;">Portal Guides</h4>
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/76b/b64/5f576bb64f910925471319.pdf" target="_blank">Adding a user to VT Virtual Terminal</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/74f/418/5f574f4185a52412815890.pdf" target="_blank">Refunding a Transaction Virtual Terminal VT</a>
+                                    </div>
+                                        </div>
+                        <div class="col-xs-6">
+                            <h4 style="margin-top: 15px;">Portal Guides</h4>
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f6/4ac/958/5f64ac95813ff770709775.pdf" target="_blank">How to use Voyager</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f7/df4/9fb/5f7df49fb9599724700603.pdf" target="_blank">Add additional products locations or services to your existing customers</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f7/f41/840/5f7f418409d65172200433.pdf" target="_blank">Change of Bank Account</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f7/df4/df9/5f7df4df9a990282548014.pdf" target="_blank">Change of Director</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5fc/4ce/83d/5fc4ce83df8d6661001306.pdf" target="_blank">eDocs Guide step by step</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5fd/a22/a97/5fda22a97c405382348656.pdf" target="_blank">CRM Platform Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/601/8bf/65b/6018bf65bd3b4374582535.pdf" target="_blank">Elavon Ecommerce Website Requirements</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/602/167/e22/602167e223005930606890.pdf" target="_blank">Charity Applications – Additional Requirements</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/602/168/202/60216820266d9889862063.png" target="_blank">Charity Trust and Foundations Information</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/60c/206/98d/60c20698d567d481662844.pdf" target="_blank">Add location pdf (Elavon)</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/60c/206/cea/60c206ceafd83884435438.pdf" target="_blank">Multiple Location PDF (Elavon)</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/629/5f2/f7a/6295f2f7a380c930443874.pdf" target="_blank">Extra Documentation Required for a Club or Society</a>
+                                    </div>
+                                            </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h4 style="margin-top: 15px;">Support Guides</h4>
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5db/c65/236/5dbc65236c45e484363022.pdf" target="_blank">Elavon Online Complaince Guide Ecommerce</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/76c/621/5f576c621eb44574217514.pdf" target="_blank">EPOS Now Partnership Hub</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/9ee/34c/5f59ee34c0458935391558.pdf" target="_blank">E-Commerce and Virtual Terminal Leaflet</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5dc/ae4/220/5dcae422019c6382952651.pdf" target="_blank">Go Mobile User Guide</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/d0e/a5a/619d0ea5af14f583788560.pdf" target="_blank">Merchant Contacts</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/76b/b64/5f576bb64f910925471319.pdf" target="_blank">Adding a user to VT Virtual Terminal</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/74f/418/5f574f4185a52412815890.pdf" target="_blank">Refunding a Transaction Virtual Terminal VT</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/60c/9dd/f94/60c9ddf9498c8715683244.pdf" target="_blank">Setting up your Miura M020 – GO MOBILE VIDEO</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/b80/e45/5f5b80e45c05b690514690.pdf" target="_blank">Elavon Connect Guide</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/608/7da/194/6087da194b495425359102.pdf" target="_blank">Pax A920 User Guide (POSitive)</a>
+                                    </div>
+                                        </div>
+                        <div class="col-xs-6">
+                            <h4 style="margin-top: 15px;">Support Guides</h4>
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/a19/4e8/5f5a194e831a8054672549.pdf" target="_blank">Adding a user to your Boarding Platform</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f6/080/78c/5f608078cce30882634626.pdf" target="_blank">Bespoke Pricing Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/8be/2e6/5f58be2e67c96276937028.pdf" target="_blank">How to withdraw an application</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/d0e/b82/619d0eb823038641863077.pdf" target="_blank">KYC Acceptable Documentation</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/8be/947/5f58be947341c881176451.pdf" target="_blank">Analytics App Document</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/8bf/30a/5f58bf30a86a5318057865.pdf" target="_blank">Correct Formats of Contact Information</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/752/a14/5f5752a14fc85512452128.pdf" target="_blank">Pax S800 Device Support Sheet</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/753/3b9/5f57533b93d3d605605252.pdf" target="_blank">Pax S900 Device Support Sheet</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/8e3/0ba/5f58e30ba8dca452518067.pdf" target="_blank">Terminal Delivery Address</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f8/eec/627/5f8eec627624a292605420.pdf" target="_blank">PAX S800 User Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/750/48c/5f575048c3560008251757.pdf" target="_blank">KYC guidance</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5db/c63/857/5dbc6385785be982819699.pdf" target="_blank">Elavon Statement Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5dc/45c/88b/5dc45c88bbbb5990929998.pdf" target="_blank">Elavon Application Checklist</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5dc/468/355/5dc468355d76d794694680.pdf" target="_blank">Restricted, risky, prohibited business</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/76a/f8b/5f576af8b58de261196076.pdf" target="_blank">Elavon Certified Payment Gateway List</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/75f/407/5f575f407384e545234474.pdf" target="_blank">Payment Industry Glossary</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/b55/300/5f5b553008cdb496472552.pdf" target="_blank">Understanding your card acceptance report</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/750/be5/5f5750be55a70760417263.pdf" target="_blank">PCI DSS Guidance (Payment Card Industry Data Security Standards)</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f6/321/541/5f6321541edf7825824922.pdf" target="_blank">Faster Payments Service Guidance (FPS)</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5e1/310/941/5e1310941bd2b865762457.pdf" target="_blank">Card Types</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5e1/da5/1d1/5e1da51d154f3408194852.pdf" target="_blank">MCC list Merchant Category Code Restricted Prohibited High Risk list</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/761/2ce/5f57612ce42f7682875331.pdf" target="_blank">Adding a logo request (Ingenico &amp; Spire Terminals)</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/767/300/5f5767300a119221749401.pdf" target="_blank">Changing/Amending Receipt Requests</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/744/674/5f574467482b6341010462.pdf" target="_blank">Adding American Express (AMEX) Requests</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/748/4ca/5f57484ca98d0700176896.pdf" target="_blank">Adding or removing cashback requests</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/8fc/460/5f58fc460f916432054768.pdf" target="_blank">Change of Merchant Details request</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/8fc/973/5f58fc973a8ee059306640.pdf" target="_blank">Change of Legal Name, Trading Name or  Address request</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/760/a58/5f5760a58332f865709502.pdf" target="_blank">Add or remove Gratuity request</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/760/0f3/5f57600f36180209963167.pdf" target="_blank">Terminal Swap out Requests</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5e4/1ab/ea8/5e41abea89fd1096585706.pdf" target="_blank">Change of Trading Name and Address form</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/8f6/c5f/5f58f6c5f0115365280182.pdf" target="_blank">Cooling Off Period</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/74f/947/5f574f9472600482194786.pdf" target="_blank">Gross and Net Settlement</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5e5/f9d/c90/5e5f9dc90ce56988498567.pdf" target="_blank">PAX S900 User Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5e6/a63/698/5e6a636981a19162332507.xlsx" target="_blank">Elavon Risk Appetite Merchant Category Code  MCC Codes - Colour Coded - High Risk Prohibited</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/606/330/4fa/6063304fae19a821007442.pptx" target="_blank">TRADE SECTOR GUIDE MCC MERCHANT CATEGORY CODE RISKY RESTRICTED PROHIBITED</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5e7/0f4/6a1/5e70f46a1ca18246240529.pdf" target="_blank">Visa guide to MCC Merchat Catagory Codes</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f1/802/4dc/5f18024dc36ef770766624.pdf" target="_blank">Pay By Link Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f6/4ac/958/5f64ac95813ff770709775.pdf" target="_blank">How to use Voyager</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f7/df4/9fb/5f7df49fb9599724700603.pdf" target="_blank">Add additional products locations or services to your existing customers</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f7/f41/840/5f7f418409d65172200433.pdf" target="_blank">Change of Bank Account</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f7/df4/df9/5f7df4df9a990282548014.pdf" target="_blank">Change of Director</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f8/eed/73b/5f8eed73bf34f144118664.pdf" target="_blank">Pax S800 Quick Start Guide QSG</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5fa/29d/1bd/5fa29d1bdb8fc541512466.pdf" target="_blank">Optomany Pax A920 Quick Set up guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5fa/13b/68f/5fa13b68f196d599037770.pdf" target="_blank">Optomany Pax A920 Data Sheet</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5fb/30f/111/5fb30f1114fda039073325.pdf" target="_blank">Global Payments Statement Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5fb/30f/434/5fb30f434c064511786027.pdf" target="_blank">First Data FDMS  Statement Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5fc/4ce/83d/5fc4ce83df8d6661001306.pdf" target="_blank">eDocs Guide step by step</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5fd/0c6/f03/5fd0c6f03188f590371108.pdf" target="_blank">Paypal Statement Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5fd/0c8/029/5fd0c80293580824018070.pdf" target="_blank">Barclays Statement Guidance</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5fd/0c8/a23/5fd0c8a23264a161907357.pdf" target="_blank">Worldpay Statement Guidance</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5fd/89a/868/5fd89a8682fb3855378270.pdf" target="_blank">Optomany Nursery Settlement Process Explained</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5fd/a22/a97/5fda22a97c405382348656.pdf" target="_blank">CRM Platform Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/601/8bf/65b/6018bf65bd3b4374582535.pdf" target="_blank">Elavon Ecommerce Website Requirements</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/601/8c0/7a2/6018c07a243bb624266828.pdf" target="_blank">Elavon Connect Reporting Tool Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/602/167/e22/602167e223005930606890.pdf" target="_blank">Charity Applications – Additional Requirements</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/602/168/202/60216820266d9889862063.png" target="_blank">Charity Trust and Foundations Information</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/608/7e2/bbc/6087e2bbcaa52688616212.pdf" target="_blank">PAX A920 – SIM enabling steps</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/608/983/0c2/6089830c237de442617716.pdf" target="_blank">PAX A920 Inserting a SIM card APN</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/60c/206/98d/60c20698d567d481662844.pdf" target="_blank">Add location pdf (Elavon)</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/60c/206/cea/60c206ceafd83884435438.pdf" target="_blank">Multiple Location PDF (Elavon)</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/629/5f2/f7a/6295f2f7a380c930443874.pdf" target="_blank">Extra Documentation Required for a Club or Society</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/cc1/db7/619cc1db7a181381064932.pdf" target="_blank">EPOS Now Oprional Extras (Accessories)</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/e65/41e/619e6541e8595443190262.pdf" target="_blank">Castles Technology Vega 3000 Paper roll installation</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/621/4c2/aa6/6214c2aa6a94a471806023.pdf" target="_blank">A920 SEMI-INTEGRATION GUIDE (EPOS NOW)</a>
+                                    </div>
+                                            </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h4 style="margin-top: 15px;">Product Information</h4>
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5d8/a24/3ba/5d8a243ba2175810333681.pdf" target="_blank">Spire SPC5 Datasheet</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5d8/a24/8a2/5d8a248a2b25a869756610.pdf" target="_blank">Spire SPG7 Datasheet</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5d8/a24/e74/5d8a24e74d008717941795.pdf" target="_blank">Spire SPC5 Quick Reference Guide (QRG)</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5d8/a25/1e4/5d8a251e45357420385696.pdf" target="_blank">Spire SPG7 Quick Reference Guide (QRG)</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5d8/a26/925/5d8a269259ad3072016356.pdf" target="_blank">Spire SPG7 Wifi Quick Reference Guide (QRG)</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/600/06e/7e2/60006e7e22e23286664422.pdf" target="_blank">Spire SPC5 and SPG7 User Guide</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5db/c65/236/5dbc65236c45e484363022.pdf" target="_blank">Elavon Online Complaince Guide Ecommerce</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/76c/621/5f576c621eb44574217514.pdf" target="_blank">EPOS Now Partnership Hub</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/9ee/34c/5f59ee34c0458935391558.pdf" target="_blank">E-Commerce and Virtual Terminal Leaflet</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/8f8/53c/5f58f853c4c3f450187256.pdf" target="_blank">Go Mobile Leaflet</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5dc/ae4/220/5dcae422019c6382952651.pdf" target="_blank">Go Mobile User Guide</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/b54/0c2/5f5b540c2f796665628602.pdf" target="_blank">Unbranded 12 page Brochure</a>
+                                    </div>
+                                
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/60c/9dd/f94/60c9ddf9498c8715683244.pdf" target="_blank">Setting up your Miura M020 – GO MOBILE VIDEO</a>
+                                    </div>
+                                        </div>
+                        <div class="col-xs-6">
+                            <h4 style="margin-top: 15px;">Product Information</h4>
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/8be/947/5f58be947341c881176451.pdf" target="_blank">Analytics App Document</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/752/a14/5f5752a14fc85512452128.pdf" target="_blank">Pax S800 Device Support Sheet</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f8/eec/627/5f8eec627624a292605420.pdf" target="_blank">PAX S800 User Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/74f/947/5f574f9472600482194786.pdf" target="_blank">Gross and Net Settlement</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5e5/f9d/c90/5e5f9dc90ce56988498567.pdf" target="_blank">PAX S900 User Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f8/71d/c42/5f871dc425a97678000106.pdf" target="_blank">Ingenico Desk 3500 Desktop Quick Start Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f8/71d/fdb/5f871dfdb4f07802427710.pdf" target="_blank">Ingenico Move 3500 Portable Quick Start Guide - Bluetooth and Wifi</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f8/eed/73b/5f8eed73bf34f144118664.pdf" target="_blank">Pax S800 Quick Start Guide QSG</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5fa/29d/1bd/5fa29d1bdb8fc541512466.pdf" target="_blank">Optomany Pax A920 Quick Set up guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5fa/13b/68f/5fa13b68f196d599037770.pdf" target="_blank">Optomany Pax A920 Data Sheet</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/601/8c0/7a2/6018c07a243bb624266828.pdf" target="_blank">Elavon Connect Reporting Tool Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/607/829/4a6/6078294a6600a996356117.pdf" target="_blank">Introduction to EPOS Now</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/608/7e2/bbc/6087e2bbcaa52688616212.pdf" target="_blank">PAX A920 – SIM enabling steps</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/608/983/0c2/6089830c237de442617716.pdf" target="_blank">PAX A920 Inserting a SIM card APN</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/cc1/db7/619cc1db7a181381064932.pdf" target="_blank">EPOS Now Oprional Extras (Accessories)</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/e64/c30/619e64c30f3f0767601737.pdf" target="_blank">Castles Technology V3M2 Portable (Wi-Fi and GPRS) Installation guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/e64/f5b/619e64f5b4591168158525.pdf" target="_blank">Castles Technology Vega 3000 guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/e65/6b0/619e656b0b448485435235.pdf" target="_blank">Castles Technology Installation guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/e65/a8a/619e65a8aee6b357121860.pdf" target="_blank">Castles Technology V3C V3M2 User Manual</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/e65/e43/619e65e43e478738462643.pdf" target="_blank">Castles Technology Elavon 46D Menu navigation guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/621/4c2/aa6/6214c2aa6a94a471806023.pdf" target="_blank">A920 SEMI-INTEGRATION GUIDE (EPOS NOW)</a>
+                                    </div>
+                                            </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-xs-6">
+                                    </div>
+                        <div class="col-xs-6">
+                            <h4 style="margin-top: 15px;">Commercial Documents</h4>
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f6/080/78c/5f608078cce30882634626.pdf" target="_blank">Bespoke Pricing Guide</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/5f5/b55/300/5f5b553008cdb496472552.pdf" target="_blank">Understanding your card acceptance report</a>
+                                    </div>
+                                            </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h4 style="margin-top: 15px;">Contacts</h4>
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px; ">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/d0e/a5a/619d0ea5af14f583788560.pdf" target="_blank">Merchant Contacts</a>
+                                    </div>
+                                        </div>
+                        <div class="col-xs-6">
+                            <h4 style="margin-top: 15px;">Contacts</h4>
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/619/d0f/015/619d0f015c37f132175187.pdf" target="_blank">Partner Contacts</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/61b/9fe/954/61b9fe954079b020376674.pdf" target="_blank">V9-ContactMatrix</a>
+                                    </div>
+                                            </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-xs-6">
+                                    </div>
+                        <div class="col-xs-6">
+                            <h4 style="margin-top: 15px;">Power (gas and electricity)</h4>
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/618/11b/f75/61811bf75312d776527331.pdf" target="_blank">Power Partners Application Process</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/60f/01d/921/60f01d92109f9383013974.pdf" target="_blank">Power Partners Supplier Criteria and Payment Terms</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/60d/1ad/427/60d1ad4276c6f431815186.xlsx" target="_blank">Annual Consumption Calculator Power Partners</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/60d/1ad/95a/60d1ad95ab8b3952837557.pptx" target="_blank">Power Partners Pre Learning Pack</a>
+                                    </div>
+                                    
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/617/69f/7bd/61769f7bd9f02086933498.pdf" target="_blank">Power Partners Frequently Asked Questions (FAQ)</a>
+                                    </div>
+                                            </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-xs-6">
+                                    </div>
+                        <div class="col-xs-6">
+                            <h4 style="margin-top: 15px;">Merchant Services Guidance Videos</h4>
+                                    <div class="support_documents" style="margin: 5px 0 5px 10px;">
+                                        <a href="https://voyager.v9.group/storage/app/uploads/public/61b/227/b88/61b227b887ec8706173643.pdf" target="_blank">1. Logging In</a>
+                                    </div>
+                                            </div>
+                    </div>
+                
+                
+                            
+                        
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
+                    

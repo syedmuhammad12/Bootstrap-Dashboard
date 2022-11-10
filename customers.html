@@ -1,0 +1,2469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="css/theme.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/boot_training.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" >Company Name</a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button>
+        <!-- Navbar Search-->
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..."
+                    aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i
+                        class="fas fa-search"></i></button>
+            </div>
+        </form>
+        <!-- Navbar-->
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#!">Settings</a></li>
+                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Core</div>
+                        <a class="nav-link" href="dashboard.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Dashboard
+                        </a>
+                        <div class="sb-sidenav-menu-heading">Customers</div>
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            Operations
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="customers.html">Customers</a>
+                                <!-- <a class="nav-link" href="layout-sidenav-light.html">Pending Request(s)</a> -->
+                                <a class="nav-link" href="bespokepricing.html">Bespoke Pricing</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            CRM
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link" href="prospects.html">Prospects</a>
+                                <!-- <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="login.html">Login</a>
+                                        <a class="nav-link" href="register.html">Register</a>
+                                        <a class="nav-link" href="password.html">Forgot Password</a>
+                                    </nav>
+                                </div> -->
+                                <a class="nav-link" href="mylist.html">My List
+                                    <!-- <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div> -->
+                                </a>
+                                <!-- <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="401.html">401 Page</a>
+                                        <a class="nav-link" href="404.html">404 Page</a>
+                                        <a class="nav-link" href="500.html">500 Page</a>
+                                    </nav>
+                                </div> -->
+                            </nav>
+                        </div>
+                        <div class="sb-sidenav-menu-heading">Support Materials</div>
+                        <a class="nav-link" href="support_materials.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Support Materials
+                        </a>
+                        <a class="nav-link" href="training.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Training
+                        </a>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Logged in as:</div>
+                    Start Bootstrap
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+
+
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4">Customers</h1>
+
+                    <div class="pull-right filters">
+                        <a class="btn btn-primary btn-sm pull-right filters" role="button" target="_blank" href="new_customers.html"><span class="glyphicon glyphicon-plus"></span> New Customer</a>
+                    </div>
+
+                    <div class="span24 itemcont" style="padding-top: 40px;">
+
+                        <div class="span24 pull-right">
+
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr class="heading">
+                                        <th nowrap=""><span class="label label-default">CUSTOMER-REF</span> <span
+                                                class="label label-primary">MID</span></th>
+                                        <th nowrap="" class="is_sortable" data-order-by="name-desc">Registered, Legal
+                                            and Trading Name, Business Contact <span
+                                                class="glyphicon custom-glyphicon-sort"></span></th>
+                                        <th nowrap="">FPS</th>
+                                        <th nowrap="">KYC</th>
+                                        <th nowrap="" class="is_sortable" data-order-by="created-asc">Started <span
+                                                class="glyphicon custom-glyphicon-sort-by-down"></span></th>
+                                        <th nowrap="" class="text-right">Trans</th>
+                                        <th nowrap="" class="text-right">Revenue</th>
+                                        <th nowrap="" class="text-right">AVG Value</th>
+                                        <th nowrap="nowrap">App Version</th>
+                                        <th nowrap="nowrap">Application Status <span class="label label-warning">Finance
+                                                Ref</span></th>
+                                        <th nowrap="nowrap">Seller Name</th>
+                                        <th nowrap="">
+                                            <div class="form-group">
+                                                <select name="pagination_limit" class="form-control input-sm"
+                                                    id="pagination_limit">
+                                                    <option value="15" selected="selected">15 rows</option>
+                                                    <option value="25">25 rows</option>
+                                                    <option value="50">50 rows</option>
+                                                    <option value="all">ALL</option>
+                                                </select>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr class="filter">
+                                        <th nowrap="" class="text-center">
+                                            <div class="form-group">
+                                                <input type="text" name="filter_retailer_mid" value=""
+                                                    class="form-control input-sm" id="filter_retailer_mid"
+                                                    placeholder="Customer Ref, MID">
+                                            </div>
+                                        </th>
+                                        <th nowrap="">
+                                            <input type="text" name="filter_free_text" value=""
+                                                class="form-control input-sm" id="filter_free_text"
+                                                placeholder="POSINABOX registered name">
+                                        </th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th class="text-right"></th>
+                                        <th class="text-right"></th>
+                                        <th class="text-right"></th>
+                                        <th nowrap="nowrap"></th>
+                                        <th nowrap="nowrap">
+                                            <div class="form-group">
+                                                <select name="filter_instant_decision_status"
+                                                    class="form-control input-sm" id="filter_instant_decision_status">
+                                                    <option value="all">ALL</option>
+                                                    <option value="id_not_completed">APPLICATION NOT COMPLETED</option>
+                                                    <option value="awaiting_esig">AWAITING E-SIGNATURE</option>
+                                                    <option value="awaiting_internal_review">AWAITING INTERNAL REVIEW
+                                                    </option>
+                                                    <option value="internal_review_done">INTERNAL REVIEW DONE</option>
+                                                    <option value="pre_elavon_query">PRE ELAVON QUERY</option>
+                                                    <option value="elavon_query">ELAVON QUERY</option>
+                                                    <option value="awaiting_mid_activation">AWAITING MID ACTIVATION
+                                                    </option>
+                                                    <option value="mid_approved">MID APPROVED</option>
+                                                    <option value="completed">AWAITING TERMINAL(S) ORDERED</option>
+                                                    <option value="terminal_ordered">TERMINAL(S) ORDERED</option>
+                                                    <option value="terminal_dispatched">TERMINAL(S) DISPATCHED</option>
+                                                    <option value="terminal_live">LIVE</option>
+                                                    <option value="terminal_live_transacted_previous_month">LIVE - TRN
+                                                        PREVIOUS MONTH</option>
+                                                    <option value="terminal_live_transacted_this_month">LIVE - TRN THIS
+                                                        MONTH</option>
+                                                    <option value="declined">DECLINED</option>
+                                                    <option value="archived">ARCHIVED</option>
+                                                    <option value="closed">CLOSED</option>
+                                                    <option value="withdrawn">WITHDRAWN</option>
+                                                    <option value="awaiting_processing">AWAITING PROCESSING</option>
+                                                    <option value="fully_processed">FULLY PROCESSED</option>
+                                                    <option value="live_utilities">LIVE - UTILITIES</option>
+                                                </select>
+                                            </div>
+                                        </th>
+                                        <th nowrap="nowrap">
+                                            <div class="form-group">
+                                                <select name="filter_partner_user_id" class="form-control input-sm"
+                                                    id="filter_partner_user_id">
+                                                    <option value="all">ALL</option>
+                                                    <option value="2CFB90BF-E907-9BE3-92D0-C6400CD49C20">Ashish
+                                                        Mehndiratta</option>
+                                                    <option value="2D0E297D-2FBF-C17C-21FE-10973CC1E266">Barry Langford
+                                                    </option>
+                                                    <option value="23FD3C4C-60D4-23C9-1E53-71F5D26C646A">barber hussain
+                                                    </option>
+                                                    <option value="AF98F4C7-646F-F84B-7BCD-5C75D437DD63">Eddie McKenna
+                                                    </option>
+                                                    <option value="1A81D3BC-A726-70D5-DB62-560D1FDED7D0">Imran khan
+                                                    </option>
+                                                    <option value="CCB8026E-EEAF-8ADC-C4D4-81FDDD2D564A">David</option>
+                                                    <option value="8DB8293B-AA8C-8BCF-A3CF-74401F2BEC05">Jamshaid Abbid
+                                                    </option>
+                                                    <option value="106BD0AF-5F8F-8EB7-5127-54C033641299">kay caan
+                                                    </option>
+                                                    <option value="942A1E3F-5D99-9AE1-05B1-F2FA006DE122">Major Ali
+                                                    </option>
+                                                    <option value="3C1E2C75-343E-B9AD-AD1E-ECA914E3B2D5">ryan caan
+                                                    </option>
+                                                    <option value="2A940424-A4CB-C01F-28D5-6C5181A41AA6">Shahid mahmood
+                                                    </option>
+                                                    <option value="7E2678E4-DBF5-6188-9CB7-EB74A64CA8FF">Fiza Caan
+                                                    </option>
+                                                    <option value="59584263-7F9C-E3E1-FDE8-7265C63BEC59">[&nbsp;Rana
+                                                        Khan&nbsp;]</option>
+                                                </select>
+                                            </div>
+                                        </th>
+                                        <th class="text-center" nowrap="">
+                                            <div class="form-group">
+                                                <button type="button" name="btn_filter" id="btn_filter" value="Filter"
+                                                    class="btn btn-primary btn-sm"><span
+                                                        class="glyphicon glyphicon-filter"></span> Filter</button>
+                                                <button type="button" name="btn_export" id="btn_export" value="Export"
+                                                    class="btn btn-primary btn-sm"><span
+                                                        class="glyphicon glyphicon-export"></span> Export</button>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+
+
+                                <tbody>
+                                    <tr class="">
+                                        <td nowrap="" class="text-center"><span
+                                                class="label label-default">22603</span><br><br><span
+                                                class="label label-primary"></span></td>
+                                        <td nowrap="" class="sec-col">Woody's Home Interiorss<br><strong>WOODY'S HOME
+                                                INTERIORS LTD T/A Woodys Home Interiors</strong><br>Kevin
+                                            Walker<br>(woodyshomeimprovements@gmail.com +44 141 944200)<br><span
+                                                class="smaller">https://woodyshomeinteriorss-ossonestopsolutionsltd.posinabox.eu</span>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/2A97F386-EDA5-D9E1-A3C8-13A70F2F230A"
+                                                target="_blank"><span class="glyphicon glyphicon-new-window"></span></a>
+
+
+                                        </td>
+
+                                        <td><span class="glyphicon glyphicon-ok"></span></td>
+                                        <td></td>
+                                        <td class="smaller">20/04/2021 09:57:05</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">£0.00</td>
+                                        <td class="text-right">£0.00</td>
+                                        <td nowrap="nowrap"></td>
+                                        <td class="smaller">
+                                            AWAITING E-SIGNATURE<br><br><span class="label label-warning"
+                                                style="font-size: x-small;"></span><br><span
+                                                style="white-space: nowrap"><strong>MID</strong>: Contract
+                                                generated</span><br><span
+                                                style="white-space: nowrap"><strong>Finance</strong>: Awaiting Elavon
+                                                Registration</span><br><span
+                                                style="white-space: nowrap"><strong>Terminal</strong>: Awaiting
+                                                MID<br>Awaiting Finance</span><br> </td>
+                                        <td class="smaller">
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/2D0E297D-2FBF-C17C-21FE-10973CC1E266"
+                                                target="_blank">Barry Langford <span
+                                                    class="glyphicon glyphicon-new-window"></span></a>
+                                        </td>
+                                        <td width="100" style="text-align: right;">
+
+                                            <button class="btn btn-primary btn-xs retailer_form_operations_log_modal"
+                                                data-retailer-id="2A97F386-EDA5-D9E1-A3C8-13A70F2F230A"
+                                                style="margin-bottom:3px;">
+                                                <span class="glyphicon glyphicon-book"></span> &nbsp; Application
+                                                Tracker </button>
+                                            <div class="btn-group" style="width:100%; margin-top:4px;">
+                                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                                    data-toggle="dropdown" style="width:100%;">
+                                                    <span class="glyphicon glyphicon-menu-hamburger"></span> &nbsp;
+                                                    Actions &nbsp; <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-custom-right" role="menu">
+
+                                                    <li><a href="#" class="retailer_form_files_modal"
+                                                            data-retailer-id="2A97F386-EDA5-D9E1-A3C8-13A70F2F230A"><small><span
+                                                                    class="glyphicon glyphicon-file"></span> &nbsp; Show
+                                                                Customer's Files</small></a></li>
+                                                    <li><a href="#" class="retailer_form_operations_log_modal"
+                                                            data-retailer-id="2A97F386-EDA5-D9E1-A3C8-13A70F2F230A"><small><span
+                                                                    class="glyphicon glyphicon-book"></span> &nbsp; Show
+                                                                Application Tracker</small></a></li>
+                                                    <li class="list-group-item-info"><a href="#"
+                                                            class="retailer_form_commission_info_modal"
+                                                            data-retailer-id="2A97F386-EDA5-D9E1-A3C8-13A70F2F230A"><small><span
+                                                                    class="glyphicon glyphicon-info-sign"></span> &nbsp;
+                                                                Commission Information</small></a></li>
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-warning"><a target="_blank"
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/2A97F386-EDA5-D9E1-A3C8-13A70F2F230A"><small><span
+                                                                    class="glyphicon glyphicon-new-window"></span>
+                                                                &nbsp; Customer Dashboard</small></a></li>
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="retailer_form_modal"
+                                                            data-retailer-id="2A97F386-EDA5-D9E1-A3C8-13A70F2F230A"><small><span
+                                                                    class="glyphicon glyphicon-pencil"></span> &nbsp;
+                                                                Edit Customer</small></a></li>
+
+
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="merchants_merchant_withdraw_merchant_form_modal"
+                                                            data-retailer-id="2A97F386-EDA5-D9E1-A3C8-13A70F2F230A"><small><span
+                                                                    class="glyphicon glyphicon-ban-circle"></span>
+                                                                &nbsp; Withdraw the Customer</small></a></li>
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-product_2A97F386-EDA5-D9E1-A3C8-13A70F2F230A"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Product</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-location_2A97F386-EDA5-D9E1-A3C8-13A70F2F230A"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Location</small>
+                                                        </a>
+                                                    </li>
+
+
+
+
+                                                    <li>&nbsp;</li>
+                                                    <li class="list-group-item-success"><a
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/reset_id_elavon_application/2A97F386-EDA5-D9E1-A3C8-13A70F2F230A"
+                                                            onclick="return confirm('Are you sure you want to Reset the Application?'); return false;"><small><span
+                                                                    class="glyphicon glyphicon-repeat"></span> &nbsp;
+                                                                Reset the Application</small></a></li>
+                                                </ul>
+                                            </div>
+
+
+                                            <div class="clearfix"></div>
+                                            <img src="https://ossonestopsolutionsltd.posinabox.eu/assets/base/images/ico_terminal.png"
+                                                class="retailer-product-ico" title="Terminals">
+                                        </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td nowrap="" class="text-center"><span
+                                                class="label label-default">19405</span><br><br><span
+                                                class="label label-primary"></span></td>
+                                        <td nowrap="">whitney's buns<br><strong>WHITNEY'S BUNS LTD T/A whitneys
+                                                buns</strong><br>WHITNEY WATSON (whitneysbuns@gmail.com +44 8243
+                                            33258)<br><span
+                                                class="smaller">https://whitneysbuns-ossonestopsolutionsltd.posinabox.eu</span>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/6A2E97A9-1636-725C-A888-CDEAC24C2492"
+                                                target="_blank"><span class="glyphicon glyphicon-new-window"></span></a>
+
+
+                                        </td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td class="smaller">20/10/2020 11:48:40</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">£0.00</td>
+                                        <td class="text-right">£0.00</td>
+                                        <td nowrap="nowrap"></td>
+                                        <td class="smaller">
+                                            AWAITING E-SIGNATURE<br><br><span class="label label-warning"
+                                                style="font-size: x-small;"></span><br><span
+                                                style="white-space: nowrap"><strong>MID</strong>: Contract
+                                                generated</span><br><span
+                                                style="white-space: nowrap"><strong>Finance</strong>: Awaiting Elavon
+                                                Registration</span><br><span
+                                                style="white-space: nowrap"><strong>Terminal</strong>: Awaiting
+                                                MID<br>Awaiting Finance</span><br> </td>
+                                        <td class="smaller">
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/106BD0AF-5F8F-8EB7-5127-54C033641299"
+                                                target="_blank">kay caan <span
+                                                    class="glyphicon glyphicon-new-window"></span></a>
+                                        </td>
+                                        <td width="100" style="text-align: right;">
+
+                                            <button class="btn btn-primary btn-xs retailer_form_operations_log_modal"
+                                                data-retailer-id="6A2E97A9-1636-725C-A888-CDEAC24C2492"
+                                                style="margin-bottom:3px;">
+                                                <span class="glyphicon glyphicon-book"></span> &nbsp; Application
+                                                Tracker </button>
+                                            <div class="btn-group" style="width:100%; margin-top:4px;">
+                                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                                    data-toggle="dropdown" style="width:100%;">
+                                                    <span class="glyphicon glyphicon-menu-hamburger"></span> &nbsp;
+                                                    Actions &nbsp; <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-custom-right" role="menu">
+
+                                                    <li><a href="#" class="retailer_form_files_modal"
+                                                            data-retailer-id="6A2E97A9-1636-725C-A888-CDEAC24C2492"><small><span
+                                                                    class="glyphicon glyphicon-file"></span> &nbsp; Show
+                                                                Customer's Files</small></a></li>
+                                                    <li><a href="#" class="retailer_form_operations_log_modal"
+                                                            data-retailer-id="6A2E97A9-1636-725C-A888-CDEAC24C2492"><small><span
+                                                                    class="glyphicon glyphicon-book"></span> &nbsp; Show
+                                                                Application Tracker</small></a></li>
+                                                    <li class="list-group-item-info"><a href="#"
+                                                            class="retailer_form_commission_info_modal"
+                                                            data-retailer-id="6A2E97A9-1636-725C-A888-CDEAC24C2492"><small><span
+                                                                    class="glyphicon glyphicon-info-sign"></span> &nbsp;
+                                                                Commission Information</small></a></li>
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-warning"><a target="_blank"
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/6A2E97A9-1636-725C-A888-CDEAC24C2492"><small><span
+                                                                    class="glyphicon glyphicon-new-window"></span>
+                                                                &nbsp; Customer Dashboard</small></a></li>
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="retailer_form_modal"
+                                                            data-retailer-id="6A2E97A9-1636-725C-A888-CDEAC24C2492"><small><span
+                                                                    class="glyphicon glyphicon-pencil"></span> &nbsp;
+                                                                Edit Customer</small></a></li>
+
+
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="merchants_merchant_withdraw_merchant_form_modal"
+                                                            data-retailer-id="6A2E97A9-1636-725C-A888-CDEAC24C2492"><small><span
+                                                                    class="glyphicon glyphicon-ban-circle"></span>
+                                                                &nbsp; Withdraw the Customer</small></a></li>
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-product_6A2E97A9-1636-725C-A888-CDEAC24C2492"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Product</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-location_6A2E97A9-1636-725C-A888-CDEAC24C2492"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Location</small>
+                                                        </a>
+                                                    </li>
+
+
+
+
+                                                    <li>&nbsp;</li>
+                                                    <li class="list-group-item-success"><a
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/reset_id_elavon_application/6A2E97A9-1636-725C-A888-CDEAC24C2492"
+                                                            onclick="return confirm('Are you sure you want to Reset the Application?'); return false;"><small><span
+                                                                    class="glyphicon glyphicon-repeat"></span> &nbsp;
+                                                                Reset the Application</small></a></li>
+                                                </ul>
+                                            </div>
+
+
+                                            <div class="clearfix"></div>
+                                            <img src="https://ossonestopsolutionsltd.posinabox.eu/assets/base/images/ico_terminal.png"
+                                                class="retailer-product-ico" title="Terminals">
+                                        </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td nowrap="" class="text-center"><span
+                                                class="label label-default">19148</span><br><br><span
+                                                class="label label-primary">2101685509</span></td>
+                                        <td nowrap="">franco labourers<br><strong>FRANCISC UNGUREANU T/A FRANKOS CABINET
+                                                MAKER</strong><br>FRANCISC UNGUREANU (frankosf9@gmail.com +44 3106
+                                            24985)<br><span
+                                                class="smaller">https://francolabourers-ossonestopsolutionsltd.posinabox.eu</span>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/33001ADB-178B-6615-7466-5615C375F75B"
+                                                target="_blank"><span class="glyphicon glyphicon-new-window"></span></a>
+
+
+                                        </td>
+
+                                        <td></td>
+                                        <td><a
+                                                href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_kyc/33001ADB-178B-6615-7466-5615C375F75B"><span
+                                                    class="glyphicon glyphicon-download-alt"></span></a></td>
+                                        <td class="smaller">09/10/2020 14:46:18</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">£0.00</td>
+                                        <td class="text-right">£0.00</td>
+                                        <td nowrap="nowrap"></td>
+                                        <td class="smaller">
+                                            DECLINED<br><br><span class="label label-warning"
+                                                style="font-size: x-small;"></span><br><span
+                                                style="white-space: nowrap"><strong>MID</strong>:
+                                                Declined</span><br><span
+                                                style="white-space: nowrap"><strong>Finance</strong>: Awaiting Elavon
+                                                Registration</span><br><span
+                                                style="white-space: nowrap"><strong>Terminal</strong>: Awaiting
+                                                MID</span><br> </td>
+                                        <td class="smaller">
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/106BD0AF-5F8F-8EB7-5127-54C033641299"
+                                                target="_blank">kay caan <span
+                                                    class="glyphicon glyphicon-new-window"></span></a>
+                                        </td>
+                                        <td width="100" style="text-align: right;">
+
+                                            <button class="btn btn-primary btn-xs retailer_form_operations_log_modal"
+                                                data-retailer-id="33001ADB-178B-6615-7466-5615C375F75B"
+                                                style="margin-bottom:3px;">
+                                                <span class="glyphicon glyphicon-book"></span> &nbsp; Application
+                                                Tracker </button>
+                                            <div class="btn-group" style="width:100%; margin-top:4px;">
+                                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                                    data-toggle="dropdown" style="width:100%;">
+                                                    <span class="glyphicon glyphicon-menu-hamburger"></span> &nbsp;
+                                                    Actions &nbsp; <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-custom-right" role="menu">
+
+                                                    <li><a href="#" class="retailer_form_files_modal"
+                                                            data-retailer-id="33001ADB-178B-6615-7466-5615C375F75B"><small><span
+                                                                    class="glyphicon glyphicon-file"></span> &nbsp; Show
+                                                                Customer's Files</small></a></li>
+                                                    <li><a href="#" class="retailer_form_operations_log_modal"
+                                                            data-retailer-id="33001ADB-178B-6615-7466-5615C375F75B"><small><span
+                                                                    class="glyphicon glyphicon-book"></span> &nbsp; Show
+                                                                Application Tracker</small></a></li>
+                                                    <li class="list-group-item-info"><a href="#"
+                                                            class="retailer_form_commission_info_modal"
+                                                            data-retailer-id="33001ADB-178B-6615-7466-5615C375F75B"><small><span
+                                                                    class="glyphicon glyphicon-info-sign"></span> &nbsp;
+                                                                Commission Information</small></a></li>
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-warning"><a target="_blank"
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/33001ADB-178B-6615-7466-5615C375F75B"><small><span
+                                                                    class="glyphicon glyphicon-new-window"></span>
+                                                                &nbsp; Customer Dashboard</small></a></li>
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="retailer_form_modal"
+                                                            data-retailer-id="33001ADB-178B-6615-7466-5615C375F75B"><small><span
+                                                                    class="glyphicon glyphicon-pencil"></span> &nbsp;
+                                                                Edit Customer</small></a></li>
+
+
+
+
+                                                    <li>&nbsp;</li>
+
+
+
+
+
+
+                                                </ul>
+                                            </div>
+
+
+                                            <div class="clearfix"></div>
+                                            <img src="https://ossonestopsolutionsltd.posinabox.eu/assets/base/images/ico_terminal.png"
+                                                class="retailer-product-ico" title="Terminals">
+                                        </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td nowrap="" class="text-center"><span
+                                                class="label label-default">19031</span><br><br><span
+                                                class="label label-primary">2101685764</span></td>
+                                        <td nowrap="">ALM MOTORS<br><strong>ALM MOTORS LIMITED T/A ALM
+                                                MOTORS</strong><br>MUHAMMAD TARIQ (muhtariq152@gmail.com +44 886
+                                            283221)<br><span
+                                                class="smaller">https://almmotors-ossonestopsolutionsltd.posinabox.eu</span>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/CDAA3E8F-28BA-44E7-3EA9-81AAB8F22298"
+                                                target="_blank"><span class="glyphicon glyphicon-new-window"></span></a>
+
+
+                                        </td>
+
+                                        <td></td>
+                                        <td><a
+                                                href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_kyc/CDAA3E8F-28BA-44E7-3EA9-81AAB8F22298"><span
+                                                    class="glyphicon glyphicon-download-alt"></span></a></td>
+                                        <td class="smaller">06/10/2020 13:43:03</td>
+                                        <td class="text-right">61</td>
+                                        <td class="text-right">£32,026.60</td>
+                                        <td class="text-right">£525.03</td>
+                                        <td nowrap="nowrap"></td>
+                                        <td class="smaller">
+                                            LIVE - TRN THIS MONTH<br><br><span class="label label-warning"
+                                                style="font-size: x-small;">Paytek [PIAB10744]</span><br><span
+                                                style="white-space: nowrap"><strong>MID</strong>: Mid(s)
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Finance</strong>: Finance
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Terminal</strong>: Terminal(s)
+                                                live</span><br> </td>
+                                        <td class="smaller">
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/106BD0AF-5F8F-8EB7-5127-54C033641299"
+                                                target="_blank">kay caan <span
+                                                    class="glyphicon glyphicon-new-window"></span></a>
+                                        </td>
+                                        <td width="100" style="text-align: right;">
+
+                                            <button class="btn btn-primary "
+                                                data-retailer-id="CDAA3E8F-28BA-44E7-3EA9-81AAB8F22298"
+                                                style="margin-bottom:3px;">
+                                                <!-- <span class="glyphicon glyphicon-book"></span> &nbsp; Application Tracker -->
+                                                Application Tracker
+                                                <!-- btn-xs retailer_form_operations_log_modal -->
+                                            </button>
+                                            <div class="btn-group" style="width:100%; margin-top:4px;">
+                                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                                    data-toggle="dropdown" style="width:100%;">
+                                                    <span class="glyphicon glyphicon-menu-hamburger"></span> &nbsp;
+                                                    Actions &nbsp; <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-custom-right" role="menu">
+
+                                                    <li><a href="#" class="retailer_form_files_modal"
+                                                            data-retailer-id="CDAA3E8F-28BA-44E7-3EA9-81AAB8F22298"><small><span
+                                                                    class="glyphicon glyphicon-file"></span> &nbsp; Show
+                                                                Customer's Files</small></a></li>
+                                                    <li><a href="#" class="retailer_form_operations_log_modal"
+                                                            data-retailer-id="CDAA3E8F-28BA-44E7-3EA9-81AAB8F22298"><small><span
+                                                                    class="glyphicon glyphicon-book"></span> &nbsp; Show
+                                                                Application Tracker</small></a></li>
+                                                    <li class="list-group-item-info"><a href="#"
+                                                            class="retailer_form_commission_info_modal"
+                                                            data-retailer-id="CDAA3E8F-28BA-44E7-3EA9-81AAB8F22298"><small><span
+                                                                    class="glyphicon glyphicon-info-sign"></span> &nbsp;
+                                                                Commission Information</small></a></li>
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-warning"><a target="_blank"
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/CDAA3E8F-28BA-44E7-3EA9-81AAB8F22298"><small><span
+                                                                    class="glyphicon glyphicon-new-window"></span>
+                                                                &nbsp; Customer Dashboard</small></a></li>
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="retailer_form_modal"
+                                                            data-retailer-id="CDAA3E8F-28BA-44E7-3EA9-81AAB8F22298"><small><span
+                                                                    class="glyphicon glyphicon-pencil"></span> &nbsp;
+                                                                Edit Customer</small></a></li>
+
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-product_CDAA3E8F-28BA-44E7-3EA9-81AAB8F22298"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Product</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-location_CDAA3E8F-28BA-44E7-3EA9-81AAB8F22298"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Location</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_terminals_CDAA3E8F-28BA-44E7-3EA9-81AAB8F22298"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add Terminal(s)</small></a>
+                                                    </li>
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_eposnow_CDAA3E8F-28BA-44E7-3EA9-81AAB8F22298"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add ePOSNOW</small></a>
+                                                    </li>
+
+                                                    <li class="list-group-item-warning">
+                                                        <a href="#" class="retailer_form_update_director_modal"
+                                                            data-retailer-id="CDAA3E8F-28BA-44E7-3EA9-81AAB8F22298">
+                                                            <small><span class="glyphicon glyphicon-pencil"></span>
+                                                                &nbsp; Update Director Details</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-warning">
+                                                        <a href="#" class="retailer_form_update_bank_details_modal"
+                                                            data-retailer-id="CDAA3E8F-28BA-44E7-3EA9-81AAB8F22298">
+                                                            <small><span class="glyphicon glyphicon-pencil"></span>
+                                                                &nbsp; Update Bank Details</small>
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+
+
+                                            <div class="clearfix"></div>
+                                            <img src="https://ossonestopsolutionsltd.posinabox.eu/assets/base/images/ico_terminal.png"
+                                                class="retailer-product-ico" title="Terminals">
+                                        </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td nowrap="" class="text-center"><span
+                                                class="label label-default">18900</span><br><br><span
+                                                class="label label-primary">2101681754</span></td>
+                                        <td nowrap="">omar cuisine<br><strong>imran afzal T/A omar
+                                                cuisine</strong><br>imran afzal (imiafzal1@icloud.com +44 492
+                                            609509)<br><span
+                                                class="smaller">https://omarcuisine-ossonestopsolutionsltd.posinabox.eu</span>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/A51EA47E-0F13-524A-F3AA-6551C2E9B261"
+                                                target="_blank"><span class="glyphicon glyphicon-new-window"></span></a>
+                                            <br><br>
+                                            <span class="label label-danger">In Arrears - £95.40 (3 months)</span>
+
+
+                                        </td>
+
+                                        <td></td>
+                                        <td><a
+                                                href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_kyc/A51EA47E-0F13-524A-F3AA-6551C2E9B261"><span
+                                                    class="glyphicon glyphicon-download-alt"></span></a></td>
+                                        <td class="smaller">01/10/2020 12:37:13</td>
+                                        <td class="text-right">238</td>
+                                        <td class="text-right">£4,858.72</td>
+                                        <td class="text-right">£20.41</td>
+                                        <td nowrap="nowrap"></td>
+                                        <td class="smaller">
+                                            LIVE<br><br><span class="label label-warning"
+                                                style="font-size: x-small;">Paytek [PIAB10495]</span><br><span
+                                                style="white-space: nowrap"><strong>MID</strong>: Mid(s)
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Finance</strong>: Finance
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Terminal</strong>: Terminal(s)
+                                                live</span><br> </td>
+                                        <td class="smaller">
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/106BD0AF-5F8F-8EB7-5127-54C033641299"
+                                                target="_blank">kay caan <span
+                                                    class="glyphicon glyphicon-new-window"></span></a>
+                                        </td>
+                                        <td width="100" style="text-align: right;">
+
+                                            <button class="btn btn-primary btn-xs retailer_form_operations_log_modal"
+                                                data-retailer-id="A51EA47E-0F13-524A-F3AA-6551C2E9B261"
+                                                style="margin-bottom:3px;">
+                                                <span class="glyphicon glyphicon-book"></span> &nbsp; Application
+                                                Tracker </button>
+                                            <div class="btn-group" style="width:100%; margin-top:4px;">
+                                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                                    data-toggle="dropdown" style="width:100%;">
+                                                    <span class="glyphicon glyphicon-menu-hamburger"></span> &nbsp;
+                                                    Actions &nbsp; <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-custom-right" role="menu">
+
+                                                    <li><a href="#" class="retailer_form_files_modal"
+                                                            data-retailer-id="A51EA47E-0F13-524A-F3AA-6551C2E9B261"><small><span
+                                                                    class="glyphicon glyphicon-file"></span> &nbsp; Show
+                                                                Customer's Files</small></a></li>
+                                                    <li><a href="#" class="retailer_form_operations_log_modal"
+                                                            data-retailer-id="A51EA47E-0F13-524A-F3AA-6551C2E9B261"><small><span
+                                                                    class="glyphicon glyphicon-book"></span> &nbsp; Show
+                                                                Application Tracker</small></a></li>
+                                                    <li class="list-group-item-info"><a href="#"
+                                                            class="retailer_form_commission_info_modal"
+                                                            data-retailer-id="A51EA47E-0F13-524A-F3AA-6551C2E9B261"><small><span
+                                                                    class="glyphicon glyphicon-info-sign"></span> &nbsp;
+                                                                Commission Information</small></a></li>
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-warning"><a target="_blank"
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/A51EA47E-0F13-524A-F3AA-6551C2E9B261"><small><span
+                                                                    class="glyphicon glyphicon-new-window"></span>
+                                                                &nbsp; Customer Dashboard</small></a></li>
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="retailer_form_modal"
+                                                            data-retailer-id="A51EA47E-0F13-524A-F3AA-6551C2E9B261"><small><span
+                                                                    class="glyphicon glyphicon-pencil"></span> &nbsp;
+                                                                Edit Customer</small></a></li>
+
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-product_A51EA47E-0F13-524A-F3AA-6551C2E9B261"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Product</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-location_A51EA47E-0F13-524A-F3AA-6551C2E9B261"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Location</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_terminals_A51EA47E-0F13-524A-F3AA-6551C2E9B261"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add Terminal(s)</small></a>
+                                                    </li>
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_eposnow_A51EA47E-0F13-524A-F3AA-6551C2E9B261"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add ePOSNOW</small></a>
+                                                    </li>
+
+
+                                                    <li class="list-group-item-warning">
+                                                        <a href="#" class="retailer_form_update_bank_details_modal"
+                                                            data-retailer-id="A51EA47E-0F13-524A-F3AA-6551C2E9B261">
+                                                            <small><span class="glyphicon glyphicon-pencil"></span>
+                                                                &nbsp; Update Bank Details</small>
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+
+
+                                            <div class="clearfix"></div>
+                                            <img src="https://ossonestopsolutionsltd.posinabox.eu/assets/base/images/ico_terminal.png"
+                                                class="retailer-product-ico" title="Terminals">
+                                        </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td nowrap="" class="text-center"><span
+                                                class="label label-default">18777</span><br><br><span
+                                                class="label label-primary">2101680683</span></td>
+                                        <td nowrap="">GRAMPIAN FIRE PLACES AND STOVES LTD<br><strong>GRAMPIAN FIRE
+                                                PLACES AND STOVES LTD<br> T/A ABERDEEN FIREPLACE
+                                                CENTRE</strong><br>SONIA MINTER (Grampianfireplaces@gmail.com +44 7939
+                                            974478)<br><span
+                                                class="smaller">https://grampianfireplacesandstoves-ossonestopsolutionsltd.posinabox.eu</span>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/BA8361BE-B016-4D5F-3AEA-8F1BF9A5889A"
+                                                target="_blank"><span class="glyphicon glyphicon-new-window"></span></a>
+
+
+                                        </td>
+
+                                        <td><span class="glyphicon glyphicon-ok"></span></td>
+                                        <td><a
+                                                href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_kyc/BA8361BE-B016-4D5F-3AEA-8F1BF9A5889A"><span
+                                                    class="glyphicon glyphicon-download-alt"></span></a></td>
+                                        <td class="smaller">25/09/2020 14:16:56</td>
+                                        <td class="text-right">415</td>
+                                        <td class="text-right">£278,007.21</td>
+                                        <td class="text-right">£669.90</td>
+                                        <td nowrap="nowrap"></td>
+                                        <td class="smaller">
+                                            LIVE - TRN THIS MONTH<br><br><span class="label label-warning"
+                                                style="font-size: x-small;">Paytek [PIAB10409]</span><br><span
+                                                style="white-space: nowrap"><strong>MID</strong>: Mid(s)
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Finance</strong>: Finance
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Terminal</strong>: Terminal(s)
+                                                live</span><br> </td>
+                                        <td class="smaller">
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/106BD0AF-5F8F-8EB7-5127-54C033641299"
+                                                target="_blank">kay caan <span
+                                                    class="glyphicon glyphicon-new-window"></span></a>
+                                        </td>
+                                        <td width="100" style="text-align: right;">
+
+                                            <button class="btn btn-primary btn-xs retailer_form_operations_log_modal"
+                                                data-retailer-id="BA8361BE-B016-4D5F-3AEA-8F1BF9A5889A"
+                                                style="margin-bottom:3px;">
+                                                <span class="glyphicon glyphicon-book"></span> &nbsp; Application
+                                                Tracker </button>
+                                            <div class="btn-group" style="width:100%; margin-top:4px;">
+                                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                                    data-toggle="dropdown" style="width:100%;">
+                                                    <span class="glyphicon glyphicon-menu-hamburger"></span> &nbsp;
+                                                    Actions &nbsp; <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-custom-right" role="menu">
+
+                                                    <li><a href="#" class="retailer_form_files_modal"
+                                                            data-retailer-id="BA8361BE-B016-4D5F-3AEA-8F1BF9A5889A"><small><span
+                                                                    class="glyphicon glyphicon-file"></span> &nbsp; Show
+                                                                Customer's Files</small></a></li>
+                                                    <li><a href="#" class="retailer_form_operations_log_modal"
+                                                            data-retailer-id="BA8361BE-B016-4D5F-3AEA-8F1BF9A5889A"><small><span
+                                                                    class="glyphicon glyphicon-book"></span> &nbsp; Show
+                                                                Application Tracker</small></a></li>
+                                                    <li class="list-group-item-info"><a href="#"
+                                                            class="retailer_form_commission_info_modal"
+                                                            data-retailer-id="BA8361BE-B016-4D5F-3AEA-8F1BF9A5889A"><small><span
+                                                                    class="glyphicon glyphicon-info-sign"></span> &nbsp;
+                                                                Commission Information</small></a></li>
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-warning"><a target="_blank"
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/BA8361BE-B016-4D5F-3AEA-8F1BF9A5889A"><small><span
+                                                                    class="glyphicon glyphicon-new-window"></span>
+                                                                &nbsp; Customer Dashboard</small></a></li>
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="retailer_form_modal"
+                                                            data-retailer-id="BA8361BE-B016-4D5F-3AEA-8F1BF9A5889A"><small><span
+                                                                    class="glyphicon glyphicon-pencil"></span> &nbsp;
+                                                                Edit Customer</small></a></li>
+
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-product_BA8361BE-B016-4D5F-3AEA-8F1BF9A5889A"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Product</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-location_BA8361BE-B016-4D5F-3AEA-8F1BF9A5889A"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Location</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_terminals_BA8361BE-B016-4D5F-3AEA-8F1BF9A5889A"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add Terminal(s)</small></a>
+                                                    </li>
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_eposnow_BA8361BE-B016-4D5F-3AEA-8F1BF9A5889A"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add ePOSNOW</small></a>
+                                                    </li>
+
+                                                    <li class="list-group-item-warning">
+                                                        <a href="#" class="retailer_form_update_director_modal"
+                                                            data-retailer-id="BA8361BE-B016-4D5F-3AEA-8F1BF9A5889A">
+                                                            <small><span class="glyphicon glyphicon-pencil"></span>
+                                                                &nbsp; Update Director Details</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-warning">
+                                                        <a href="#" class="retailer_form_update_bank_details_modal"
+                                                            data-retailer-id="BA8361BE-B016-4D5F-3AEA-8F1BF9A5889A">
+                                                            <small><span class="glyphicon glyphicon-pencil"></span>
+                                                                &nbsp; Update Bank Details</small>
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+
+
+                                            <div class="clearfix"></div>
+                                            <img src="https://ossonestopsolutionsltd.posinabox.eu/assets/base/images/ico_terminal.png"
+                                                class="retailer-product-ico" title="Terminals">
+                                        </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td nowrap="" class="text-center"><span
+                                                class="label label-default">18399</span><br><br><span
+                                                class="label label-primary">2101675053</span></td>
+                                        <td nowrap="">TREADMAX LTD<br><strong>TREADMAX LIMITED T/A TREADMAX
+                                                LIMITED</strong><br>sabahat hamad (treadmaxltd@gmail.com +44 1334
+                                            617861)<br><span
+                                                class="smaller">https://treadmaxltd-ossonestopsolutionsltd.posinabox.eu</span>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/8FA10520-5D05-1EA0-900C-BDC3BBF3CBE3"
+                                                target="_blank"><span class="glyphicon glyphicon-new-window"></span></a>
+
+
+                                        </td>
+
+                                        <td></td>
+                                        <td><a
+                                                href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_kyc/8FA10520-5D05-1EA0-900C-BDC3BBF3CBE3"><span
+                                                    class="glyphicon glyphicon-download-alt"></span></a></td>
+                                        <td class="smaller">10/09/2020 13:02:27</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">£0.00</td>
+                                        <td class="text-right">£0.00</td>
+                                        <td nowrap="nowrap"></td>
+                                        <td class="smaller">
+                                            LIVE<br><br><span class="label label-warning"
+                                                style="font-size: x-small;">Paytek [PIAB10041]</span><br><span
+                                                style="white-space: nowrap"><strong>MID</strong>: Mid(s)
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Finance</strong>: Finance
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Terminal</strong>: Terminal(s)
+                                                live</span><br> </td>
+                                        <td class="smaller">
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/106BD0AF-5F8F-8EB7-5127-54C033641299"
+                                                target="_blank">kay caan <span
+                                                    class="glyphicon glyphicon-new-window"></span></a>
+                                        </td>
+                                        <td width="100" style="text-align: right;">
+
+                                            <button class="btn btn-primary btn-xs retailer_form_operations_log_modal"
+                                                data-retailer-id="8FA10520-5D05-1EA0-900C-BDC3BBF3CBE3"
+                                                style="margin-bottom:3px;">
+                                                <span class="glyphicon glyphicon-book"></span> &nbsp; Application
+                                                Tracker </button>
+                                            <div class="btn-group" style="width:100%; margin-top:4px;">
+                                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                                    data-toggle="dropdown" style="width:100%;">
+                                                    <span class="glyphicon glyphicon-menu-hamburger"></span> &nbsp;
+                                                    Actions &nbsp; <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-custom-right" role="menu">
+
+                                                    <li><a href="#" class="retailer_form_files_modal"
+                                                            data-retailer-id="8FA10520-5D05-1EA0-900C-BDC3BBF3CBE3"><small><span
+                                                                    class="glyphicon glyphicon-file"></span> &nbsp; Show
+                                                                Customer's Files</small></a></li>
+                                                    <li><a href="#" class="retailer_form_operations_log_modal"
+                                                            data-retailer-id="8FA10520-5D05-1EA0-900C-BDC3BBF3CBE3"><small><span
+                                                                    class="glyphicon glyphicon-book"></span> &nbsp; Show
+                                                                Application Tracker</small></a></li>
+                                                    <li class="list-group-item-info"><a href="#"
+                                                            class="retailer_form_commission_info_modal"
+                                                            data-retailer-id="8FA10520-5D05-1EA0-900C-BDC3BBF3CBE3"><small><span
+                                                                    class="glyphicon glyphicon-info-sign"></span> &nbsp;
+                                                                Commission Information</small></a></li>
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-warning"><a target="_blank"
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/8FA10520-5D05-1EA0-900C-BDC3BBF3CBE3"><small><span
+                                                                    class="glyphicon glyphicon-new-window"></span>
+                                                                &nbsp; Customer Dashboard</small></a></li>
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="retailer_form_modal"
+                                                            data-retailer-id="8FA10520-5D05-1EA0-900C-BDC3BBF3CBE3"><small><span
+                                                                    class="glyphicon glyphicon-pencil"></span> &nbsp;
+                                                                Edit Customer</small></a></li>
+
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-product_8FA10520-5D05-1EA0-900C-BDC3BBF3CBE3"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Product</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-location_8FA10520-5D05-1EA0-900C-BDC3BBF3CBE3"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Location</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_terminals_8FA10520-5D05-1EA0-900C-BDC3BBF3CBE3"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add Terminal(s)</small></a>
+                                                    </li>
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_eposnow_8FA10520-5D05-1EA0-900C-BDC3BBF3CBE3"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add ePOSNOW</small></a>
+                                                    </li>
+
+                                                    <li class="list-group-item-warning">
+                                                        <a href="#" class="retailer_form_update_director_modal"
+                                                            data-retailer-id="8FA10520-5D05-1EA0-900C-BDC3BBF3CBE3">
+                                                            <small><span class="glyphicon glyphicon-pencil"></span>
+                                                                &nbsp; Update Director Details</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-warning">
+                                                        <a href="#" class="retailer_form_update_bank_details_modal"
+                                                            data-retailer-id="8FA10520-5D05-1EA0-900C-BDC3BBF3CBE3">
+                                                            <small><span class="glyphicon glyphicon-pencil"></span>
+                                                                &nbsp; Update Bank Details</small>
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+
+
+                                            <div class="clearfix"></div>
+                                            <img src="https://ossonestopsolutionsltd.posinabox.eu/assets/base/images/ico_terminal.png"
+                                                class="retailer-product-ico" title="Terminals">
+                                        </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td nowrap="" class="text-center"><span
+                                                class="label label-default">18213</span><br><br><span
+                                                class="label label-primary">2101677133</span></td>
+                                        <td nowrap="">SNS Retail Ltd<br><strong>SNS RETAIL LIMITED T/A SNS RETAIL
+                                                LIMITED</strong><br>barry nicholls (snsretail1@gmail.com +44 7950
+                                            812051)<br><span
+                                                class="smaller">https://snsretailltd-ossonestopsolutionsltd.posinabox.eu</span>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/31503BE5-AF76-373D-2163-145019F9E9DC"
+                                                target="_blank"><span class="glyphicon glyphicon-new-window"></span></a>
+
+
+                                        </td>
+
+                                        <td><span class="glyphicon glyphicon-ok"></span></td>
+                                        <td><a
+                                                href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_kyc/31503BE5-AF76-373D-2163-145019F9E9DC"><span
+                                                    class="glyphicon glyphicon-download-alt"></span></a></td>
+                                        <td class="smaller">03/09/2020 14:31:23</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">£0.00</td>
+                                        <td class="text-right">£0.00</td>
+                                        <td nowrap="nowrap"></td>
+                                        <td class="smaller">
+                                            LIVE<br><br><span class="label label-warning"
+                                                style="font-size: x-small;"></span><br><span
+                                                style="white-space: nowrap"><strong>MID</strong>: Mid(s)
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Finance</strong>: Finance
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Terminal</strong>: Terminal(s)
+                                                live</span><br> </td>
+                                        <td class="smaller">
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/106BD0AF-5F8F-8EB7-5127-54C033641299"
+                                                target="_blank">kay caan <span
+                                                    class="glyphicon glyphicon-new-window"></span></a>
+                                        </td>
+                                        <td width="100" style="text-align: right;">
+
+                                            <button class="btn btn-primary btn-xs retailer_form_operations_log_modal"
+                                                data-retailer-id="31503BE5-AF76-373D-2163-145019F9E9DC"
+                                                style="margin-bottom:3px;">
+                                                <span class="glyphicon glyphicon-book"></span> &nbsp; Application
+                                                Tracker </button>
+                                            <div class="btn-group" style="width:100%; margin-top:4px;">
+                                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                                    data-toggle="dropdown" style="width:100%;">
+                                                    <span class="glyphicon glyphicon-menu-hamburger"></span> &nbsp;
+                                                    Actions &nbsp; <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-custom-right" role="menu">
+
+                                                    <li><a href="#" class="retailer_form_files_modal"
+                                                            data-retailer-id="31503BE5-AF76-373D-2163-145019F9E9DC"><small><span
+                                                                    class="glyphicon glyphicon-file"></span> &nbsp; Show
+                                                                Customer's Files</small></a></li>
+                                                    <li><a href="#" class="retailer_form_operations_log_modal"
+                                                            data-retailer-id="31503BE5-AF76-373D-2163-145019F9E9DC"><small><span
+                                                                    class="glyphicon glyphicon-book"></span> &nbsp; Show
+                                                                Application Tracker</small></a></li>
+                                                    <li class="list-group-item-info"><a href="#"
+                                                            class="retailer_form_commission_info_modal"
+                                                            data-retailer-id="31503BE5-AF76-373D-2163-145019F9E9DC"><small><span
+                                                                    class="glyphicon glyphicon-info-sign"></span> &nbsp;
+                                                                Commission Information</small></a></li>
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-warning"><a target="_blank"
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/31503BE5-AF76-373D-2163-145019F9E9DC"><small><span
+                                                                    class="glyphicon glyphicon-new-window"></span>
+                                                                &nbsp; Customer Dashboard</small></a></li>
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="retailer_form_modal"
+                                                            data-retailer-id="31503BE5-AF76-373D-2163-145019F9E9DC"><small><span
+                                                                    class="glyphicon glyphicon-pencil"></span> &nbsp;
+                                                                Edit Customer</small></a></li>
+
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-product_31503BE5-AF76-373D-2163-145019F9E9DC"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Product</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-location_31503BE5-AF76-373D-2163-145019F9E9DC"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Location</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_terminals_31503BE5-AF76-373D-2163-145019F9E9DC"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add Terminal(s)</small></a>
+                                                    </li>
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_eposnow_31503BE5-AF76-373D-2163-145019F9E9DC"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add ePOSNOW</small></a>
+                                                    </li>
+
+                                                    <li class="list-group-item-warning">
+                                                        <a href="#" class="retailer_form_update_director_modal"
+                                                            data-retailer-id="31503BE5-AF76-373D-2163-145019F9E9DC">
+                                                            <small><span class="glyphicon glyphicon-pencil"></span>
+                                                                &nbsp; Update Director Details</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-warning">
+                                                        <a href="#" class="retailer_form_update_bank_details_modal"
+                                                            data-retailer-id="31503BE5-AF76-373D-2163-145019F9E9DC">
+                                                            <small><span class="glyphicon glyphicon-pencil"></span>
+                                                                &nbsp; Update Bank Details</small>
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+
+
+                                            <div class="clearfix"></div>
+                                            <img src="https://ossonestopsolutionsltd.posinabox.eu/assets/base/images/ico_terminal.png"
+                                                class="retailer-product-ico" title="Terminals">
+                                        </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td nowrap="" class="text-center"><span
+                                                class="label label-default">17901</span><br><br><span
+                                                class="label label-primary">2101669607</span></td>
+                                        <td nowrap="">COX Industrial Supplies<br><strong>Barry Winston T/A cox
+                                                industrial supplies</strong><br>Barry Winston (barrywinston@hotmail.com
+                                            +44 7711 294767)<br><span
+                                                class="smaller">https://coxindustrialsupplies-ossonestopsolutionsltd.posinabox.eu</span>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/9922176C-8D57-7CA7-8F32-9D559BA09969"
+                                                target="_blank"><span class="glyphicon glyphicon-new-window"></span></a>
+
+
+                                        </td>
+
+                                        <td></td>
+                                        <td><a
+                                                href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_kyc/9922176C-8D57-7CA7-8F32-9D559BA09969"><span
+                                                    class="glyphicon glyphicon-download-alt"></span></a></td>
+                                        <td class="smaller">19/08/2020 15:41:22</td>
+                                        <td class="text-right">2,231</td>
+                                        <td class="text-right">£42,764.49</td>
+                                        <td class="text-right">£19.17</td>
+                                        <td nowrap="nowrap"></td>
+                                        <td class="smaller">
+                                            LIVE - TRN THIS MONTH<br><br><span class="label label-warning"
+                                                style="font-size: x-small;">Paytek [PIAB9725]</span><br><span
+                                                style="white-space: nowrap"><strong>MID</strong>: Mid(s)
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Finance</strong>: Finance
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Terminal</strong>: Terminal(s)
+                                                live</span><br> </td>
+                                        <td class="smaller">
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/8DB8293B-AA8C-8BCF-A3CF-74401F2BEC05"
+                                                target="_blank">Jamshaid Abbid <span
+                                                    class="glyphicon glyphicon-new-window"></span></a>
+                                        </td>
+                                        <td width="100" style="text-align: right;">
+
+                                            <button class="btn btn-primary btn-xs retailer_form_operations_log_modal"
+                                                data-retailer-id="9922176C-8D57-7CA7-8F32-9D559BA09969"
+                                                style="margin-bottom:3px;">
+                                                <span class="glyphicon glyphicon-book"></span> &nbsp; Application
+                                                Tracker </button>
+                                            <div class="btn-group" style="width:100%; margin-top:4px;">
+                                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                                    data-toggle="dropdown" style="width:100%;">
+                                                    <span class="glyphicon glyphicon-menu-hamburger"></span> &nbsp;
+                                                    Actions &nbsp; <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-custom-right" role="menu">
+
+                                                    <li><a href="#" class="retailer_form_files_modal"
+                                                            data-retailer-id="9922176C-8D57-7CA7-8F32-9D559BA09969"><small><span
+                                                                    class="glyphicon glyphicon-file"></span> &nbsp; Show
+                                                                Customer's Files</small></a></li>
+                                                    <li><a href="#" class="retailer_form_operations_log_modal"
+                                                            data-retailer-id="9922176C-8D57-7CA7-8F32-9D559BA09969"><small><span
+                                                                    class="glyphicon glyphicon-book"></span> &nbsp; Show
+                                                                Application Tracker</small></a></li>
+                                                    <li class="list-group-item-info"><a href="#"
+                                                            class="retailer_form_commission_info_modal"
+                                                            data-retailer-id="9922176C-8D57-7CA7-8F32-9D559BA09969"><small><span
+                                                                    class="glyphicon glyphicon-info-sign"></span> &nbsp;
+                                                                Commission Information</small></a></li>
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-warning"><a target="_blank"
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/9922176C-8D57-7CA7-8F32-9D559BA09969"><small><span
+                                                                    class="glyphicon glyphicon-new-window"></span>
+                                                                &nbsp; Customer Dashboard</small></a></li>
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="retailer_form_modal"
+                                                            data-retailer-id="9922176C-8D57-7CA7-8F32-9D559BA09969"><small><span
+                                                                    class="glyphicon glyphicon-pencil"></span> &nbsp;
+                                                                Edit Customer</small></a></li>
+
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-product_9922176C-8D57-7CA7-8F32-9D559BA09969"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Product</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-location_9922176C-8D57-7CA7-8F32-9D559BA09969"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Location</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_terminals_9922176C-8D57-7CA7-8F32-9D559BA09969"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add Terminal(s)</small></a>
+                                                    </li>
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_eposnow_9922176C-8D57-7CA7-8F32-9D559BA09969"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add ePOSNOW</small></a>
+                                                    </li>
+
+
+                                                    <li class="list-group-item-warning">
+                                                        <a href="#" class="retailer_form_update_bank_details_modal"
+                                                            data-retailer-id="9922176C-8D57-7CA7-8F32-9D559BA09969">
+                                                            <small><span class="glyphicon glyphicon-pencil"></span>
+                                                                &nbsp; Update Bank Details</small>
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+
+
+                                            <div class="clearfix"></div>
+                                            <img src="https://ossonestopsolutionsltd.posinabox.eu/assets/base/images/ico_terminal.png"
+                                                class="retailer-product-ico" title="Terminals">
+                                        </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td nowrap="" class="text-center"><span
+                                                class="label label-default">17756</span><br><br><span
+                                                class="label label-primary">2101667345</span></td>
+                                        <td nowrap="">w&amp;m retail ltd<br><strong>W &amp; M RETAIL LTD T/A Murray's
+                                                Supermarket</strong><br>Ahmad Walid (imnotwalid@gmail.com +44 7462
+                                            765657)<br><span
+                                                class="smaller">https://wmretailltd-ossonestopsolutionsltd.posinabox.eu</span>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/D6742834-0902-8662-322E-09A251B5ADE3"
+                                                target="_blank"><span class="glyphicon glyphicon-new-window"></span></a>
+
+
+                                        </td>
+
+                                        <td><span class="glyphicon glyphicon-ok"></span></td>
+                                        <td><a
+                                                href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_kyc/D6742834-0902-8662-322E-09A251B5ADE3"><span
+                                                    class="glyphicon glyphicon-download-alt"></span></a></td>
+                                        <td class="smaller">12/08/2020 18:13:35</td>
+                                        <td class="text-right">68</td>
+                                        <td class="text-right">£673.22</td>
+                                        <td class="text-right">£9.90</td>
+                                        <td nowrap="nowrap"></td>
+                                        <td class="smaller">
+                                            LIVE<br><br><span class="label label-warning"
+                                                style="font-size: x-small;">Paytek [PIAB9583]</span><br><span
+                                                style="white-space: nowrap"><strong>MID</strong>: Mid(s)
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Finance</strong>: Finance
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Terminal</strong>: Terminal(s)
+                                                live</span><br> </td>
+                                        <td class="smaller">
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/8DB8293B-AA8C-8BCF-A3CF-74401F2BEC05"
+                                                target="_blank">Jamshaid Abbid <span
+                                                    class="glyphicon glyphicon-new-window"></span></a>
+                                        </td>
+                                        <td width="100" style="text-align: right;">
+
+                                            <button class="btn btn-primary btn-xs retailer_form_operations_log_modal"
+                                                data-retailer-id="D6742834-0902-8662-322E-09A251B5ADE3"
+                                                style="margin-bottom:3px;">
+                                                <span class="glyphicon glyphicon-book"></span> &nbsp; Application
+                                                Tracker </button>
+                                            <div class="btn-group" style="width:100%; margin-top:4px;">
+                                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                                    data-toggle="dropdown" style="width:100%;">
+                                                    <span class="glyphicon glyphicon-menu-hamburger"></span> &nbsp;
+                                                    Actions &nbsp; <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-custom-right" role="menu">
+
+                                                    <li><a href="#" class="retailer_form_files_modal"
+                                                            data-retailer-id="D6742834-0902-8662-322E-09A251B5ADE3"><small><span
+                                                                    class="glyphicon glyphicon-file"></span> &nbsp; Show
+                                                                Customer's Files</small></a></li>
+                                                    <li><a href="#" class="retailer_form_operations_log_modal"
+                                                            data-retailer-id="D6742834-0902-8662-322E-09A251B5ADE3"><small><span
+                                                                    class="glyphicon glyphicon-book"></span> &nbsp; Show
+                                                                Application Tracker</small></a></li>
+                                                    <li class="list-group-item-info"><a href="#"
+                                                            class="retailer_form_commission_info_modal"
+                                                            data-retailer-id="D6742834-0902-8662-322E-09A251B5ADE3"><small><span
+                                                                    class="glyphicon glyphicon-info-sign"></span> &nbsp;
+                                                                Commission Information</small></a></li>
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-warning"><a target="_blank"
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/D6742834-0902-8662-322E-09A251B5ADE3"><small><span
+                                                                    class="glyphicon glyphicon-new-window"></span>
+                                                                &nbsp; Customer Dashboard</small></a></li>
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="retailer_form_modal"
+                                                            data-retailer-id="D6742834-0902-8662-322E-09A251B5ADE3"><small><span
+                                                                    class="glyphicon glyphicon-pencil"></span> &nbsp;
+                                                                Edit Customer</small></a></li>
+
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-product_D6742834-0902-8662-322E-09A251B5ADE3"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Product</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-location_D6742834-0902-8662-322E-09A251B5ADE3"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Location</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_terminals_D6742834-0902-8662-322E-09A251B5ADE3"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add Terminal(s)</small></a>
+                                                    </li>
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_eposnow_D6742834-0902-8662-322E-09A251B5ADE3"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add ePOSNOW</small></a>
+                                                    </li>
+
+                                                    <li class="list-group-item-warning">
+                                                        <a href="#" class="retailer_form_update_director_modal"
+                                                            data-retailer-id="D6742834-0902-8662-322E-09A251B5ADE3">
+                                                            <small><span class="glyphicon glyphicon-pencil"></span>
+                                                                &nbsp; Update Director Details</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-warning">
+                                                        <a href="#" class="retailer_form_update_bank_details_modal"
+                                                            data-retailer-id="D6742834-0902-8662-322E-09A251B5ADE3">
+                                                            <small><span class="glyphicon glyphicon-pencil"></span>
+                                                                &nbsp; Update Bank Details</small>
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+
+
+                                            <div class="clearfix"></div>
+                                            <img src="https://ossonestopsolutionsltd.posinabox.eu/assets/base/images/ico_terminal.png"
+                                                class="retailer-product-ico" title="Terminals">
+                                        </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td nowrap="" class="text-center"><span
+                                                class="label label-default">17354</span><br><br><span
+                                                class="label label-primary"></span></td>
+                                        <td nowrap="">Face Facts<br><strong>pamela hussain T/A Face
+                                                facts</strong><br>--- N/A --- (--- N/A --- --- N/A ---)<br><span
+                                                class="smaller">https://facefacts-ossonestopsolutionsltd.posinabox.eu</span>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/8A783EFA-0A24-3E55-5316-FB8E87163F3B"
+                                                target="_blank"><span class="glyphicon glyphicon-new-window"></span></a>
+
+
+                                        </td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td class="smaller">22/07/2020 14:56:35</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">£0.00</td>
+                                        <td class="text-right">£0.00</td>
+                                        <td nowrap="nowrap"></td>
+                                        <td class="smaller">
+                                            APPLICATION NOT COMPLETED<br><br><span class="label label-warning"
+                                                style="font-size: x-small;"></span><br><span
+                                                style="white-space: nowrap"><strong>MID</strong>: Awaiting Elavon
+                                                Registration</span><br><span
+                                                style="white-space: nowrap"><strong>Finance</strong>: Awaiting Elavon
+                                                Registration</span><br><span
+                                                style="white-space: nowrap"><strong>Terminal</strong>: Awaiting
+                                                MID<br>Awaiting Finance</span><br> </td>
+                                        <td class="smaller">
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/CCB8026E-EEAF-8ADC-C4D4-81FDDD2D564A"
+                                                target="_blank">David <span
+                                                    class="glyphicon glyphicon-new-window"></span></a>
+                                        </td>
+                                        <td width="100" style="text-align: right;">
+
+                                            <button class="btn btn-primary btn-xs retailer_form_operations_log_modal"
+                                                data-retailer-id="8A783EFA-0A24-3E55-5316-FB8E87163F3B"
+                                                style="margin-bottom:3px;">
+                                                <span class="glyphicon glyphicon-book"></span> &nbsp; Application
+                                                Tracker </button>
+                                            <div class="btn-group" style="width:100%; margin-top:4px;">
+                                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                                    data-toggle="dropdown" style="width:100%;">
+                                                    <span class="glyphicon glyphicon-menu-hamburger"></span> &nbsp;
+                                                    Actions &nbsp; <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-custom-right" role="menu">
+                                                    <li class="list-group-item-success"><a target="_blank"
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/8A783EFA-0A24-3E55-5316-FB8E87163F3B"><small><span
+                                                                    class="glyphicon glyphicon-play"></span> &nbsp;
+                                                                Continue with Application</small></a></li>
+
+                                                    <li><a href="#" class="retailer_form_files_modal"
+                                                            data-retailer-id="8A783EFA-0A24-3E55-5316-FB8E87163F3B"><small><span
+                                                                    class="glyphicon glyphicon-file"></span> &nbsp; Show
+                                                                Customer's Files</small></a></li>
+                                                    <li><a href="#" class="retailer_form_operations_log_modal"
+                                                            data-retailer-id="8A783EFA-0A24-3E55-5316-FB8E87163F3B"><small><span
+                                                                    class="glyphicon glyphicon-book"></span> &nbsp; Show
+                                                                Application Tracker</small></a></li>
+                                                    <li class="list-group-item-info"><a href="#"
+                                                            class="retailer_form_commission_info_modal"
+                                                            data-retailer-id="8A783EFA-0A24-3E55-5316-FB8E87163F3B"><small><span
+                                                                    class="glyphicon glyphicon-info-sign"></span> &nbsp;
+                                                                Commission Information</small></a></li>
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-warning"><a target="_blank"
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/8A783EFA-0A24-3E55-5316-FB8E87163F3B"><small><span
+                                                                    class="glyphicon glyphicon-new-window"></span>
+                                                                &nbsp; Customer Dashboard</small></a></li>
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="retailer_form_modal"
+                                                            data-retailer-id="8A783EFA-0A24-3E55-5316-FB8E87163F3B"><small><span
+                                                                    class="glyphicon glyphicon-pencil"></span> &nbsp;
+                                                                Edit Customer</small></a></li>
+
+
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="merchants_merchant_withdraw_merchant_form_modal"
+                                                            data-retailer-id="8A783EFA-0A24-3E55-5316-FB8E87163F3B"><small><span
+                                                                    class="glyphicon glyphicon-ban-circle"></span>
+                                                                &nbsp; Withdraw the Customer</small></a></li>
+
+
+                                                    <li>&nbsp;</li>
+
+
+
+
+
+
+                                                    <li>&nbsp;</li>
+                                                    <li class="list-group-item-success"><a
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/reset_id_elavon_application/8A783EFA-0A24-3E55-5316-FB8E87163F3B"
+                                                            onclick="return confirm('Are you sure you want to Reset the Application?'); return false;"><small><span
+                                                                    class="glyphicon glyphicon-repeat"></span> &nbsp;
+                                                                Reset the Application</small></a></li>
+                                                </ul>
+                                            </div>
+
+
+                                            <div class="clearfix"></div>
+                                            <img src="https://ossonestopsolutionsltd.posinabox.eu/assets/base/images/ico_terminal.png"
+                                                class="retailer-product-ico" title="Terminals">
+                                        </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td nowrap="" class="text-center"><span
+                                                class="label label-default">17182</span><br><br><span
+                                                class="label label-primary">2101659697</span></td>
+                                        <td nowrap="">Little Supermarket<br><strong>Muhammad Sohail Sardar T/A Little
+                                                Supermarket</strong><br>Muhammad Sohail
+                                            Sardar<br>(marriamsohail99@yahoo.com +44 7466 656875)<br><span
+                                                class="smaller">https://littlesupermarket-ossonestopsolutionsltd.posinabox.eu</span>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/53A6AD16-840B-A9A2-37D2-50A6CF934EB6"
+                                                target="_blank"><span class="glyphicon glyphicon-new-window"></span></a>
+
+
+                                        </td>
+
+                                        <td><span class="glyphicon glyphicon-ok"></span></td>
+                                        <td><a
+                                                href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_kyc/53A6AD16-840B-A9A2-37D2-50A6CF934EB6"><span
+                                                    class="glyphicon glyphicon-download-alt"></span></a></td>
+                                        <td class="smaller">14/07/2020 21:18:55</td>
+                                        <td class="text-right">1,520</td>
+                                        <td class="text-right">£19,204.09</td>
+                                        <td class="text-right">£12.63</td>
+                                        <td nowrap="nowrap"></td>
+                                        <td class="smaller">
+                                            LIVE<br><br><span class="label label-warning"
+                                                style="font-size: x-small;">Paytek [PIAB9128]</span><br><span
+                                                style="white-space: nowrap"><strong>MID</strong>: Mid(s)
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Finance</strong>: Finance
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Terminal</strong>: Terminal(s)
+                                                live</span><br> </td>
+                                        <td class="smaller">
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/8DB8293B-AA8C-8BCF-A3CF-74401F2BEC05"
+                                                target="_blank">Jamshaid Abbid <span
+                                                    class="glyphicon glyphicon-new-window"></span></a>
+                                        </td>
+                                        <td width="100" style="text-align: right;">
+
+                                            <button class="btn btn-primary btn-xs retailer_form_operations_log_modal"
+                                                data-retailer-id="53A6AD16-840B-A9A2-37D2-50A6CF934EB6"
+                                                style="margin-bottom:3px;">
+                                                <span class="glyphicon glyphicon-book"></span> &nbsp; Application
+                                                Tracker </button>
+                                            <div class="btn-group" style="width:100%; margin-top:4px;">
+                                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                                    data-toggle="dropdown" style="width:100%;">
+                                                    <span class="glyphicon glyphicon-menu-hamburger"></span> &nbsp;
+                                                    Actions &nbsp; <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-custom-right" role="menu">
+
+                                                    <li><a href="#" class="retailer_form_files_modal"
+                                                            data-retailer-id="53A6AD16-840B-A9A2-37D2-50A6CF934EB6"><small><span
+                                                                    class="glyphicon glyphicon-file"></span> &nbsp; Show
+                                                                Customer's Files</small></a></li>
+                                                    <li><a href="#" class="retailer_form_operations_log_modal"
+                                                            data-retailer-id="53A6AD16-840B-A9A2-37D2-50A6CF934EB6"><small><span
+                                                                    class="glyphicon glyphicon-book"></span> &nbsp; Show
+                                                                Application Tracker</small></a></li>
+                                                    <li class="list-group-item-info"><a href="#"
+                                                            class="retailer_form_commission_info_modal"
+                                                            data-retailer-id="53A6AD16-840B-A9A2-37D2-50A6CF934EB6"><small><span
+                                                                    class="glyphicon glyphicon-info-sign"></span> &nbsp;
+                                                                Commission Information</small></a></li>
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-warning"><a target="_blank"
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/53A6AD16-840B-A9A2-37D2-50A6CF934EB6"><small><span
+                                                                    class="glyphicon glyphicon-new-window"></span>
+                                                                &nbsp; Customer Dashboard</small></a></li>
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="retailer_form_modal"
+                                                            data-retailer-id="53A6AD16-840B-A9A2-37D2-50A6CF934EB6"><small><span
+                                                                    class="glyphicon glyphicon-pencil"></span> &nbsp;
+                                                                Edit Customer</small></a></li>
+
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-product_53A6AD16-840B-A9A2-37D2-50A6CF934EB6"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Product</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-location_53A6AD16-840B-A9A2-37D2-50A6CF934EB6"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Location</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_terminals_53A6AD16-840B-A9A2-37D2-50A6CF934EB6"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add Terminal(s)</small></a>
+                                                    </li>
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_eposnow_53A6AD16-840B-A9A2-37D2-50A6CF934EB6"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add ePOSNOW</small></a>
+                                                    </li>
+
+
+                                                    <li class="list-group-item-warning">
+                                                        <a href="#" class="retailer_form_update_bank_details_modal"
+                                                            data-retailer-id="53A6AD16-840B-A9A2-37D2-50A6CF934EB6">
+                                                            <small><span class="glyphicon glyphicon-pencil"></span>
+                                                                &nbsp; Update Bank Details</small>
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+
+
+                                            <div class="clearfix"></div>
+                                            <img src="https://ossonestopsolutionsltd.posinabox.eu/assets/base/images/ico_terminal.png"
+                                                class="retailer-product-ico" title="Terminals">
+                                        </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td nowrap="" class="text-center"><span
+                                                class="label label-default">17014</span><br><br><span
+                                                class="label label-primary">2101657319</span></td>
+                                        <td nowrap="">go-go's Take Away<br><strong>kelly thomson T/A go-go's take
+                                                away</strong><br>Kelly Thomson<br>(kelly84thomson@virginmedia.com +44
+                                            74232 17766)<br><span
+                                                class="smaller">https://go-gostakeaway-ossonestopsolutionsltd.posinabox.eu</span>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/AFC8A2C7-354D-50B0-B29B-1089C9519973"
+                                                target="_blank"><span class="glyphicon glyphicon-new-window"></span></a>
+
+
+                                        </td>
+
+                                        <td><span class="glyphicon glyphicon-ok"></span></td>
+                                        <td><a
+                                                href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_kyc/AFC8A2C7-354D-50B0-B29B-1089C9519973"><span
+                                                    class="glyphicon glyphicon-download-alt"></span></a></td>
+                                        <td class="smaller">06/07/2020 15:41:16</td>
+                                        <td class="text-right">7,320</td>
+                                        <td class="text-right">£81,062.11</td>
+                                        <td class="text-right">£11.07</td>
+                                        <td nowrap="nowrap"></td>
+                                        <td class="smaller">
+                                            LIVE - TRN THIS MONTH<br><br><span class="label label-warning"
+                                                style="font-size: x-small;">Paytek [PIAB8995]</span><br><span
+                                                style="white-space: nowrap"><strong>MID</strong>: Mid(s)
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Finance</strong>: Finance
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Terminal</strong>: Terminal(s)
+                                                live</span><br> </td>
+                                        <td class="smaller">
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/7E2678E4-DBF5-6188-9CB7-EB74A64CA8FF"
+                                                target="_blank">Fiza Caan <span
+                                                    class="glyphicon glyphicon-new-window"></span></a>
+                                        </td>
+                                        <td width="100" style="text-align: right;">
+
+                                            <button class="btn btn-primary btn-xs retailer_form_operations_log_modal"
+                                                data-retailer-id="AFC8A2C7-354D-50B0-B29B-1089C9519973"
+                                                style="margin-bottom:3px;">
+                                                <span class="glyphicon glyphicon-book"></span> &nbsp; Application
+                                                Tracker </button>
+                                            <div class="btn-group" style="width:100%; margin-top:4px;">
+                                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                                    data-toggle="dropdown" style="width:100%;">
+                                                    <span class="glyphicon glyphicon-menu-hamburger"></span> &nbsp;
+                                                    Actions &nbsp; <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-custom-right" role="menu">
+
+                                                    <li><a href="#" class="retailer_form_files_modal"
+                                                            data-retailer-id="AFC8A2C7-354D-50B0-B29B-1089C9519973"><small><span
+                                                                    class="glyphicon glyphicon-file"></span> &nbsp; Show
+                                                                Customer's Files</small></a></li>
+                                                    <li><a href="#" class="retailer_form_operations_log_modal"
+                                                            data-retailer-id="AFC8A2C7-354D-50B0-B29B-1089C9519973"><small><span
+                                                                    class="glyphicon glyphicon-book"></span> &nbsp; Show
+                                                                Application Tracker</small></a></li>
+                                                    <li class="list-group-item-info"><a href="#"
+                                                            class="retailer_form_commission_info_modal"
+                                                            data-retailer-id="AFC8A2C7-354D-50B0-B29B-1089C9519973"><small><span
+                                                                    class="glyphicon glyphicon-info-sign"></span> &nbsp;
+                                                                Commission Information</small></a></li>
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-warning"><a target="_blank"
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/AFC8A2C7-354D-50B0-B29B-1089C9519973"><small><span
+                                                                    class="glyphicon glyphicon-new-window"></span>
+                                                                &nbsp; Customer Dashboard</small></a></li>
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="retailer_form_modal"
+                                                            data-retailer-id="AFC8A2C7-354D-50B0-B29B-1089C9519973"><small><span
+                                                                    class="glyphicon glyphicon-pencil"></span> &nbsp;
+                                                                Edit Customer</small></a></li>
+
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-product_AFC8A2C7-354D-50B0-B29B-1089C9519973"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Product</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-location_AFC8A2C7-354D-50B0-B29B-1089C9519973"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Location</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_terminals_AFC8A2C7-354D-50B0-B29B-1089C9519973"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add Terminal(s)</small></a>
+                                                    </li>
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_eposnow_AFC8A2C7-354D-50B0-B29B-1089C9519973"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add ePOSNOW</small></a>
+                                                    </li>
+
+
+                                                    <li class="list-group-item-warning">
+                                                        <a href="#" class="retailer_form_update_bank_details_modal"
+                                                            data-retailer-id="AFC8A2C7-354D-50B0-B29B-1089C9519973">
+                                                            <small><span class="glyphicon glyphicon-pencil"></span>
+                                                                &nbsp; Update Bank Details</small>
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+
+
+                                            <div class="clearfix"></div>
+                                            <img src="https://ossonestopsolutionsltd.posinabox.eu/assets/base/images/ico_terminal.png"
+                                                class="retailer-product-ico" title="Terminals">
+                                        </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td nowrap="" class="text-center"><span
+                                                class="label label-default">17013</span><br><br><span
+                                                class="label label-primary">2101657535</span></td>
+                                        <td nowrap="">Mian Sweets<br><strong>MIAN SWEETS LIMITED T/A Mia
+                                                Sweets</strong><br>Muhammad Rashid (xaad7722@gmail.com +44 7366
+                                            323224)<br><span
+                                                class="smaller">https://miansweets-ossonestopsolutionsltd.posinabox.eu</span>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/8AB285E6-1671-1464-8A7A-C8626E01B9F5"
+                                                target="_blank"><span class="glyphicon glyphicon-new-window"></span></a>
+
+
+                                        </td>
+
+                                        <td></td>
+                                        <td><a
+                                                href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_kyc/8AB285E6-1671-1464-8A7A-C8626E01B9F5"><span
+                                                    class="glyphicon glyphicon-download-alt"></span></a></td>
+                                        <td class="smaller">06/07/2020 15:33:33</td>
+                                        <td class="text-right">1,002</td>
+                                        <td class="text-right">£10,607.05</td>
+                                        <td class="text-right">£10.59</td>
+                                        <td nowrap="nowrap"></td>
+                                        <td class="smaller">
+                                            LIVE - TRN THIS MONTH<br><br><span class="label label-warning"
+                                                style="font-size: x-small;">Paytek [PIAB9017]</span><br><span
+                                                style="white-space: nowrap"><strong>MID</strong>: Mid(s)
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Finance</strong>: Finance
+                                                approved</span><br><span
+                                                style="white-space: nowrap"><strong>Terminal</strong>: Terminal(s)
+                                                live</span><br> </td>
+                                        <td class="smaller">
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/8DB8293B-AA8C-8BCF-A3CF-74401F2BEC05"
+                                                target="_blank">Jamshaid Abbid <span
+                                                    class="glyphicon glyphicon-new-window"></span></a>
+                                        </td>
+                                        <td width="100" style="text-align: right;">
+
+                                            <button class="btn btn-primary btn-xs retailer_form_operations_log_modal"
+                                                data-retailer-id="8AB285E6-1671-1464-8A7A-C8626E01B9F5"
+                                                style="margin-bottom:3px;">
+                                                <span class="glyphicon glyphicon-book"></span> &nbsp; Application
+                                                Tracker </button>
+                                            <div class="btn-group" style="width:100%; margin-top:4px;">
+                                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                                    data-toggle="dropdown" style="width:100%;">
+                                                    <span class="glyphicon glyphicon-menu-hamburger"></span> &nbsp;
+                                                    Actions &nbsp; <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-custom-right" role="menu">
+
+                                                    <li><a href="#" class="retailer_form_files_modal"
+                                                            data-retailer-id="8AB285E6-1671-1464-8A7A-C8626E01B9F5"><small><span
+                                                                    class="glyphicon glyphicon-file"></span> &nbsp; Show
+                                                                Customer's Files</small></a></li>
+                                                    <li><a href="#" class="retailer_form_operations_log_modal"
+                                                            data-retailer-id="8AB285E6-1671-1464-8A7A-C8626E01B9F5"><small><span
+                                                                    class="glyphicon glyphicon-book"></span> &nbsp; Show
+                                                                Application Tracker</small></a></li>
+                                                    <li class="list-group-item-info"><a href="#"
+                                                            class="retailer_form_commission_info_modal"
+                                                            data-retailer-id="8AB285E6-1671-1464-8A7A-C8626E01B9F5"><small><span
+                                                                    class="glyphicon glyphicon-info-sign"></span> &nbsp;
+                                                                Commission Information</small></a></li>
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-warning"><a target="_blank"
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/8AB285E6-1671-1464-8A7A-C8626E01B9F5"><small><span
+                                                                    class="glyphicon glyphicon-new-window"></span>
+                                                                &nbsp; Customer Dashboard</small></a></li>
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="retailer_form_modal"
+                                                            data-retailer-id="8AB285E6-1671-1464-8A7A-C8626E01B9F5"><small><span
+                                                                    class="glyphicon glyphicon-pencil"></span> &nbsp;
+                                                                Edit Customer</small></a></li>
+
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-product_8AB285E6-1671-1464-8A7A-C8626E01B9F5"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Product</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-info">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/add-new-location_8AB285E6-1671-1464-8A7A-C8626E01B9F5"
+                                                            target="_blank">
+                                                            <small><span class="glyphicon glyphicon-plus-sign"></span>
+                                                                &nbsp; New Location</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_terminals_8AB285E6-1671-1464-8A7A-C8626E01B9F5"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add Terminal(s)</small></a>
+                                                    </li>
+                                                    <li class="list-group-item-success">
+                                                        <a href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/additional-product_eposnow_8AB285E6-1671-1464-8A7A-C8626E01B9F5"
+                                                            target="_blank"><small><span
+                                                                    class="glyphicon glyphicon-plus-sign"></span> &nbsp;
+                                                                Add ePOSNOW</small></a>
+                                                    </li>
+
+                                                    <li class="list-group-item-warning">
+                                                        <a href="#" class="retailer_form_update_director_modal"
+                                                            data-retailer-id="8AB285E6-1671-1464-8A7A-C8626E01B9F5">
+                                                            <small><span class="glyphicon glyphicon-pencil"></span>
+                                                                &nbsp; Update Director Details</small>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="list-group-item-warning">
+                                                        <a href="#" class="retailer_form_update_bank_details_modal"
+                                                            data-retailer-id="8AB285E6-1671-1464-8A7A-C8626E01B9F5">
+                                                            <small><span class="glyphicon glyphicon-pencil"></span>
+                                                                &nbsp; Update Bank Details</small>
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+
+
+                                            <div class="clearfix"></div>
+                                            <img src="https://ossonestopsolutionsltd.posinabox.eu/assets/base/images/ico_terminal.png"
+                                                class="retailer-product-ico" title="Terminals">
+                                        </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td nowrap="" class="text-center"><span
+                                                class="label label-default">17002</span><br><br><span
+                                                class="label label-primary"></span></td>
+                                        <td nowrap="">Sweet Box LTD<br><strong>--- N/A ---</strong><br>--- N/A --- (---
+                                            N/A --- --- N/A ---)<br><span
+                                                class="smaller">https://sweetboxltd-ossonestopsolutionsltd.posinabox.eu</span>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/57F27659-B1E8-8F34-C0FF-4B8E0F5D6D59"
+                                                target="_blank"><span class="glyphicon glyphicon-new-window"></span></a>
+
+
+                                        </td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td class="smaller">06/07/2020 12:04:57</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">£0.00</td>
+                                        <td class="text-right">£0.00</td>
+                                        <td nowrap="nowrap"></td>
+                                        <td class="smaller">
+                                            APPLICATION NOT COMPLETED<br><br><span class="label label-warning"
+                                                style="font-size: x-small;"></span><br><span
+                                                style="white-space: nowrap"><strong>MID</strong>: Awaiting Elavon
+                                                Registration</span><br><span
+                                                style="white-space: nowrap"><strong>Finance</strong>: Awaiting Elavon
+                                                Registration</span><br><span
+                                                style="white-space: nowrap"><strong>Terminal</strong>: Awaiting
+                                                MID<br>Awaiting Finance</span><br> </td>
+                                        <td class="smaller">
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/CCB8026E-EEAF-8ADC-C4D4-81FDDD2D564A"
+                                                target="_blank">David <span
+                                                    class="glyphicon glyphicon-new-window"></span></a>
+                                        </td>
+                                        <td width="100" style="text-align: right;">
+
+                                            <button class="btn btn-primary btn-xs retailer_form_operations_log_modal"
+                                                data-retailer-id="57F27659-B1E8-8F34-C0FF-4B8E0F5D6D59"
+                                                style="margin-bottom:3px;">
+                                                <span class="glyphicon glyphicon-book"></span> &nbsp; Application
+                                                Tracker </button>
+                                            <div class="btn-group" style="width:100%; margin-top:4px;">
+                                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                                    data-toggle="dropdown" style="width:100%;">
+                                                    <span class="glyphicon glyphicon-menu-hamburger"></span> &nbsp;
+                                                    Actions &nbsp; <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-custom-right" role="menu">
+                                                    <li class="list-group-item-success"><a target="_blank"
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/57F27659-B1E8-8F34-C0FF-4B8E0F5D6D59"><small><span
+                                                                    class="glyphicon glyphicon-play"></span> &nbsp;
+                                                                Continue with Application</small></a></li>
+
+                                                    <li><a href="#" class="retailer_form_files_modal"
+                                                            data-retailer-id="57F27659-B1E8-8F34-C0FF-4B8E0F5D6D59"><small><span
+                                                                    class="glyphicon glyphicon-file"></span> &nbsp; Show
+                                                                Customer's Files</small></a></li>
+                                                    <li><a href="#" class="retailer_form_operations_log_modal"
+                                                            data-retailer-id="57F27659-B1E8-8F34-C0FF-4B8E0F5D6D59"><small><span
+                                                                    class="glyphicon glyphicon-book"></span> &nbsp; Show
+                                                                Application Tracker</small></a></li>
+                                                    <li class="list-group-item-info"><a href="#"
+                                                            class="retailer_form_commission_info_modal"
+                                                            data-retailer-id="57F27659-B1E8-8F34-C0FF-4B8E0F5D6D59"><small><span
+                                                                    class="glyphicon glyphicon-info-sign"></span> &nbsp;
+                                                                Commission Information</small></a></li>
+
+
+
+                                                    <li>&nbsp;</li>
+
+                                                    <li class="list-group-item-warning"><a target="_blank"
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/merchant_auto_login/57F27659-B1E8-8F34-C0FF-4B8E0F5D6D59"><small><span
+                                                                    class="glyphicon glyphicon-new-window"></span>
+                                                                &nbsp; Customer Dashboard</small></a></li>
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="retailer_form_modal"
+                                                            data-retailer-id="57F27659-B1E8-8F34-C0FF-4B8E0F5D6D59"><small><span
+                                                                    class="glyphicon glyphicon-pencil"></span> &nbsp;
+                                                                Edit Customer</small></a></li>
+
+
+                                                    <li class="list-group-item-warning"><a href="#"
+                                                            class="merchants_merchant_withdraw_merchant_form_modal"
+                                                            data-retailer-id="57F27659-B1E8-8F34-C0FF-4B8E0F5D6D59"><small><span
+                                                                    class="glyphicon glyphicon-ban-circle"></span>
+                                                                &nbsp; Withdraw the Customer</small></a></li>
+
+
+                                                    <li>&nbsp;</li>
+
+
+
+
+
+
+                                                    <li>&nbsp;</li>
+                                                    <li class="list-group-item-success"><a
+                                                            href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/reset_id_elavon_application/57F27659-B1E8-8F34-C0FF-4B8E0F5D6D59"
+                                                            onclick="return confirm('Are you sure you want to Reset the Application?'); return false;"><small><span
+                                                                    class="glyphicon glyphicon-repeat"></span> &nbsp;
+                                                                Reset the Application</small></a></li>
+                                                </ul>
+                                            </div>
+
+
+                                            <div class="clearfix"></div>
+                                            <img src="https://ossonestopsolutionsltd.posinabox.eu/assets/base/images/ico_terminal.png"
+                                                class="retailer-product-ico" title="Terminals">
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="2"> </td>
+                                        <td colspan="3">&nbsp;</td>
+                                        <td class="text-right"> </td>
+                                        <td class="text-right"> </td>
+                                        <td colspan="2">&nbsp;</td>
+                                        <td colspan="4">
+                                            <div class="btn-group pull-right filters filter_pager"><a
+                                                    class="btn btn-default btn-sm disabled" role="button" href="#"
+                                                    title="First"><i class="fas fa-table"></i><span
+                                                        class="glyphicon glyphicon-step-backward"></span></a><a
+                                                    class="btn btn-default btn-sm disabled" role="button" href="#"
+                                                    title="Prev"><span
+                                                        class="glyphicon glyphicon-chevron-left"></span></a>
+                                                <div class="btn btn-default btn-sm pager-holder "><select
+                                                        name="pager-select" id="pager-holder-select">
+                                                        <option value="0" selected="selected">1/4 pages of 55 results
+                                                        </option>
+                                                        <option value="15">2/4 pages of 55 results</option>
+                                                        <option value="30">3/4 pages of 55 results</option>
+                                                        <option value="45">4/4 pages of 55 results</option>
+                                                    </select></div><a class="btn btn-default btn-sm" role="button"
+                                                    href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/filter/all/all/all/all/all/created-desc/15/15"
+                                                    title="Next"><span
+                                                        class="glyphicon glyphicon-chevron-right"></span></a><a
+                                                    class="btn btn-default btn-sm" role="button"
+                                                    href="https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/filter/all/all/all/all/all/created-desc/15/45"
+                                                    title="Last"><span
+                                                        class="glyphicon glyphicon-step-forward"></span></a>
+                                            </div>
+                                            <script type="text/javascript">
+
+                                                $(document).ready(function () {
+
+                                                    $("#pager-holder-select").on("change", function (event) {
+                                                        window.location.href = "https://ossonestopsolutionsltd.posinabox.eu/merchants/merchant/filter/all/all/all/all/all/created-desc/15/" + $(this).val();
+                                                    });
+
+                                                });
+                            //-->
+                                            </script>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                        <div>
+                            <a href="#">Privacy Policy</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.table tbody tr.disabled button, .table tbody tr.disabled a, .table tbody tr.disabled td').addClass('disabled').unbind('click');
+        });
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+
+    <script type="text/javascript"
+        src="https://ossonestopsolutionsltd.posinabox.eu/assets/jquery-autoNumeric/autoNumeric-min.js"></script>
+    <script type="text/javascript">
+        function format_currency(selector, decimals) {
+            if (typeof decimals === 'undefined') { decimals = '2'; }
+
+            $(selector).autoNumeric("init", {
+                aSep: ',',
+                aDec: '.',
+                aSign: '£',
+                pSign: 'p',
+                mDec: decimals,
+                unSetOnSubmit: true
+            });
+        }
+
+        function format_tax(selector, decimals) {
+            if (typeof decimals === 'undefined') { decimals = '2'; }
+
+            if ($(selector).data('type') !== undefined) {
+                //console.log($(selector).data('type'));
+                if ($(selector).data('type') == 'e') {
+                    tax = $(selector).data('value');
+                    tax_calc = $(selector).data('amount') * (tax / 100);
+                    text = ' + VAT %y';
+                    text = text.replace('%x', tax);
+                    text = text.replace('%y', '<span>' + tax_calc + '</span>');
+                    $(selector).html(text);
+
+                    //format tax
+                    format_currency($(selector + ' span'));
+                }
+                else if ($(selector).data('type') == 'i') {
+                    $(selector).html(' VAT Included');
+                }
+            }
+        }
+
+        function format_number(selector, decimals) {
+            if (typeof decimals === 'undefined') { decimals = '2'; }
+
+            $(selector).autoNumeric("init", {
+                aSep: ',',
+                aDec: '.',
+                mDec: decimals,
+                unSetOnSubmit: true
+            });
+        }
+
+        function format_integer(selector) {
+            $(selector).autoNumeric("init", {
+                aSep: ',',
+                aDec: '.',
+                mDec: '0',
+                unSetOnSubmit: true
+            });
+        }
+
+        $(document).ready(function () {
+            format_currency('.format_currency');
+            format_number('.format_number');
+            format_number('.format_number_3_dec', 3);
+            format_integer('.format_integer');
+        });
+
+    </script>
+    <script type="text/javascript"
+        src="https://ossonestopsolutionsltd.posinabox.eu/assets/nprogress/nprogress.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Show the progress bar
+            NProgress.start();
+
+            // Increase randomly
+            var interval = setInterval(function () { NProgress.inc(); }, 1000);
+
+            // Trigger finish when page fully loaded
+            jQuery(window).load(function () {
+                clearInterval(interval);
+                NProgress.done();
+            });
+
+            // Trigger bar when exiting the page
+            jQuery(window).unload(function () {
+                NProgress.start();
+            });
+        });
+    </script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#leftmenu ul .nav_merchants").show();
+            $("#leftmenu ul .nav_merchants").addClass('active');
+
+            $("#leftmenu h6").on('click', function () {
+
+                $(document.body).css({ 'cursor': 'wait' });
+
+                //hide all the link lists
+                //$("#leftmenu ul ul").fadeTo('fast', 0);
+                $("#leftmenu ul ul").hide();
+
+                $("#leftmenu h6").fadeTo(0, 0.1).removeClass('selected');
+                $(this).fadeTo(0, 1).addClass('selected');
+
+                //show the link list below the h6 clicked - only if its closed
+                if (!$(this).next().is(":visible")) {
+                    $(this).next().show();
+                    $(this).next().fadeTo('slow', 1);
+
+                    var link = $(this).next().children().not("[class^=no-link]").first().children().first().prop('href');
+                    window.location.href = link;
+                }
+            })
+
+            $("#leftmenu h6").hover(
+                function () {
+                    if (!($(this).hasClass('selected') || $(this).hasClass('active'))) $(this).fadeTo(0, 1);
+                }, function () {
+                    if (!($(this).hasClass('selected') || $(this).hasClass('active'))) $(this).fadeTo(0, 0.5);
+                }
+            )
+
+            $('body').ajaxStart(function () {
+                $(this).css({ 'cursor': 'wait' });
+
+                //NProgress.start();
+                //NProgress.inc();
+                //NProgress.done();
+
+            }).ajaxStop(function () {
+                $(this).css({ 'cursor': 'default' });
+            });
+        });
+
+        function showAlert(type, message) {
+            $(".alerts_holder." + type).remove();
+            var alertsHolder = '' +
+                '<div id="alerts_holder" class="alerts_holder alert ' + type + ' alert-dismissible">' +
+                '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' +
+                '<div class="alerts_holder_message"></div>' +
+                '</div>';
+
+            $('body').append(alertsHolder);
+
+            $('.alerts_holder.' + type + ' .alerts_holder_message').html(message);
+            $('.alerts_holder.' + type).stop().slideUp(600).fadeIn(600).delay(6000).slideDown(600).fadeOut(600);
+        }
+
+    </script>
+</body>
+
+</html>

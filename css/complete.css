@@ -1,0 +1,463 @@
+.link,
+.paste_colour {
+    color: #e31e24 !important;
+}
+
+header {
+    background: #cdcdcd !important;
+}
+
+#top_menu_link_user {
+    color: #ffffff !important;
+}
+
+#top_menu_link_user2 {
+    color: #ffffff !important;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+#top_menu_link_user2 .caret {
+    border-bottom-color: #ffffff !important;
+    border-top-color: #ffffff !important;
+}
+
+.panel-default>.panel-heading {
+    background: #cdcdcd !important;
+    color: #ffffff;
+}
+
+/* buttons */
+.instant-decision-continue {
+    color: #333333 !important;
+    background-color: #cdcdcd !important;
+}
+
+/* breadcrumb-design */
+.breadcrumb_holder {
+    color: #333333 !important;
+    background-color: #cdcdcd !important;
+}
+
+.breadcrumb-design .breadcrumb>li.active,
+.breadcrumb-design .breadcrumb>li a {
+    color: #ffffff;
+}
+
+.breadcrumb-design .breadcrumb {
+    background-color: #cdcdcd;
+}
+
+.breadcrumb-design {
+    background-color: #ffffff;
+}
+
+.breadcrumb-design .filters {
+    background-color: #cdcdcd;
+}
+
+.breadcrumb-design .filter_period_buttons .btn-primary,
+.breadcrumb-design .filter_period_buttons .btn-default:hover,
+.breadcrumb-design .filter_pager .btn-primary,
+.breadcrumb-design .filter_pager .btn-default:hover,
+.breadcrumb-design .filter_period_from_to .btn-primary,
+.breadcrumb-design .filter_period_from_to .btn-default:hover {
+    color: #333333 !important;
+    background-image: linear-gradient(to bottom, #5b5b5b 0px, #cdcdcd 100%) !important;
+    border-color: #aaaaaa !important;
+}
+
+.breadcrumb-design .filter_period_buttons .btn-default,
+.breadcrumb-design .filter_pager .btn-default,
+.breadcrumb-design .filter_period_from_to .btn-default,
+.breadcrumb-design .input-group .input-group-addon {
+    color: #333333 !important;
+    background: #cdcdcd !important;
+    border-color: #aaaaaa !important;
+}
+
+
+/* breadcrumb-row */
+.breadcrumb-row {
+    background: #ffffff;
+}
+
+
+
+
+.first_content {
+    background: #cdcdcd;
+}
+
+.table>thead>tr:last-of-type>th,
+.table>thead>tr.heading>th,
+.first_form_2 .table>tfoot>tr:last-of-type>td,
+.first_form .table>tfoot>tr:last-of-type>td,
+.first_content .table>tfoot>tr:last-of-type>td,
+.itemcont .table>tfoot>tr:last-of-type>td {
+    color: #333333 !important;
+    background-color: #cdcdcd !important;
+}
+
+.btn-primary {
+    background-image: linear-gradient(to bottom, #5b5b5b 0px, #cdcdcd 100%) !important;
+    border-color: #aaaaaa !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #5b5b5b !important;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+    background-color: #cdcdcd !important;
+    border-color: #cdcdcd !important;
+}
+
+#avatar_holder,
+ul.sidemenu {
+    background-color: #252525 !important;
+}
+
+ul.sidemenu h6 {
+    color: #ffffff;
+}
+
+#my_info,
+#leftmenu .side-sub-menu {
+    background-color: #363636 !important;
+}
+
+ul.sidemenu li ul li a {
+    color: #ffffff;
+}
+
+a,
+a:hover,
+a:focus {
+    color: #e31e24;
+}
+
+.form-control:focus {
+    border-color: #e31e24;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(227, 30, 36, 0.6);
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+    font-weight: bold !important;
+    color: #333333 !important;
+    background-color: #cdcdcd !important;
+    border-color: #cdcdcd #cdcdcd transparent;
+}
+
+.nav-tabs>li>a,
+.nav-tabs>li>a:hover,
+.nav-tabs>li>a:focus {
+    border-color: #ddd;
+}
+
+.mobile-menu-button a,
+.mobile-menu-button a:focus,
+.mobile-menu-button a:hover {
+    color: #333333;
+}
+
+.progress-indicator>li.completed .bubble,
+.progress-indicator>li.completed .bubble::after,
+.progress-indicator>li.completed .bubble::before {
+    background-color: #013c5c;
+}
+
+.progress-indicator>li.completed,
+.progress-indicator>li.completed .bubble,
+.progress-indicator>li.completed a,
+.progress-indicator>li.completed a:hover,
+.progress-indicator>li.completed a:focus {
+    color: #013c5c;
+}
+
+.sing-up-body .header-selected {
+    background-color: #ffffff;
+    color: #212721;
+}
+
+.sing-up-body .header-selected .header-selected-left #header-selected-img-text {
+    color: #cdcdcd;
+}
+
+.sing-up-body .header-selected-right-text strong {
+    color: #212721;
+}
+
+.sing-up-body .header-selected-right-text button {
+    background-color: #cdcdcd;
+    border-color: #cdcdcd;
+    color: #ffffff;
+}
+
+.signup-main-body h1,
+.sing-up-body h1 {
+    color: #cdcdcd;
+}
+
+.signup-main-body h2 {
+    color: #cdcdcd;
+}
+
+.signup-main-body h4,
+.signup-main-body .modal-dialog h4 {
+    color: #cdcdcd;
+}
+
+.signup-main-body .text-blue {
+    color: #cdcdcd;
+}
+
+.signup-main-body .modal-dialog h5,
+.signup-main-body .modal-dialog-inpage h5 {
+    color: #cdcdcd;
+    border-bottom-color: #cdcdcd;
+}
+
+.signup-main-body h1 span {
+    color: #212721;
+}
+
+.signup-main-body .select-product h2 {
+    color: #cdcdcd;
+    border-bottom-color: #cdcdcd;
+}
+
+.signup-main-body .top-info-box {
+    border-color: #cdcdcd;
+    color: #212721;
+    border-radius: 5px;
+}
+
+.signup-main-body .top-info-box .ico {
+    background-color: #cdcdcd;
+}
+
+.signup-main-body .top-info-route {
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+
+.signup-main-body .form-group label {
+    color: #ffffff;
+    text-align: left;
+    background-color: #cdcdcd;
+    border-radius: 17px 0 0 17px;
+    min-height: 34px;
+    margin-right: -15px;
+}
+
+.signup-main-body .form-group .checkbox label {
+    background-color: transparent;
+    color: #212721;
+}
+
+
+.signup-main-body .form-group input[type=file],
+.signup-main-body input[type=file] {
+    color: #ffffff;
+    background-color: #cdcdcd;
+    border-radius: 17px;
+}
+
+
+.signup-main-body .form-group input,
+.signup-main-body .form-group select,
+.signup-main-body .form-group textarea,
+.signup-main-body textarea,
+.signup-main-body .select2-container--default .select2-selection--single {
+    border-radius: 0 17px 17px 0;
+    border-color: #212721;
+}
+
+.signup-main-body .form-group.utilities-mpan-wrapper input {
+    border-radius: 4px;
+}
+
+.signup-main-body .ms-container .ms-list {
+    border-color: #212721;
+}
+
+
+.signup-main-body .input-group-addon {
+    border-color: #212721;
+    border-radius: 0px;
+    color: #ffffff;
+    background-color: #cccccc;
+}
+
+.signup-main-body .input-group-addon:last-child {
+    border-radius: 0 17px 17px 0;
+}
+
+
+.signup-main-body button.btn-continue,
+.signup-main-body button.btn-add-owner,
+.signup-main-body .standard-box-1 button.extras,
+.signup-main-body .select-product .buttons button {
+    background-color: #5b5b5b;
+    color: #ffffff;
+    border-radius: 17px;
+}
+
+.signup-main-body button.btn-continue:hover,
+.signup-main-body button.btn-add-owner:hover,
+.signup-main-body .standard-box-1 button.extras:hover,
+.signup-main-body .select-product .buttons button:hover {
+    background-color: #e31e24;
+    color: #ffffff;
+}
+
+
+
+.signup-main-body .select-product .buttons button.select,
+.signup-main-body .select-product .buttons button:disabled,
+.signup-main-body button.btn-previous {
+    background-color: #cccccc;
+    color: #ffffff;
+    border-radius: 17px;
+}
+
+.signup-main-body .select-product .buttons button.select:hover,
+.signup-main-body .select-product .buttons button:disabled:hover,
+.signup-main-body button.btn-previous:hover {
+    background-color: #bababa;
+    color: #ffffff;
+}
+
+
+.signup-main-body button.btn-edit {
+        background-color: #221f1f;
+        color: #ffffff;
+        border-radius: 17px;
+}
+
+.signup-main-body button.btn-edit:hover {
+    background-color: #7e0d0d;
+    color: #ffffff;
+}
+
+
+
+
+
+.signup-main-body .form-control-static {
+    background-color: #cccccc;
+    padding-left: 15px;
+    border-radius: 0 17px 17px 0;
+    border-color: #212721
+}
+
+
+.signup-main-body .document-read-1 {
+    color: #212721;
+}
+
+.signup-main-body .document-read-1-outer {
+    border-radius: 17px;
+    border-color: #212721;
+}
+
+.signup-main-body .overview-box {
+    background-color: #f2f2f2;
+    border: 1px solid #cdcdcd;
+    border-radius: 17px;
+}
+
+.signup-main-body .overview-box h2,
+.signup-main-body table.ownership th,
+.merchant_form_update_bank_details_modal table.ownership th {
+    background-color: #cdcdcd;
+    color: #ffffff;
+}
+
+.signup-main-body .overview-box h2, .signup-main-body table.ownership th, .merchant_form_update_bank_details_modal table.ownership th {
+    background-color: #cdcdcd;
+    color: #000000;
+}
+
+.signup-main-body table.ownership {
+    border-color: #212721;
+    border-collapse: collapse;
+    border-radius: 17px;
+    border-collapse: inherit;
+    overflow: hidden;
+}
+
+.sing-up-body .file-upload-box {
+    border-color: #212721;
+    border-radius: 17px;
+
+}
+
+
+.signup-main-body .price-wrap-up-price-1 {
+    color: #cdcdcd;
+}
+
+.signup-main-body .price-wrap-up-price-2 {
+    color: #cdcdcd;
+}
+
+.signup-main-body .floor-price {
+    background-color: #8c8c8c;
+    ;
+    color: #8c8c8c;
+}
+
+.signup-main-body .floor-price.show {
+    color: #ffffff;
+}
+
+
+.signup-main-body .modal-dialog .btn-group {
+    border-color: #cdcdcd;
+}
+
+.signup-main-body .modal-dialog .btn-group .btn-radio {
+    background-color: #ffffff;
+    color: #cdcdcd;
+}
+
+.signup-main-body .modal-dialog .btn-group .btn-radio.active {
+    background-color: #cdcdcd;
+    color: #ffffff;
+}
+
+.signup-main-body .software_count_1 .btn-default.active,
+.signup-main-body .software_count_1 .btn-default:active {
+    background-color: #5b5b5b;
+    color: #ffffff;
+}
+
+.progress-indicator>li.completed .bubble, .progress-indicator>li.completed .bubble::after, .progress-indicator>li.completed .bubble::before {
+    background-color: #960202;
+}
+
+.signup-main-body h1, .sing-up-body h1 {
+    color: rgb(0, 0, 0);
+}
+
+.signup-main-body .overview-box h2, .signup-main-body table.ownership th, .merchant_form_update_bank_details_modal table.ownership th {
+    background-color: rgb(209 9 9);
+    color: rgb(0, 0, 0);
+}
+
+.signup-main-body .select-product .buttons button.select, .signup-main-body .select-product .buttons button:disabled, .signup-main-body button.btn-previous:hover {
+    background-color: #af1e1e;
+    color: #ffffff;
+    border-radius: 17px;
+}
+
+.signup-main-body .text-blue {
+    color: #8d0505;
+}

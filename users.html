@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/themes.css" rel="stylesheet" />
+        <link href="css/base.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/boot_training.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" >Company Name</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                        <!-- <li><a class="dropdown-item" href="#!">Activity Log</a></li> -->
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="dashboard.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Customers</div>
+                            <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Operations
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="customers.html">Customers</a>
+                                    <!-- <a class="nav-link" href="layout-sidenav-light.html">Pending Request(s)</a> -->
+                                    <a class="nav-link" href="bespokepricing.html">Bespoke Pricing</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                CRM
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link" href="prospects.html">Prospects</a>
+                                    <!-- <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Register</a>
+                                            <a class="nav-link" href="password.html">Forgot Password</a>
+                                        </nav>
+                                    </div> -->
+                                    <a class="nav-link" href="mylist.html">My List
+                                        <!-- <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div> -->
+                                    </a>
+                                    <!-- <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="401.html">401 Page</a>
+                                            <a class="nav-link" href="404.html">404 Page</a>
+                                            <a class="nav-link" href="500.html">500 Page</a>
+                                        </nav>
+                                    </div> -->
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Support Materials</div>
+                            <a class="nav-link" href="support_materials.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Support Materials
+                            </a>
+                            <a class="nav-link" href="training.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Training
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Start Bootstrap
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Users</h1>
+                        
+                        
+                        <div class="span112">
+
+                            Manage users and view detailed information on them.
+                            <div class="clearfix"></div>
+                            <br><br>
+                    
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>&nbsp;</th>
+                                        <th>
+                                            <div class="is_sortable" data-order-by="username-desc">
+                                            <span class="glyphicon custom-glyphicon-sort-by-up"></span><br>Full Name                        </div>
+                                            <div class="form-group">
+                                                <input type="text" name="filter_user_free_text" value="" class="form-control input-sm" id="filter_user_free_text">                        </div>
+                                        </th>
+                                        <th class="is_sortable" data-order-by="status-asc">Status <span class="glyphicon custom-glyphicon-sort"></span></th>
+                                        <th class="is_sortable" data-order-by="type-asc">Account Type <span class="glyphicon custom-glyphicon-sort"></span></th>
+                                        <th>Superior User</th>
+                                        <th>User Group</th>
+                                        <th class="is_sortable" data-order-by="lastlogin-asc">Last Login <span class="glyphicon custom-glyphicon-sort"></span></th>
+                                        <th class="text-center" nowrap="">
+                                            <div class="form-group">
+                                                <button type="button" name="btn_filter" id="btn_filter" value="Filter" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                        
+                                <tbody>
+                                                    <tr>
+                                        <td class="td_image_icon"><a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/2CFB90BF-E907-9BE3-92D0-C6400CD49C20"><img class="img-thumbnail image_icon" src="https://ossonestopsolutionsltd.posinabox.eu/data/f2ae5e9b2519b1a8918cd50979e6f5e5/user/f5469631edce883d7c8abef44de07dea.png"></a></td>
+                                        <td>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/2CFB90BF-E907-9BE3-92D0-C6400CD49C20">ashish@oss1stop.com</a>
+                                            <br>
+                                            Ashish Mehndiratta                    </td>
+                                        <td>
+                                            <span class="label label-success">Active</span>
+                                        </td>
+                                        <td>User</td>
+                                        <td>Fiza Caan</td>
+                                        <td>Agent Group</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                                    <tr>
+                                        <td class="td_image_icon"><a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/2D0E297D-2FBF-C17C-21FE-10973CC1E266"><img class="img-thumbnail image_icon" src="https://ossonestopsolutionsltd.posinabox.eu/data/_default/user_image_icon.png"></a></td>
+                                        <td>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/2D0E297D-2FBF-C17C-21FE-10973CC1E266">barry@oss1stop.com</a>
+                                            <br>
+                                            Barry Langford                    </td>
+                                        <td>
+                                            <span class="label label-success">Active</span>
+                                        </td>
+                                        <td>User</td>
+                                        <td>Fiza Caan</td>
+                                        <td>Manager Group</td>
+                                        <td>03/12/2021 09:03:56</td>
+                                        <td></td>
+                                    </tr>
+                                                    <tr>
+                                        <td class="td_image_icon"><a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/23FD3C4C-60D4-23C9-1E53-71F5D26C646A"><img class="img-thumbnail image_icon" src="https://ossonestopsolutionsltd.posinabox.eu/data/_default/user_image_icon.png"></a></td>
+                                        <td>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/23FD3C4C-60D4-23C9-1E53-71F5D26C646A">bhussain@oss1stop.com</a>
+                                            <br>
+                                            barber hussain                    </td>
+                                        <td>
+                                            <span class="label label-success">Active</span>
+                                        </td>
+                                        <td>User</td>
+                                        <td>Shahid mahmood</td>
+                                        <td>Agent Group</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                                    <tr>
+                                        <td class="td_image_icon"><a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/AF98F4C7-646F-F84B-7BCD-5C75D437DD63"><img class="img-thumbnail image_icon" src="https://ossonestopsolutionsltd.posinabox.eu/data/_default/user_image_icon.png"></a></td>
+                                        <td>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/AF98F4C7-646F-F84B-7BCD-5C75D437DD63">eddie@oss1stopsolutions.co.uk</a>
+                                            <br>
+                                            Eddie McKenna                    </td>
+                                        <td>
+                                            <span class="label label-success">Active</span>
+                                        </td>
+                                        <td>User</td>
+                                        <td>Fiza Caan</td>
+                                        <td>Manager Group</td>
+                                        <td>03/08/2020 15:25:30</td>
+                                        <td></td>
+                                    </tr>
+                                                    <tr>
+                                        <td class="td_image_icon"><a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/1A81D3BC-A726-70D5-DB62-560D1FDED7D0"><img class="img-thumbnail image_icon" src="https://ossonestopsolutionsltd.posinabox.eu/data/f2ae5e9b2519b1a8918cd50979e6f5e5/user/5af95852ff3ab0fbb532201b35deaeba.png"></a></td>
+                                        <td>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/1A81D3BC-A726-70D5-DB62-560D1FDED7D0">imran@oss1stop.com</a>
+                                            <br>
+                                            Imran khan                    </td>
+                                        <td>
+                                            <span class="label label-success">Active</span>
+                                        </td>
+                                        <td>User</td>
+                                        <td>Fiza Caan</td>
+                                        <td>Agent Group</td>
+                                        <td>06/09/2019 15:31:29</td>
+                                        <td></td>
+                                    </tr>
+                                                    <tr>
+                                        <td class="td_image_icon"><a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/CCB8026E-EEAF-8ADC-C4D4-81FDDD2D564A"><img class="img-thumbnail image_icon" src="https://ossonestopsolutionsltd.posinabox.eu/data/f2ae5e9b2519b1a8918cd50979e6f5e5/user/a9b6ae4598830a3700c3f9d37e2a1648.png"></a></td>
+                                        <td>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/CCB8026E-EEAF-8ADC-C4D4-81FDDD2D564A">info@westenergybrokerage.co.uk</a>
+                                            <br>
+                                            David                    </td>
+                                        <td>
+                                            <span class="label label-success">Active</span>
+                                        </td>
+                                        <td>User</td>
+                                        <td></td>
+                                        <td>Agent Group</td>
+                                        <td>25/01/2021 14:28:50</td>
+                                        <td></td>
+                                    </tr>
+                                                    <tr>
+                                        <td class="td_image_icon"><a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/8DB8293B-AA8C-8BCF-A3CF-74401F2BEC05"><img class="img-thumbnail image_icon" src="https://ossonestopsolutionsltd.posinabox.eu/data/_default/user_image_icon.png"></a></td>
+                                        <td>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/8DB8293B-AA8C-8BCF-A3CF-74401F2BEC05">Jimmy@oss1stop.com</a>
+                                            <br>
+                                            Jamshaid Abbid                    </td>
+                                        <td>
+                                            <span class="label label-success">Active</span>
+                                        </td>
+                                        <td>User</td>
+                                        <td>Fiza Caan</td>
+                                        <td>Agent Group</td>
+                                        <td>10/09/2020 17:10:07</td>
+                                        <td></td>
+                                    </tr>
+                                                    <tr>
+                                        <td class="td_image_icon"><a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/106BD0AF-5F8F-8EB7-5127-54C033641299"><img class="img-thumbnail image_icon" src="https://ossonestopsolutionsltd.posinabox.eu/data/_default/user_image_icon.png"></a></td>
+                                        <td>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/106BD0AF-5F8F-8EB7-5127-54C033641299">kay@oss1stopsolutions.co.uk</a>
+                                            <br>
+                                            kay caan                    </td>
+                                        <td>
+                                            <span class="label label-success">Active</span>
+                                        </td>
+                                        <td>User</td>
+                                        <td>Fiza Caan</td>
+                                        <td>Administrator Group</td>
+                                        <td>26/10/2020 09:55:49</td>
+                                        <td></td>
+                                    </tr>
+                                                    <tr>
+                                        <td class="td_image_icon"><a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/942A1E3F-5D99-9AE1-05B1-F2FA006DE122"><img class="img-thumbnail image_icon" src="https://ossonestopsolutionsltd.posinabox.eu/data/_default/user_image_icon.png"></a></td>
+                                        <td>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/942A1E3F-5D99-9AE1-05B1-F2FA006DE122">major@oss1stop.com</a>
+                                            <br>
+                                            Major Ali                    </td>
+                                        <td>
+                                            <span class="label label-success">Active</span>
+                                        </td>
+                                        <td>User</td>
+                                        <td>Shahid mahmood</td>
+                                        <td>Agent Group</td>
+                                        <td>30/05/2022 14:35:27</td>
+                                        <td></td>
+                                    </tr>
+                                                    <tr>
+                                        <td class="td_image_icon"><a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/3C1E2C75-343E-B9AD-AD1E-ECA914E3B2D5"><img class="img-thumbnail image_icon" src="https://ossonestopsolutionsltd.posinabox.eu/data/_default/user_image_icon.png"></a></td>
+                                        <td>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/3C1E2C75-343E-B9AD-AD1E-ECA914E3B2D5">ryan@oss1stop.com</a>
+                                            <br>
+                                            ryan caan                    </td>
+                                        <td>
+                                            <span class="label label-success">Active</span>
+                                        </td>
+                                        <td>User</td>
+                                        <td></td>
+                                        <td>Administrator Group</td>
+                                        <td>04/10/2019 16:18:05</td>
+                                        <td></td>
+                                    </tr>
+                                                    <tr>
+                                        <td class="td_image_icon"><a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/2A940424-A4CB-C01F-28D5-6C5181A41AA6"><img class="img-thumbnail image_icon" src="https://ossonestopsolutionsltd.posinabox.eu/data/f2ae5e9b2519b1a8918cd50979e6f5e5/user/fd0ad3d4d16c5157efa42d2713d4384d.png"></a></td>
+                                        <td>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/2A940424-A4CB-C01F-28D5-6C5181A41AA6">Shahid@oss1stop.com</a>
+                                            <br>
+                                            Shahid mahmood                    </td>
+                                        <td>
+                                            <span class="label label-success">Active</span>
+                                        </td>
+                                        <td>User</td>
+                                        <td>Fiza Caan</td>
+                                        <td>Manager Group</td>
+                                        <td>04/06/2020 20:04:49</td>
+                                        <td></td>
+                                    </tr>
+                                                    <tr>
+                                        <td class="td_image_icon"><a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/7E2678E4-DBF5-6188-9CB7-EB74A64CA8FF"><img class="img-thumbnail image_icon" src="https://ossonestopsolutionsltd.posinabox.eu/data/_default/user_image_icon.png"></a></td>
+                                        <td>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/7E2678E4-DBF5-6188-9CB7-EB74A64CA8FF">tinacaan@solution4u.com</a>
+                                            <br>
+                                            Fiza Caan                    </td>
+                                        <td>
+                                            <span class="label label-success">Active</span>
+                                        </td>
+                                        <td>User</td>
+                                        <td></td>
+                                        <td>Administrator Group</td>
+                                        <td>19/06/2022 12:30:19</td>
+                                        <td></td>
+                                    </tr>
+                                                    <tr>
+                                        <td class="td_image_icon"><a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/59584263-7F9C-E3E1-FDE8-7265C63BEC59"><img class="img-thumbnail image_icon" src="https://ossonestopsolutionsltd.posinabox.eu/data/f2ae5e9b2519b1a8918cd50979e6f5e5/user/25d61c54162af3acbf1418c685465d96.png"></a></td>
+                                        <td>
+                                            <a href="https://ossonestopsolutionsltd.posinabox.eu/setup/user/detail/59584263-7F9C-E3E1-FDE8-7265C63BEC59">rana@oss1stop.com</a>
+                                            <br>
+                                            Rana Khan                    </td>
+                                        <td>
+                                            <span class="label label-default">Archived</span>
+                                        </td>
+                                        <td>User</td>
+                                        <td>Fiza Caan</td>
+                                        <td>Manager Group</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                                </tbody>
+                        
+                            </table>
+                    
+                        </div>
+
+                    </div>
+     
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
+                    

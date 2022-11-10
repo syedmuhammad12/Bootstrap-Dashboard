@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet" type="text/css">
+    <link href="https://ossonestopsolutionsltd.posinabox.eu/assets/base/css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet">
+    <link href="https://ossonestopsolutionsltd.posinabox.eu/assets/partner/css/progress-wizard.min.css"
+        rel="stylesheet">
+    <link href="https://ossonestopsolutionsltd.posinabox.eu/assets/partner/css/style-signup.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/financeover.css">
+    <link rel="stylesheet"
+        href="https://ossonestopsolutionsltd.posinabox.eu/assets/jquery-multi-select/css/multi-select.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css"
+        media="all">
+
+
+
+    <!-- jquery -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
+
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button>
+        <!-- Navbar Search-->
+        <!-- <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form> -->
+        <!-- Navbar-->
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#!">Settings</a></li>
+                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+    <body class="no_bg sing-up-body">
+        <!-- header -->
+
+        <!-- header without menu -->
+        <header>
+            <!-- <div class="main-container container">
+                            <nav class="navbar navbar-default yamm">
+                                <div class="navbar-header">
+                                                                        <a class="navbar-brand main-logo" href="https://ossonestopsolutionsltd.posinabox.eu/">
+                                        <img src="https://ossonestopsolutionsltd.posinabox.eu/data/f2ae5e9b2519b1a8918cd50979e6f5e5/acd5017f7ac6fed0269ec7b97a368277.png">
+                                    </a>
+                                                                    </div>
+                            </nav>    
+                        </div> -->
+        </header>
+        <div class="clear" style="margin-top: 50px;"></div>
+
+
+        <!-- sub-header -->
+        <div class="header-selected container">
+        </div>
+        <!-- end header -->
+
+
+
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $('.input-datepicker').datepicker({
+                    dateFormat: 'dd/mm/yy',
+                    regional: get_bootstrap_datepicker_language(),
+                });
+
+            });
+
+            function get_bootstrap_datepicker_language() {
+                var lang = 'en';
+                return lang;
+            } 
+        </script>
+
+        <div class="signup-main-body">
+            <div class="container">
+                <form class="form-horizontal" role="form" method="post"
+                    action="https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/103" name="form-main">
+
+                    <div class="top-info-route">
+                        <!-- Routing start -->
+
+
+
+                        <ul class="progress-indicator">
+                            <li class="completed"> <span class="bubble"></span>Select Products</li>
+                            <li class="completed"> <span class="bubble"></span>Customer Details</li>
+                            <li class="completed"> <span class="bubble"></span>Finance Overview</li>
+
+                            <li class=""> <span class="bubble"></span>Terms and Conditions<br>Privacy Policy</li>
+                            <li class=""> <span class="bubble"></span>Overview</li>
+                            <li class=""> <span class="bubble"></span>Complete</li>
+                        </ul>
+
+                        <!-- Routing end -->
+                    </div>
+
+                    <h1>
+                        Summary of charges </h1>
+
+
+                    <div class="col-sm-12">
+                        <div class="top-info-box">
+                            <span class="ico">i</span>
+                            Please review Summary of charges.
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-12">
+
+                        <!--            <h2>Finance</h2>-->
+
+                        <div class="form-group" style="margin:0;">
+                            <label for="system_signup_retailer_elavon_fi_annual_revenue" class="col-sm-8 control-label">
+                                <span class="glyphicon glyphicon-question-sign tooltip-enable"
+                                    title="The total Customer Annual Turnover that is processed by the merchant NOT the total merchant turnover."></span>
+                                Customer Annual Turnover * </label>
+                            <div class="col-sm-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">£</span>
+                                    <input type="number" data-site-visit-limit="0" min="1"
+                                        name="system_signup_retailer_elavon_fi_annual_revenue"
+                                        id="system_signup_retailer_elavon_fi_annual_revenue" class="form-control"
+                                        value="">
+                                </div>
+                                <input type="hidden" name="site_visit_one_off" id="site_visit_one_off" value=""
+                                    data-prev="">
+                                <input type="hidden" name="site_visit_one_off_tax" id="site_visit_one_off_tax" value=""
+                                    data-prev="">
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-group" style="display: none;" id="site-visit-limit-info">
+                            <div class="alert alert-info">
+                                Due to your customer card turnover being in excess of £0.00 we will require a completed
+                                site visit form. </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <!--            <div class="form-group">-->
+                        <!--                <label class="col-sm-5 control-label">-->
+                        <!--</label>-->
+                        <!--                <div class="col-sm-7">-->
+                        <!--                    <p class="form-control-static" id="finance_deal">-->
+                        <!--</p>-->
+                        <!--                </div>-->
+                        <!--            </div>-->
+
+                    </div>
+
+
+                    <div class="clearfix"></div>
+
+
+
+                    <div class="clearfix"></div>
+
+                    <script type="text/javascript">
+                        $(function () {
+                            $('.contract-info').matchHeight();
+                            $('.sla-info').matchHeight();
+                        })
+                    </script>
+                    <div class="col-sm-12">
+                        <!--        Hardware overview start -->
+                        <div class="overview-box signup-terminals-overview">
+                            <button
+                                onclick="location.href = 'https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/101'"
+                                class="btn-edit">Edit</button>
+                            <h2>Standalone Terminals</h2>
+
+                            <div class="overview-body">
+                                <div class="finance-info-box contract-info">
+                                    <div class="col-sm-4 my-label">Contract Length:</div>
+                                    <div class="col-sm-8 my-value">4 year(s)</div>
+                                    <div class="clearfix"></div>
+
+                                    <div class="col-sm-4 my-label">Total Monthly:</div>
+                                    <div class="col-sm-8 my-value">
+                                        £37.50 ( + VAT <span>£7.50</span>)
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="finance-info-box sla-info">
+                                    <div class="col-sm-4 my-label">Faster Payments:</div>
+                                    <div class="col-sm-8 my-value">
+                                        £3.00 (Per month + VAT <span>£0.60</span>)
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="col-sm-4 my-label">Analytics:</div>
+                                    <div class="col-sm-8 my-value">
+                                        £3.00 (Per month + VAT <span>£0.60</span>)
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="col-sm-4 my-label">PCI Compliance:</div>
+                                    <div class="col-sm-8 my-value">
+                                        £3.50 (Per month + VAT <span>£0.70</span>)
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="terminals-wrapper">
+
+                                    <div class="terminal-box">
+
+                                        <div class="col-sm-4 my-label">Terminal:</div>
+                                        <div class="col-sm-8 my-value"><strong>Pax A920Pro Mobile</strong></div>
+                                        <div class="clearfix"></div>
+
+                                        <div class="col-sm-4 my-label">Qty:</div>
+                                        <div class="col-sm-8 my-value">1</div>
+                                        <div class="clearfix"></div>
+
+                                        <div class="col-sm-4 my-label">Per month:</div>
+                                        <div class="col-sm-8 my-value">£28.00 (Per month + VAT <span>£5.60</span>)
+                                        </div>
+                                        <div class="clearfix"></div>
+
+                                        <div class="col-sm-4 my-label">Accessories:</div>
+                                        <div class="col-sm-8 my-value">4x Pax A920Pro Charging Cradle: £4.00 (Per month
+                                            + VAT <span>£0.80</span>)<br></div>
+                                        <div class="clearfix"></div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="clearfix"></div>
+
+
+
+
+                    <div class="clearfix"></div>
+
+
+                    <div class="clearfix"></div>
+                    <div class="bottom-box-2">
+                        <button type="submit" class="btn-continue right">Continue &gt;</button>
+                        <button type="button" class="btn-previous left"
+                            onclick="location.href='https://ossonestopsolutionsltd.posinabox.eu/system/sign_up/102'">&lt;
+                            Previous</button>
+                    </div>
+
+
+                    <div class="clearfix"></div>
+
+                </form>
+            </div>
+            <!--! end of #container -->
+
+        </div>
+
+        <div class="container">
+
+        </div>
+        <!--! end of #container -->
+
+        
+        <div id="alerts_holder" class="alerts_holder alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <div id="alerts_holder_message">
+            </div>
+        </div>
+
+
+        <div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+    </body>
+
+
+    </main>
+    <footer class="py-4 bg-light mt-auto">
+        <div class="container-fluid px-4">
+            <div class="d-flex align-items-center justify-content-between small">
+                <div class="text-muted">&copy; 2022 Oss One Stop Solutions Ltd</div>
+                <div>
+                    <a href="#">Privacy Policy</a>
+                    &middot;
+                    <a href="#">Terms &amp; Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.table tbody tr.disabled button, .table tbody tr.disabled a, .table tbody tr.disabled td').addClass('disabled').unbind('click');
+        });
+    //-->
+    </script>
+    <script type="text/javascript">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript"
+        src="https://ossonestopsolutionsltd.posinabox.eu/assets/jquery-autoNumeric/autoNumeric-min.js"></script>
+    <script type="text/javascript">
+        function format_currency(selector, decimals) {
+            if (typeof decimals === 'undefined') { decimals = '2'; }
+
+            $(selector).autoNumeric("init", {
+                aSep: ',',
+                aDec: '.',
+                aSign: '£',
+                pSign: 'p',
+                mDec: decimals,
+                unSetOnSubmit: true
+            });
+        }
+
+        function format_tax(selector, decimals) {
+            if (typeof decimals === 'undefined') { decimals = '2'; }
+
+            if ($(selector).data('type') !== undefined) {
+                //console.log($(selector).data('type'));
+                if ($(selector).data('type') == 'e') {
+                    tax = $(selector).data('value');
+                    tax_calc = $(selector).data('amount') * (tax / 100);
+                    text = ' + VAT %y';
+                    text = text.replace('%x', tax);
+                    text = text.replace('%y', '<span>' + tax_calc + '</span>');
+                    $(selector).html(text);
+
+                    //format tax
+                    format_currency($(selector + ' span'));
+                }
+                else if ($(selector).data('type') == 'i') {
+                    $(selector).html(' VAT Included');
+                }
+            }
+        }
+
+        function format_number(selector, decimals) {
+            if (typeof decimals === 'undefined') { decimals = '2'; }
+
+            $(selector).autoNumeric("init", {
+                aSep: ',',
+                aDec: '.',
+                mDec: decimals,
+                unSetOnSubmit: true
+            });
+        }
+
+        function format_integer(selector) {
+            $(selector).autoNumeric("init", {
+                aSep: ',',
+                aDec: '.',
+                mDec: '0',
+                unSetOnSubmit: true
+            });
+        }
+
+        $(document).ready(function () {
+            format_currency('.format_currency');
+            format_number('.format_number');
+            format_number('.format_number_3_dec', 3);
+            format_integer('.format_integer');
+        });
+	//-->
+    </script>
+    <script type="text/javascript"
+        src="https://ossonestopsolutionsltd.posinabox.eu/assets/jquery-multi-select/js/jquery.multi-select.js"></script>
+    <script type="text/javascript"
+        src="https://ossonestopsolutionsltd.posinabox.eu/assets/jquery-quicksearch/jquery.quicksearch.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!--        HAVE TO BE LAST-->
+    <script src="https://ossonestopsolutionsltd.posinabox.eu/assets/partner/js/general.js"></script>
+
+</body>
+
+</html>

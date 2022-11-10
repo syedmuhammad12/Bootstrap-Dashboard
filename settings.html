@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="css/style_setting.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" >Company Name</a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button>
+        <!-- Navbar Search-->
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..."
+                    aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i
+                        class="fas fa-search"></i></button>
+            </div>
+        </form>
+        <!-- Navbar-->
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                    <!-- <li><a class="dropdown-item" href="#!">Activity Log</a></li> -->
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Core</div>
+                        <a class="nav-link" href="dashboard.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Dashboard
+                        </a>
+                        <div class="sb-sidenav-menu-heading">Customers</div>
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            Operations
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="customers.html">Customers</a>
+                                <!-- <a class="nav-link" href="layout-sidenav-light.html">Pending Request(s)</a> -->
+                                <a class="nav-link" href="bespokepricing.html">Bespoke Pricing</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            CRM
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link" href="prospects.html">Prospects</a>
+                                <!-- <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="login.html">Login</a>
+                                        <a class="nav-link" href="register.html">Register</a>
+                                        <a class="nav-link" href="password.html">Forgot Password</a>
+                                    </nav>
+                                </div> -->
+                                <a class="nav-link" href="mylist.html">My List
+                                    <!-- <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div> -->
+                                </a>
+                                <!-- <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="401.html">401 Page</a>
+                                        <a class="nav-link" href="404.html">404 Page</a>
+                                        <a class="nav-link" href="500.html">500 Page</a>
+                                    </nav>
+                                </div> -->
+                            </nav>
+                        </div>
+                        <div class="sb-sidenav-menu-heading">Support Materials</div>
+                        <a class="nav-link" href="support_materials.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Support Materials
+                        </a>
+                        <a class="nav-link" href="training.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Training
+                        </a>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Logged in as:</div>
+                    Start Bootstrap
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4">Settings</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active"><a class="settings-tag" href="#contact-details">Contact Details</a></li>
+                        <li class="breadcrumb-item active"><a  class="settings-tag" href="#query-contact">Query Contact Details</a></li>
+                        <li class="breadcrumb-item active"><a class="settings-tag" href="#commissions-invoices">Commissions, Invoices, Card Acceptance</a></li>
+                        <li class="breadcrumb-item active"><a class="settings-tag" href="#company-details">Company Details</a></li>
+                        <li class="breadcrumb-item active"><a class="settings-tag" href="#company-logo">Company Logo</a></li>
+                        <li class="breadcrumb-item active"><a class="settings-tag" href="#address-detail">Address</a></li>
+                    </ol>
+
+                    <hr id="contact-details">
+
+                    <div class="span24 first_form">
+                        <h2 class="first-head">Contact details</h2>
+                        <span class="help-block">General contact details, e.g. to print out on footer of emails etc., so customers can contact you</span>
+                        <div class="span11">
+                            <div class="form-group">
+                                <label for="partner_contact_first_name" class="col-sm-4 control-label">First name *</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="partner_contact_first_name" id="partner_contact_first_name" class="form-control" value="Tina">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_last_name" class="col-sm-4 control-label">Last name *</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="partner_contact_last_name" id="partner_contact_last_name" class="form-control" value="Caan">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_email" class="col-sm-4 control-label">Email *</label>
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">@</span>
+                                        <input type="text" name="partner_contact_email" id="partner_contact_email" class="form-control" value="tinacaan@solution4u.com">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="partner_contact_phone" class="col-sm-4 control-label">Phone</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="partner_contact_phone" id="partner_contact_phone" class="form-control" value="07904072717">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_website" class="col-sm-4 control-label">Website</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="partner_contact_website" id="partner_contact_website" class="form-control" value="">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_twitter" class="col-sm-4 control-label">Twitter</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="partner_contact_twitter" id="partner_contact_twitter" class="form-control" value="">
+                                </div>
+                            </div>
+                
+                
+                        </div>
+
+                    </div>
+
+                    <hr id="query-contact">
+
+                    <div class="span24 paragraph">
+
+                        <h2>Query Contact details</h2>
+                
+                        <span class="help-block">Details for communication with you. Queries, Notifications, etc.</span>
+                
+                        <div class="span11">
+                
+                            <div class="form-group">
+                                <label for="partner_contact_query_name" class="col-sm-4 control-label">Name *</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="partner_contact_query_name" id="partner_contact_query_name" class="form-control" value="Fiza Caan">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <div class="col-sm-offset-4 col-sm-5">
+                                    <div class="checkbox">
+                                        <label>
+                                            
+                <input type="hidden" name="partner_contact_query_cc_seller" value="0">
+                                            <input type="checkbox" name="partner_contact_query_cc_seller" value="1" id="partner_contact_query_cc_seller">  Also Cc Seller and Superior Users                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                
+                        </div>
+                
+                        <div class="span1">&nbsp;</div>
+                
+                        <div class="span11">
+                
+                            <div class="form-group">
+                                <label for="partner_contact_query_email" class="col-sm-4 control-label">Email *</label>
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">@</span>
+                                        <input type="text" name="partner_contact_query_email" id="partner_contact_query_email" class="form-control" value="tinacaan@solution4u.com">
+                                    </div>
+                                </div>
+                            </div>
+                
+                        </div>
+                
+                    </div>
+
+                    <hr id="commissions-invoices">
+                
+                    <div class="span24 paragraph">
+
+                        <h2>Commissions, Invoices, Card Acceptance</h2>
+                
+                        <span class="help-block">Email address for Commissions, Invoicing, Card Acceptance reports, etc.</span>
+                
+                        <div class="span11">
+                
+                            <div class="form-group">
+                                <label for="partner_contact_correspondence_email_from" class="col-sm-4 control-label">Email *</label>
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">@</span>
+                                        <input type="text" name="partner_contact_correspondence_email_from" id="partner_contact_correspondence_email_from" class="form-control" value="tinacaan@solution4u.com">
+                                    </div>
+                                </div>
+                            </div>
+                
+                        </div>
+                
+                        <div class="span1">&nbsp;</div>
+                
+                        <div class="span11">
+                
+                        </div>
+                
+                    </div>
+
+                    <hr id="company-details">
+
+                    <div class="span24 paragraph">
+
+                        <h2>Company Details</h2>
+                
+                        <div class="span11">
+                
+                            <div class="form-group">
+                                <label for="partner_contact_company_name" class="col-sm-4 control-label">Company name *</label>
+                                <div class="col-sm-6">
+                                    <input type="text" name="partner_contact_company_name" id="partner_contact_company_name" class="form-control" value="Hodge Enterprises Ltd">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_registered_number" class="col-sm-4 control-label">Registered number</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="partner_contact_registered_number" id="partner_contact_registered_number" class="form-control" value="sc582815">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_vat_number" class="col-sm-4 control-label">VAT number</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="partner_contact_vat_number" id="partner_contact_vat_number" class="form-control" value="">
+                                </div>
+                            </div>
+                
+                        </div>
+                
+                        <div class="span1">&nbsp;</div>
+                
+                        <div class="span11">
+                
+                            <div class="form-group">
+                                <label for="partner_contact_bacs_sort_code" class="col-sm-4 control-label">Bank sort code</label>
+                                <div class="col-sm-3">
+                                    <input type="text" name="partner_contact_bacs_sort_code" id="partner_contact_bacs_sort_code" class="form-control" value="23-11-85">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_bacs_account_number" class="col-sm-4 control-label">Bank account number</label>
+                                <div class="col-sm-3">
+                                    <input type="text" name="partner_contact_bacs_account_number" id="partner_contact_bacs_account_number" class="form-control" value="00109610">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_iban" class="col-sm-4 control-label">IBAN</label>
+                                <div class="col-sm-6">
+                                    <input type="text" name="partner_contact_iban" id="partner_contact_iban" class="form-control" value="">
+                                </div>
+                            </div>
+                
+                        </div>
+                
+                    </div>
+
+                    <hr id="company-logo">
+
+                    <div class="span24 paragraph">
+
+                        <h2>Company Logo</h2>
+                
+                        <div class="span24">
+                
+                            <div class="form-group">
+                                <label for="partner_contact_logo" class="col-sm-4 control-label">
+                                    Your Logo                    <br><br>
+                
+                                    <!-- The fileinput-button span is used to style the file input field as button -->
+                                    <span class="btn btn-default btn-sm fileinput-button">
+                                    <i class="glyphicon glyphicon-picture"></i>
+                                    <span>Choose Image</span>
+                                        <!-- The file input field used as target for the file upload widget -->
+                                    <input id="partner_contact_logo_fileupload" type="file" name="file_to_upload">
+                                </span>
+                                </label>
+                                <div class="col-sm-6">
+                                    <ul class="multi_images">
+                                        <li class="ui-state-default"><img id="partner_contact_logo_choose" class="image_choose img-thumbnail image_preview" src="https://ossonestopsolutionsltd.posinabox.eu/data/_default/partner_contact_logo_image_upload.png" data-file="">
+                                            <button type="button" class="btn_delete_partner_contact_logo btn_delete_file btn btn-default btn-sm" name="btn_delete_file"><span class="glyphicon glyphicon-trash"></span></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">
+                                    &nbsp;
+                                </label>
+                                <div class="col-sm-3">
+                                    <!-- The global progress bar -->
+                                    <div id="partner_contact_logo_progress" class="progress">
+                                        <div class="progress-bar progress-bar-success"></div>
+                                    </div>
+                                    <input type="hidden" id="partner_contact_logo" name="partner_contact_logo" value="">
+                                </div>
+                            </div>
+                
+                        </div>
+                
+                    </div>
+
+                    <hr id="address-detail">
+
+                    <div class="span24 paragraph">
+
+                        <h2>Address</h2>
+                
+                        <div class="span11">
+                
+                            <h3>Physical address</h3>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_physical_address_1" class="col-sm-4 control-label">Address 1</label>
+                                <div class="col-sm-6">
+                                    <input type="text" name="partner_contact_physical_address_1" id="partner_contact_physical_address_1" class="form-control" value="Anna">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_physical_address_2" class="col-sm-4 control-label">Address 2</label>
+                                <div class="col-sm-6">
+                                    <input type="text" name="partner_contact_physical_address_2" id="partner_contact_physical_address_2" class="form-control" value="Capital Tower Business Centre">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_physical_address_3" class="col-sm-4 control-label">Address 3</label>
+                                <div class="col-sm-6">
+                                    <input type="text" name="partner_contact_physical_address_3" id="partner_contact_physical_address_3" class="form-control" value="Greyfriars Rd">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_physical_city" class="col-sm-4 control-label">City</label>
+                                <div class="col-sm-6">
+                                    <input type="text" name="partner_contact_physical_city" id="partner_contact_physical_city" class="form-control" value="Cardiff">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_physical_postcode" class="col-sm-4 control-label">Postcode</label>
+                                <div class="col-sm-6">
+                                    <input type="text" name="partner_contact_physical_postcode" id="partner_contact_physical_postcode" class="form-control" value="CF10 3AG">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_physical_county" class="col-sm-4 control-label">County</label>
+                                <div class="col-sm-6">
+                                    <input type="text" name="partner_contact_physical_county" id="partner_contact_physical_county" class="form-control" value="">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_physical_country_id" class="col-sm-4 control-label">Country</label>
+                                <div class="col-sm-6">
+                                    <select name="partner_contact_physical_country_id" class="form-control" id="partner_contact_physical_country_id">
+                <option value="">- please select -</option>
+                <option value="af">Afghanistan</option>
+                <option value="ax">Aland Islands</option>
+                <option value="al">Albania</option>
+                <option value="dz">Algeria</option>
+                <option value="as">American Samoa</option>
+                <option value="ad">Andorra</option>
+                <option value="ao">Angola</option>
+                <option value="ai">Anguilla</option>
+                <option value="aq">Antarctica</option>
+                <option value="ag">Antigua and Barbuda</option>
+                <option value="ar">Argentina</option>
+                <option value="am">Armenia</option>
+                <option value="aw">Aruba</option>
+                <option value="au">Australia</option>
+                <option value="at">Austria</option>
+                <option value="az">Azerbaijan</option>
+                <option value="bs">Bahamas</option>
+                <option value="bh">Bahrain</option>
+                <option value="bd">Bangladesh</option>
+                <option value="bb">Barbados</option>
+                <option value="by">Belarus</option>
+                <option value="be">Belgium</option>
+                <option value="bz">Belize</option>
+                <option value="bj">Benin</option>
+                <option value="bm">Bermuda</option>
+                <option value="bt">Bhutan</option>
+                <option value="bo">Bolivia, Plurinational State of</option>
+                <option value="bq">Bonaire, Sint Eustatius and Saba</option>
+                <option value="ba">Bosnia and Herzegovina</option>
+                <option value="bw">Botswana</option>
+                <option value="bv">Bouvet Island</option>
+                <option value="br">Brazil</option>
+                <option value="io">British Indian Ocean Territory</option>
+                <option value="bn">Brunei Darussalam</option>
+                <option value="bg">Bulgaria</option>
+                <option value="bf">Burkina Faso</option>
+                <option value="bi">Burundi</option>
+                <option value="kh">Cambodia</option>
+                <option value="cm">Cameroon</option>
+                <option value="ca">Canada</option>
+                <option value="cv">Cape Verde</option>
+                <option value="ky">Cayman Islands</option>
+                <option value="cf">Central African Republic</option>
+                <option value="td">Chad</option>
+                <option value="cl">Chile</option>
+                <option value="cn">China</option>
+                <option value="cx">Christmas Island</option>
+                <option value="cc">Cocos (Keeling) Islands</option>
+                <option value="co">Colombia</option>
+                <option value="km">Comoros</option>
+                <option value="cg">Congo</option>
+                <option value="cd">Congo, The Democratic Republic of the</option>
+                <option value="ck">Cook Islands</option>
+                <option value="cr">Costa Rica</option>
+                <option value="ci">Cote d'Ivoire</option>
+                <option value="hr">Croatia</option>
+                <option value="cu">Cuba</option>
+                <option value="cw">Curacao</option>
+                <option value="cy">Cyprus</option>
+                <option value="cz">Czech Republic</option>
+                <option value="dk">Denmark</option>
+                <option value="dj">Djibouti</option>
+                <option value="dm">Dominica</option>
+                <option value="do">Dominican Republic</option>
+                <option value="ec">Ecuador</option>
+                <option value="eg">Egypt</option>
+                <option value="sv">El Salvador</option>
+                <option value="gq">Equatorial Guinea</option>
+                <option value="er">Eritrea</option>
+                <option value="ee">Estonia</option>
+                <option value="et">Ethiopia</option>
+                <option value="fk">Falkland Islands (Malvinas)</option>
+                <option value="fo">Faroe Islands</option>
+                <option value="fj">Fiji</option>
+                <option value="fi">Finland</option>
+                <option value="fr">France</option>
+                <option value="gf">French Guiana</option>
+                <option value="pf">French Polynesia</option>
+                <option value="tf">French Southern Territories</option>
+                <option value="ga">Gabon</option>
+                <option value="gm">Gambia</option>
+                <option value="ge">Georgia</option>
+                <option value="de">Germany</option>
+                <option value="gh">Ghana</option>
+                <option value="gi">Gibraltar</option>
+                <option value="gr">Greece</option>
+                <option value="gl">Greenland</option>
+                <option value="gd">Grenada</option>
+                <option value="gp">Guadeloupe</option>
+                <option value="gu">Guam</option>
+                <option value="gt">Guatemala</option>
+                <option value="gg">Guernsey</option>
+                <option value="gn">Guinea</option>
+                <option value="gw">Guinea-Bissau</option>
+                <option value="gy">Guyana</option>
+                <option value="ht">Haiti</option>
+                <option value="hm">Heard Island and McDonald Islands</option>
+                <option value="va">Holy See (Vatican City State)</option>
+                <option value="hn">Honduras</option>
+                <option value="hk">Hong Kong</option>
+                <option value="hu">Hungary</option>
+                <option value="is">Iceland</option>
+                <option value="in">India</option>
+                <option value="id">Indonesia</option>
+                <option value="ir">Iran, Islamic Republic of</option>
+                <option value="iq">Iraq</option>
+                <option value="ie">Ireland</option>
+                <option value="im">Isle of Man</option>
+                <option value="il">Israel</option>
+                <option value="it">Italy</option>
+                <option value="jm">Jamaica</option>
+                <option value="jp">Japan</option>
+                <option value="je">Jersey</option>
+                <option value="jo">Jordan</option>
+                <option value="kz">Kazakhstan</option>
+                <option value="ke">Kenya</option>
+                <option value="ki">Kiribati</option>
+                <option value="kp">Korea, Democratic People's Republic of</option>
+                <option value="kr">Korea, Republic of</option>
+                <option value="kw">Kuwait</option>
+                <option value="kg">Kyrgyzstan</option>
+                <option value="la">Lao People's Democratic Republic</option>
+                <option value="lv">Latvia</option>
+                <option value="lb">Lebanon</option>
+                <option value="ls">Lesotho</option>
+                <option value="lr">Liberia</option>
+                <option value="ly">Libyan Arab Jamahiriya</option>
+                <option value="li">Liechtenstein</option>
+                <option value="lt">Lithuania</option>
+                <option value="lu">Luxembourg</option>
+                <option value="mo">Macao</option>
+                <option value="mk">Macedonia, The former Yugoslav Republic of</option>
+                <option value="mg">Madagascar</option>
+                <option value="mw">Malawi</option>
+                <option value="my">Malaysia</option>
+                <option value="mv">Maldives</option>
+                <option value="ml">Mali</option>
+                <option value="mt">Malta</option>
+                <option value="mh">Marshall Islands</option>
+                <option value="mq">Martinique</option>
+                <option value="mr">Mauritania</option>
+                <option value="mu">Mauritius</option>
+                <option value="yt">Mayotte</option>
+                <option value="mx">Mexico</option>
+                <option value="fm">Micronesia, Federated States of</option>
+                <option value="md">Moldova, Republic of</option>
+                <option value="mc">Monaco</option>
+                <option value="mn">Mongolia</option>
+                <option value="me">Montenegro</option>
+                <option value="ms">Montserrat</option>
+                <option value="ma">Morocco</option>
+                <option value="mz">Mozambique</option>
+                <option value="mm">Myanmar</option>
+                <option value="na">Namibia</option>
+                <option value="nr">Nauru</option>
+                <option value="np">Nepal</option>
+                <option value="nl">Netherlands</option>
+                <option value="nc">New Caledonia</option>
+                <option value="nz">New Zealand</option>
+                <option value="ni">Nicaragua</option>
+                <option value="ne">Niger</option>
+                <option value="ng">Nigeria</option>
+                <option value="nu">Niue</option>
+                <option value="nf">Norfolk Island</option>
+                <option value="mp">Northern Mariana Islands</option>
+                <option value="no">Norway</option>
+                <option value="om">Oman</option>
+                <option value="pk">Pakistan</option>
+                <option value="pw">Palau</option>
+                <option value="ps">Palestinian Territory, Occupied</option>
+                <option value="pa">Panama</option>
+                <option value="pg">Papua New Guinea</option>
+                <option value="py">Paraguay</option>
+                <option value="pe">Peru</option>
+                <option value="ph">Philippines</option>
+                <option value="pn">Pitcairn</option>
+                <option value="pl">Poland</option>
+                <option value="pt">Portugal</option>
+                <option value="pr">Puerto Rico</option>
+                <option value="qa">Qatar</option>
+                <option value="re">Reunion</option>
+                <option value="ro">Romania</option>
+                <option value="ru">Russian Federation</option>
+                <option value="rw">Rwanda</option>
+                <option value="bl">Saint Barthelemy</option>
+                <option value="sh">Saint Helena, Ascension and Tristan Da Cunha</option>
+                <option value="kn">Saint Kitts and Nevis</option>
+                <option value="lc">Saint Lucia</option>
+                <option value="mf">Saint Martin (French Part)</option>
+                <option value="pm">Saint Pierre and Miquelon</option>
+                <option value="vc">Saint Vincent and The Grenadines</option>
+                <option value="ws">Samoa</option>
+                <option value="sm">San Marino</option>
+                <option value="st">Sao Tome and Principe</option>
+                <option value="sa">Saudi Arabia</option>
+                <option value="sn">Senegal</option>
+                <option value="rs">Serbia</option>
+                <option value="sc">Seychelles</option>
+                <option value="sl">Sierra Leone</option>
+                <option value="sg">Singapore</option>
+                <option value="sx">Sint Maarten (Dutch Part)</option>
+                <option value="sk">Slovakia</option>
+                <option value="si">Slovenia</option>
+                <option value="sb">Solomon Islands</option>
+                <option value="so">Somalia</option>
+                <option value="za">South Africa</option>
+                <option value="gs">South Georgia and The South Sandwich Islands</option>
+                <option value="ss">South Sudan</option>
+                <option value="es">Spain</option>
+                <option value="lk">Sri Lanka</option>
+                <option value="sd">Sudan</option>
+                <option value="sr">Suriname</option>
+                <option value="sj">Svalbard and Jan Mayen</option>
+                <option value="sz">Swaziland</option>
+                <option value="se">Sweden</option>
+                <option value="ch">Switzerland</option>
+                <option value="sy">Syrian Arab Republic</option>
+                <option value="tw">Taiwan, Province of China</option>
+                <option value="tj">Tajikistan</option>
+                <option value="tz">Tanzania, United Republic of</option>
+                <option value="th">Thailand</option>
+                <option value="tl">Timor-Leste</option>
+                <option value="tg">Togo</option>
+                <option value="tk">Tokelau</option>
+                <option value="to">Tonga</option>
+                <option value="tt">Trinidad and Tobago</option>
+                <option value="tn">Tunisia</option>
+                <option value="tr">Turkey</option>
+                <option value="tm">Turkmenistan</option>
+                <option value="tc">Turks and Caicos Islands</option>
+                <option value="tv">Tuvalu</option>
+                <option value="ug">Uganda</option>
+                <option value="ua">Ukraine</option>
+                <option value="ae">United Arab Emirates</option>
+                <option value="gb" selected="selected">United Kingdom</option>
+                <option value="us">United States</option>
+                <option value="um">United States Minor Outlying Islands</option>
+                <option value="uy">Uruguay</option>
+                <option value="uz">Uzbekistan</option>
+                <option value="vu">Vanuatu</option>
+                <option value="ve">Venezuela, Bolivarian Republic of</option>
+                <option value="vn">Viet Nam</option>
+                <option value="vg">Virgin Islands, British</option>
+                <option value="vi">Virgin Islands, U.S.</option>
+                <option value="wf">Wallis and Futuna</option>
+                <option value="eh">Western Sahara</option>
+                <option value="ye">Yemen</option>
+                <option value="zm">Zambia</option>
+                <option value="zw">Zimbabwe</option>
+                </select>                </div>
+                            </div>
+                
+                        </div>
+                
+                        <div class="span1">&nbsp;</div>
+                
+                        <div class="span11">
+                
+                            <h3>Postal address <small><a href="#" id="same_as_physical_address" class="settings-tag">(same as Physical address)</a></small>
+                            </h3>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_postal_address_1" class="col-sm-4 control-label">Address 1</label>
+                                <div class="col-sm-6">
+                                    <input type="text" name="partner_contact_postal_address_1" id="partner_contact_postal_address_1" class="form-control" value="Anna">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_postal_address_2" class="col-sm-4 control-label">Address 2</label>
+                                <div class="col-sm-6">
+                                    <input type="text" name="partner_contact_postal_address_2" id="partner_contact_postal_address_2" class="form-control" value="Capital Tower Business Centre">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_postal_address_3" class="col-sm-4 control-label">Address 3</label>
+                                <div class="col-sm-6">
+                                    <input type="text" name="partner_contact_postal_address_3" id="partner_contact_postal_address_3" class="form-control" value="Greyfriars Rd">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_postal_city" class="col-sm-4 control-label">City</label>
+                                <div class="col-sm-6">
+                                    <input type="text" name="partner_contact_postal_city" id="partner_contact_postal_city" class="form-control" value="Cardiff">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_postal_postcode" class="col-sm-4 control-label">Postcode</label>
+                                <div class="col-sm-6">
+                                    <input type="text" name="partner_contact_postal_postcode" id="partner_contact_postal_postcode" class="form-control" value="CF10 3AG">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_postal_county" class="col-sm-4 control-label">County</label>
+                                <div class="col-sm-6">
+                                    <input type="text" name="partner_contact_postal_county" id="partner_contact_postal_county" class="form-control" value="">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="partner_contact_postal_country_id" class="col-sm-4 control-label">Country</label>
+                                <div class="col-sm-6">
+                                    <select name="partner_contact_postal_country_id" class="form-control" id="partner_contact_postal_country_id">
+                <option value="">- please select -</option>
+                <option value="af">Afghanistan</option>
+                <option value="ax">Aland Islands</option>
+                <option value="al">Albania</option>
+                <option value="dz">Algeria</option>
+                <option value="as">American Samoa</option>
+                <option value="ad">Andorra</option>
+                <option value="ao">Angola</option>
+                <option value="ai">Anguilla</option>
+                <option value="aq">Antarctica</option>
+                <option value="ag">Antigua and Barbuda</option>
+                <option value="ar">Argentina</option>
+                <option value="am">Armenia</option>
+                <option value="aw">Aruba</option>
+                <option value="au">Australia</option>
+                <option value="at">Austria</option>
+                <option value="az">Azerbaijan</option>
+                <option value="bs">Bahamas</option>
+                <option value="bh">Bahrain</option>
+                <option value="bd">Bangladesh</option>
+                <option value="bb">Barbados</option>
+                <option value="by">Belarus</option>
+                <option value="be">Belgium</option>
+                <option value="bz">Belize</option>
+                <option value="bj">Benin</option>
+                <option value="bm">Bermuda</option>
+                <option value="bt">Bhutan</option>
+                <option value="bo">Bolivia, Plurinational State of</option>
+                <option value="bq">Bonaire, Sint Eustatius and Saba</option>
+                <option value="ba">Bosnia and Herzegovina</option>
+                <option value="bw">Botswana</option>
+                <option value="bv">Bouvet Island</option>
+                <option value="br">Brazil</option>
+                <option value="io">British Indian Ocean Territory</option>
+                <option value="bn">Brunei Darussalam</option>
+                <option value="bg">Bulgaria</option>
+                <option value="bf">Burkina Faso</option>
+                <option value="bi">Burundi</option>
+                <option value="kh">Cambodia</option>
+                <option value="cm">Cameroon</option>
+                <option value="ca">Canada</option>
+                <option value="cv">Cape Verde</option>
+                <option value="ky">Cayman Islands</option>
+                <option value="cf">Central African Republic</option>
+                <option value="td">Chad</option>
+                <option value="cl">Chile</option>
+                <option value="cn">China</option>
+                <option value="cx">Christmas Island</option>
+                <option value="cc">Cocos (Keeling) Islands</option>
+                <option value="co">Colombia</option>
+                <option value="km">Comoros</option>
+                <option value="cg">Congo</option>
+                <option value="cd">Congo, The Democratic Republic of the</option>
+                <option value="ck">Cook Islands</option>
+                <option value="cr">Costa Rica</option>
+                <option value="ci">Cote d'Ivoire</option>
+                <option value="hr">Croatia</option>
+                <option value="cu">Cuba</option>
+                <option value="cw">Curacao</option>
+                <option value="cy">Cyprus</option>
+                <option value="cz">Czech Republic</option>
+                <option value="dk">Denmark</option>
+                <option value="dj">Djibouti</option>
+                <option value="dm">Dominica</option>
+                <option value="do">Dominican Republic</option>
+                <option value="ec">Ecuador</option>
+                <option value="eg">Egypt</option>
+                <option value="sv">El Salvador</option>
+                <option value="gq">Equatorial Guinea</option>
+                <option value="er">Eritrea</option>
+                <option value="ee">Estonia</option>
+                <option value="et">Ethiopia</option>
+                <option value="fk">Falkland Islands (Malvinas)</option>
+                <option value="fo">Faroe Islands</option>
+                <option value="fj">Fiji</option>
+                <option value="fi">Finland</option>
+                <option value="fr">France</option>
+                <option value="gf">French Guiana</option>
+                <option value="pf">French Polynesia</option>
+                <option value="tf">French Southern Territories</option>
+                <option value="ga">Gabon</option>
+                <option value="gm">Gambia</option>
+                <option value="ge">Georgia</option>
+                <option value="de">Germany</option>
+                <option value="gh">Ghana</option>
+                <option value="gi">Gibraltar</option>
+                <option value="gr">Greece</option>
+                <option value="gl">Greenland</option>
+                <option value="gd">Grenada</option>
+                <option value="gp">Guadeloupe</option>
+                <option value="gu">Guam</option>
+                <option value="gt">Guatemala</option>
+                <option value="gg">Guernsey</option>
+                <option value="gn">Guinea</option>
+                <option value="gw">Guinea-Bissau</option>
+                <option value="gy">Guyana</option>
+                <option value="ht">Haiti</option>
+                <option value="hm">Heard Island and McDonald Islands</option>
+                <option value="va">Holy See (Vatican City State)</option>
+                <option value="hn">Honduras</option>
+                <option value="hk">Hong Kong</option>
+                <option value="hu">Hungary</option>
+                <option value="is">Iceland</option>
+                <option value="in">India</option>
+                <option value="id">Indonesia</option>
+                <option value="ir">Iran, Islamic Republic of</option>
+                <option value="iq">Iraq</option>
+                <option value="ie">Ireland</option>
+                <option value="im">Isle of Man</option>
+                <option value="il">Israel</option>
+                <option value="it">Italy</option>
+                <option value="jm">Jamaica</option>
+                <option value="jp">Japan</option>
+                <option value="je">Jersey</option>
+                <option value="jo">Jordan</option>
+                <option value="kz">Kazakhstan</option>
+                <option value="ke">Kenya</option>
+                <option value="ki">Kiribati</option>
+                <option value="kp">Korea, Democratic People's Republic of</option>
+                <option value="kr">Korea, Republic of</option>
+                <option value="kw">Kuwait</option>
+                <option value="kg">Kyrgyzstan</option>
+                <option value="la">Lao People's Democratic Republic</option>
+                <option value="lv">Latvia</option>
+                <option value="lb">Lebanon</option>
+                <option value="ls">Lesotho</option>
+                <option value="lr">Liberia</option>
+                <option value="ly">Libyan Arab Jamahiriya</option>
+                <option value="li">Liechtenstein</option>
+                <option value="lt">Lithuania</option>
+                <option value="lu">Luxembourg</option>
+                <option value="mo">Macao</option>
+                <option value="mk">Macedonia, The former Yugoslav Republic of</option>
+                <option value="mg">Madagascar</option>
+                <option value="mw">Malawi</option>
+                <option value="my">Malaysia</option>
+                <option value="mv">Maldives</option>
+                <option value="ml">Mali</option>
+                <option value="mt">Malta</option>
+                <option value="mh">Marshall Islands</option>
+                <option value="mq">Martinique</option>
+                <option value="mr">Mauritania</option>
+                <option value="mu">Mauritius</option>
+                <option value="yt">Mayotte</option>
+                <option value="mx">Mexico</option>
+                <option value="fm">Micronesia, Federated States of</option>
+                <option value="md">Moldova, Republic of</option>
+                <option value="mc">Monaco</option>
+                <option value="mn">Mongolia</option>
+                <option value="me">Montenegro</option>
+                <option value="ms">Montserrat</option>
+                <option value="ma">Morocco</option>
+                <option value="mz">Mozambique</option>
+                <option value="mm">Myanmar</option>
+                <option value="na">Namibia</option>
+                <option value="nr">Nauru</option>
+                <option value="np">Nepal</option>
+                <option value="nl">Netherlands</option>
+                <option value="nc">New Caledonia</option>
+                <option value="nz">New Zealand</option>
+                <option value="ni">Nicaragua</option>
+                <option value="ne">Niger</option>
+                <option value="ng">Nigeria</option>
+                <option value="nu">Niue</option>
+                <option value="nf">Norfolk Island</option>
+                <option value="mp">Northern Mariana Islands</option>
+                <option value="no">Norway</option>
+                <option value="om">Oman</option>
+                <option value="pk">Pakistan</option>
+                <option value="pw">Palau</option>
+                <option value="ps">Palestinian Territory, Occupied</option>
+                <option value="pa">Panama</option>
+                <option value="pg">Papua New Guinea</option>
+                <option value="py">Paraguay</option>
+                <option value="pe">Peru</option>
+                <option value="ph">Philippines</option>
+                <option value="pn">Pitcairn</option>
+                <option value="pl">Poland</option>
+                <option value="pt">Portugal</option>
+                <option value="pr">Puerto Rico</option>
+                <option value="qa">Qatar</option>
+                <option value="re">Reunion</option>
+                <option value="ro">Romania</option>
+                <option value="ru">Russian Federation</option>
+                <option value="rw">Rwanda</option>
+                <option value="bl">Saint Barthelemy</option>
+                <option value="sh">Saint Helena, Ascension and Tristan Da Cunha</option>
+                <option value="kn">Saint Kitts and Nevis</option>
+                <option value="lc">Saint Lucia</option>
+                <option value="mf">Saint Martin (French Part)</option>
+                <option value="pm">Saint Pierre and Miquelon</option>
+                <option value="vc">Saint Vincent and The Grenadines</option>
+                <option value="ws">Samoa</option>
+                <option value="sm">San Marino</option>
+                <option value="st">Sao Tome and Principe</option>
+                <option value="sa">Saudi Arabia</option>
+                <option value="sn">Senegal</option>
+                <option value="rs">Serbia</option>
+                <option value="sc">Seychelles</option>
+                <option value="sl">Sierra Leone</option>
+                <option value="sg">Singapore</option>
+                <option value="sx">Sint Maarten (Dutch Part)</option>
+                <option value="sk">Slovakia</option>
+                <option value="si">Slovenia</option>
+                <option value="sb">Solomon Islands</option>
+                <option value="so">Somalia</option>
+                <option value="za">South Africa</option>
+                <option value="gs">South Georgia and The South Sandwich Islands</option>
+                <option value="ss">South Sudan</option>
+                <option value="es">Spain</option>
+                <option value="lk">Sri Lanka</option>
+                <option value="sd">Sudan</option>
+                <option value="sr">Suriname</option>
+                <option value="sj">Svalbard and Jan Mayen</option>
+                <option value="sz">Swaziland</option>
+                <option value="se">Sweden</option>
+                <option value="ch">Switzerland</option>
+                <option value="sy">Syrian Arab Republic</option>
+                <option value="tw">Taiwan, Province of China</option>
+                <option value="tj">Tajikistan</option>
+                <option value="tz">Tanzania, United Republic of</option>
+                <option value="th">Thailand</option>
+                <option value="tl">Timor-Leste</option>
+                <option value="tg">Togo</option>
+                <option value="tk">Tokelau</option>
+                <option value="to">Tonga</option>
+                <option value="tt">Trinidad and Tobago</option>
+                <option value="tn">Tunisia</option>
+                <option value="tr">Turkey</option>
+                <option value="tm">Turkmenistan</option>
+                <option value="tc">Turks and Caicos Islands</option>
+                <option value="tv">Tuvalu</option>
+                <option value="ug">Uganda</option>
+                <option value="ua">Ukraine</option>
+                <option value="ae">United Arab Emirates</option>
+                <option value="gb" selected="selected">United Kingdom</option>
+                <option value="us">United States</option>
+                <option value="um">United States Minor Outlying Islands</option>
+                <option value="uy">Uruguay</option>
+                <option value="uz">Uzbekistan</option>
+                <option value="vu">Vanuatu</option>
+                <option value="ve">Venezuela, Bolivarian Republic of</option>
+                <option value="vn">Viet Nam</option>
+                <option value="vg">Virgin Islands, British</option>
+                <option value="vi">Virgin Islands, U.S.</option>
+                <option value="wf">Wallis and Futuna</option>
+                <option value="eh">Western Sahara</option>
+                <option value="ye">Yemen</option>
+                <option value="zm">Zambia</option>
+                <option value="zw">Zimbabwe</option>
+                </select>                </div>
+                            </div>
+                
+                        </div>
+                
+                        <!-- Monthly subscription
+                        added 2/2020 R.Jindra -->
+                
+                
+                        <div class="span24 paragraph subscription" style="display: none;">
+                            <h2>Monthly Subscription</h2>
+                
+                            <div class="span11">
+                
+                
+                                <div class="form-group">
+                                    <label for="setup_details_form_partner_monthly_subscription_authorized_card_number" class="col-sm-4 control-label">Authorized Card Number</label>
+                                    <div class="col-sm-6 control-label">
+                                        <div class="text-left">
+                                                                    </div>
+                                    </div>
+                                </div>
+                
+                                <div class="form-group">
+                                    <label for="business_establishment_month" class="col-sm-4 control-label">Authorized Card Expires</label>
+                                    <div class="col-sm-6 control-label">
+                                        <div class="text-left">
+                                                                    </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                
+                
+                                <div class="span24 paragraph">
+                
+                                    <h5 for="replace_actual_value" class="col-sm-10 control-label">If you which to replace the actual card please fill new details below                        <br><br></h5>
+                
+                                    <div class="form-group">
+                                        <label for="setup_details_form_partner_monthly_subscription_card_number" class="col-sm-4 control-label">Card Number</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" name="setup_details_form_partner_monthly_subscription_card_number" id="setup_details_form_partner_monthly_subscription_card_number" class="form-control" value="">
+                                        </div>
+                                    </div>
+                
+                                    <div class="form-group">
+                
+                                        <label for="business_establishment_month" class="col-sm-4 control-label">Card Expires</label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <select name="setup_details_form_partner_monthly_subscription_card_expires_year" class="form-control" id="monthly_subscription_card_expires_year">
+                <option value="" selected="selected">year</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+                <option value="2031">2031</option>
+                <option value="2032">2032</option>
+                </select>                                <span class="input-group-addon">&nbsp;&nbsp;</span>
+                                                <select name="setup_details_form_partner_monthly_subscription_card_expires_month" class="form-control" id="monthly_subscription_card_expires_month">
+                <option value="" selected="selected">month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+                </select>                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                
+                                    <div class="form-group">
+                                        <label for="setup_details_form_partner_monthly_subscription_cvv" class="col-sm-4 control-label">CVC</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" name="setup_details_form_partner_monthly_subscription_cvv" id="setup_details_form_partner_monthly_subscription_cvv" class="form-control" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                
+                            <table class="span11" id="orders_table">
+                
+                                <thead>
+                                <tr>
+                
+                                    <th>#</th>
+                                    <th class="text-center">Date / Time</th>
+                                    <th class="text-right">Status</th>
+                                    <th class="text-right">Pan Starred</th>
+                                    <th class="text-right">Amount</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                
+                
+                                                    <tbody>
+                                    <tr>
+                                        <td colspan="9" class="text-center">No data</td>
+                                    </tr>
+                                    </tbody>
+                                
+                            </table>
+                        </div>
+                
+                    </div>
+
+                    <hr>
+
+                    <div class="span24 paragraph">
+
+                        <div class="span24">
+                
+                            <div class="btn-group pull-right">
+                                <button type="submit" name="btn_cancel" value="Back" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-chevron-left"></span> Back</button>
+                                <button type="submit" name="btn_submit_address" value="Save" class="btn btn-primary btn-sm btn_submit"><span class="glyphicon glyphicon-save"></span> Save</button>
+                            </div>
+                
+                        </div>
+                    </div>
+            </main>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                crossorigin="anonymous"></script>
+            <script src="js/scripts.js"></script>
